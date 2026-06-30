@@ -473,7 +473,7 @@
       <div class="guide-top">
         <div class="guide-intro">
           <span aria-hidden="true">ℹ</span>
-          <span><strong>Working prototype.</strong> Mock data reflects patterns from Oracle Fusion Applications and Intuit AI Tooling &amp; Adoption programs. Each initiative card shows program status, health score, ownership, milestone gates, and AI-flagged risks — the same view a PMO leader would distribute to executive stakeholders.</span>
+          <span><strong>Working prototype.</strong> Mock data modeled on Oracle Fusion and Intuit AI Tooling programs. Each card shows status, health, ownership, milestone gates, and AI-flagged risks.</span>
         </div>
         <button class="guide-toggle" onclick="toggleGuide(this)" aria-expanded="false" aria-controls="guide-body">How to read each card ↓</button>
       </div>
@@ -481,77 +481,77 @@
       <div class="guide-body" id="guide-body">
 
         <div class="guide-sec">
-          <p class="guide-sec-title">Left border color &amp; status badge (top right of card) — program status</p>
+          <p class="guide-sec-title">Left border color &amp; status badge — program status</p>
           <div class="guide-grid">
             <div class="guide-item">
               <div class="gi-icon gi-green">■</div>
-              <div><strong>On Track</strong><span>Progressing to plan. No active blockers. Upcoming milestones confirmed.</span></div>
+              <div><strong>On Track</strong><span>On plan. No blockers. Upcoming milestones confirmed.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-red">■</div>
-              <div><strong>At Risk</strong><span>A blocker, ownership gap, or missed milestone is threatening delivery. Escalation likely needed.</span></div>
+              <div><strong>At Risk</strong><span>Blocker or missed milestone threatening delivery. Escalation likely required.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-amber">■</div>
-              <div><strong>Needs Decision</strong><span>Program is stalled pending an executive approval or decision. Cannot advance until resolved.</span></div>
+              <div><strong>Needs Decision</strong><span>Stalled pending executive approval. Cannot advance until resolved.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-done">■</div>
-              <div><strong>Complete</strong><span>Delivered and closed. May be in post-launch monitoring or adoption follow-up phase.</span></div>
+              <div><strong>Complete</strong><span>Delivered. May be in post-launch monitoring.</span></div>
             </div>
           </div>
         </div>
 
         <div class="guide-sec">
-          <p class="guide-sec-title">Health bar (top right of card) — overall program health score 0–100%</p>
+          <p class="guide-sec-title">Health bar — program health score 0–100%</p>
           <div class="guide-grid">
             <div class="guide-item">
               <div class="gi-icon gi-green" style="font-size:.6rem">80+</div>
-              <div><strong>Green (80–100%)</strong><span>Healthy. Milestones on track, risks actively managed, no critical gaps.</span></div>
+              <div><strong>Green (80–100%)</strong><span>Healthy. Milestones on track, risks managed.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-amber" style="font-size:.55rem">60–79</div>
-              <div><strong>Amber (60–79%)</strong><span>Moderate concern. Some blockers or ownership gaps need near-term attention to avoid slippage.</span></div>
+              <div><strong>Amber (60–79%)</strong><span>Moderate concern. Blockers need near-term attention.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-red" style="font-size:.6rem">&lt;60</div>
-              <div><strong>Red (&lt;60%)</strong><span>Significant issues present. Delivery at risk without immediate leadership intervention.</span></div>
+              <div><strong>Red (&lt;60%)</strong><span>Delivery at risk. Immediate leadership action required.</span></div>
             </div>
           </div>
         </div>
 
         <div class="guide-sec">
-          <p class="guide-sec-title">Metadata fields — key program facts displayed below the description</p>
+          <p class="guide-sec-title">Metadata fields</p>
           <div class="guide-grid">
             <div class="guide-item">
               <div class="gi-icon gi-soft">👤</div>
-              <div><strong>Owner</strong><span>Program lead accountable for delivery, escalation, and executive communication.</span></div>
+              <div><strong>Owner</strong><span>Program lead accountable for delivery and escalation.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-soft">📅</div>
-              <div><strong>Target</strong><span>Planned delivery quarter or date per the current program schedule.</span></div>
+              <div><strong>Target</strong><span>Planned delivery quarter or date.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-soft">↗</div>
-              <div><strong>Phase / Progress</strong><span>Current stage of delivery — e.g., Wave 2 of 4, 73% of controls complete, or 6 of 8 BUs onboarded.</span></div>
+              <div><strong>Phase / Progress</strong><span>Current delivery stage — e.g., Wave 2 of 4, 73% complete, 6 of 8 BUs onboarded.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-soft">⏱</div>
-              <div><strong>Next Gate / Audit Gate / Q2 Milestone</strong><span>The nearest upcoming decision point, approval, or milestone that determines whether the program can advance.</span></div>
+              <div><strong>Next Gate</strong><span>Nearest decision point or milestone gating program advancement.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-red">!</div>
-              <div><strong>Blocked / Blocker / Pending</strong><span>An active issue preventing forward progress. Shown with duration (e.g., "3 weeks") to flag how long it has been unresolved.</span></div>
+              <div><strong>Blocked / Blocker</strong><span>Active issue preventing progress. Duration shows how long unresolved.</span></div>
             </div>
             <div class="guide-item">
               <div class="gi-icon gi-done">⬡</div>
-              <div><strong>Final Gate / Final Due</strong><span>The ultimate completion milestone or end-state delivery date — what "done" looks like for this initiative.</span></div>
+              <div><strong>Final Gate / Final Due</strong><span>Ultimate completion milestone — what "done" looks like.</span></div>
             </div>
           </div>
         </div>
 
         <div class="guide-sec">
-          <p class="guide-sec-title">Tag chips (bottom of each card) — domain labels and live status signals</p>
+          <p class="guide-sec-title">Tag chips (bottom of card) — domain labels and live status signals</p>
           <div class="guide-tags-col">
             <div>
               <div class="guide-tag-row">
@@ -560,7 +560,7 @@
                 <span class="gdemo gdemo-n">PMO</span>
                 <span class="gdemo gdemo-n">Compliance</span>
               </div>
-              <p class="guide-tag-desc" style="margin-top:6px"><strong style="color:var(--ink)">White border, green text</strong> — Domain, tool, or methodology label. Identifies the technology area, platform, or delivery approach the program operates in (e.g., cloud-native architecture, AI tooling, release governance).</p>
+              <p class="guide-tag-desc" style="margin-top:6px"><strong style="color:var(--ink)">White border</strong> — Domain, tool, or methodology label.</p>
             </div>
             <div>
               <div class="guide-tag-row">
@@ -568,7 +568,7 @@
                 <span class="gdemo gdemo-w">⚠ RACI not approved</span>
                 <span class="gdemo gdemo-w">⚠ Owner unassigned</span>
               </div>
-              <p class="guide-tag-desc" style="margin-top:6px"><strong style="color:var(--ink)">Amber background with ⚠</strong> — Active risk, blocker, or pending decision that is directly impacting this program's health score or delivery timeline. These are the items that need immediate attention.</p>
+              <p class="guide-tag-desc" style="margin-top:6px"><strong style="color:var(--ink)">Amber ⚠</strong> — Active risk or pending decision impacting health or timeline.</p>
             </div>
             <div>
               <div class="guide-tag-row">
@@ -576,7 +576,7 @@
                 <span class="gdemo gdemo-g">Final 2 BUs: June 28</span>
                 <span class="gdemo gdemo-g">✓ Live in production</span>
               </div>
-              <p class="guide-tag-desc" style="margin-top:6px"><strong style="color:var(--ink)">Green background</strong> — Positive status signal. Either a confirmed upcoming milestone with a countdown showing days or a date remaining, or a completed delivery milestone confirming the program met its goal.</p>
+              <p class="guide-tag-desc" style="margin-top:6px"><strong style="color:var(--ink)">Green</strong> — Confirmed upcoming milestone or completed delivery.</p>
             </div>
           </div>
         </div>
@@ -589,7 +589,7 @@
       <div class="panel-header">
         <p class="panel-eyebrow">Enterprise Technology Portfolio · Q2 2026</p>
         <h1 class="panel-title">Portfolio Health Dashboard</h1>
-        <p class="panel-sub">6 active initiatives across Oracle Fusion Applications and Intuit AI Tooling programs. Tracks status, milestones, risks, blockers, and launch readiness. Last updated June 26, 2026.</p>
+        <p class="panel-sub">6 initiatives · Oracle Fusion and Intuit AI Tooling programs · Status, milestones, risks, and launch readiness · June 26, 2026</p>
       </div>
 
       <div class="stats-row">
@@ -625,7 +625,7 @@
           <div>
             <p class="pc-org">Oracle · Fusion Applications</p>
             <h2 class="pc-name">Fusion Cloud Modernization</h2>
-            <p class="pc-desc">Migrate 12 legacy Fusion HCM and ERP services to cloud-native microservices architecture across 8 regional data centers.</p>
+            <p class="pc-desc">Migrate 12 legacy Fusion HCM/ERP services to cloud-native microservices across 8 regional data centers.</p>
             <div class="pc-meta">
               <div class="meta-item"><span class="meta-lbl">Owner</span><span class="meta-val">Alison Whittaker</span></div>
               <div class="meta-item"><span class="meta-lbl">Target</span><span class="meta-val">Q4 2026</span></div>
@@ -653,7 +653,7 @@
           <div>
             <p class="pc-org">Oracle · Government Cloud</p>
             <h2 class="pc-name">FedRAMP High Authorization</h2>
-            <p class="pc-desc">Achieve FedRAMP High authorization for Oracle Fusion Government Cloud tenant supporting federal agency customers.</p>
+            <p class="pc-desc">Achieve FedRAMP High authorization for Oracle Fusion Government Cloud serving federal agency customers.</p>
             <div class="pc-meta">
               <div class="meta-item"><span class="meta-lbl">Owner</span><span class="meta-val">Alison Whittaker</span></div>
               <div class="meta-item"><span class="meta-lbl">Target</span><span class="meta-val">Q3 2026</span></div>
@@ -681,7 +681,7 @@
           <div>
             <p class="pc-org">Intuit · Product, Engineering &amp; TPM</p>
             <h2 class="pc-name">AI Portfolio Planning Rollout</h2>
-            <p class="pc-desc">Enterprise adoption of Dragonboat AI-enabled portfolio planning and roadmapping across 8 business units — Product, Engineering, TPM, and Business Operations.</p>
+            <p class="pc-desc">Enterprise rollout of Dragonboat AI-enabled portfolio planning across 8 business units — Product, Engineering, TPM, and Business Operations.</p>
             <div class="pc-meta">
               <div class="meta-item"><span class="meta-lbl">Owner</span><span class="meta-val">Alison Whittaker</span></div>
               <div class="meta-item"><span class="meta-lbl">Target</span><span class="meta-val">Q2 2026</span></div>
@@ -709,7 +709,7 @@
           <div>
             <p class="pc-org">Intuit · TPM Organization</p>
             <h2 class="pc-name">TPM Operating Model Redesign</h2>
-            <p class="pc-desc">Redesign TPM governance structures and delivery processes to align with AI-augmented ways of working and Dragonboat planning standards across the organization.</p>
+            <p class="pc-desc">Redesign TPM governance and delivery processes to align with AI-augmented ways of working and Dragonboat planning standards.</p>
             <div class="pc-meta">
               <div class="meta-item"><span class="meta-lbl">Owner</span><span class="meta-val">Alison Whittaker</span></div>
               <div class="meta-item"><span class="meta-lbl">Target</span><span class="meta-val">Q3 2026</span></div>
@@ -737,7 +737,7 @@
           <div>
             <p class="pc-org">Intuit · Data &amp; Analytics</p>
             <h2 class="pc-name">Portfolio Data Quality Initiative</h2>
-            <p class="pc-desc">Establish enterprise data standards and governance for AI-powered roadmap insights and portfolio health signals within Dragonboat.</p>
+            <p class="pc-desc">Establish enterprise data standards and governance for AI-powered roadmap insights and portfolio health signals in Dragonboat.</p>
             <div class="pc-meta">
               <div class="meta-item"><span class="meta-lbl">Owner</span><span class="meta-val">Alison Whittaker</span></div>
               <div class="meta-item"><span class="meta-lbl">Target</span><span class="meta-val">Q2 2026</span></div>
@@ -765,7 +765,7 @@
           <div>
             <p class="pc-org">Oracle · Engineering Operations</p>
             <h2 class="pc-name">Release Governance Framework</h2>
-            <p class="pc-desc">Standardized release cadence, quality gates, and governance operating model across 40+ global engineering organizations supporting Oracle Fusion Applications.</p>
+            <p class="pc-desc">Standardized release cadence, quality gates, and governance model across 40+ global engineering organizations supporting Oracle Fusion Applications.</p>
             <div class="pc-meta">
               <div class="meta-item"><span class="meta-lbl">Owner</span><span class="meta-val">Alison Whittaker</span></div>
               <div class="meta-item"><span class="meta-lbl">Completed</span><span class="meta-val">Q1 2026</span></div>
@@ -797,7 +797,7 @@
       <div class="panel-header">
         <p class="panel-eyebrow">✦ AI-Generated</p>
         <h1 class="panel-title">AI Executive Summary</h1>
-        <p class="panel-sub">Weekly portfolio update synthesized from program status, milestone data, RAID logs, and risk patterns. Ready for executive distribution.</p>
+        <p class="panel-sub">Weekly portfolio update synthesized from status, milestone data, and RAID logs. Ready for executive distribution.</p>
       </div>
 
       <div class="ai-card">
@@ -812,20 +812,20 @@
 
         <div class="sum-sec">
           <h3>Portfolio at a Glance</h3>
-          <p>The portfolio carries <strong>2 programs at risk</strong> this week, with <strong>1 decision escalation outstanding for 3+ weeks</strong>. Of 6 active initiatives, 1 is complete, 3 are on track, and 2 require immediate executive action. Overall portfolio health is <strong>74%</strong>, down 4 points from last week as the Portfolio Data Quality Initiative continues to slip without a named governance owner.</p>
+          <p><strong>2 programs at risk. 1 escalation pending 3+ weeks.</strong> Of 6 initiatives: 1 complete, 3 on track, 2 require immediate action. Portfolio health: <strong>74%</strong>, down 4 points — Portfolio Data Quality slipping without a named governance owner.</p>
         </div>
 
         <div class="sum-sec">
           <h3>Progress Highlights</h3>
-          <p><strong>AI Portfolio Planning Rollout (91% health)</strong> completed BU onboarding for 6 of 8 business units this week, ahead of the June 30 Q2 milestone. Tax Platform and Financial Services sessions are confirmed for June 28. This program is the strongest performer in the portfolio and on track to close Q2 on time.</p>
-          <p><strong>FedRAMP High Authorization (84% health)</strong> remains on track. Security control documentation is 73% complete across 325 controls, the third-party audit partner has been contracted, and the July 18 security gate is confirmed. No active blockers, though a contingency plan for Tier 1 control gaps has not yet been documented.</p>
-          <p><strong>Release Governance Framework</strong> officially closed Q1 2026. Standardized release cadence and quality gates are now live across all 40+ engineering organizations. Post-implementation survey shows 88% adoption — follow-up is planned for the remaining 5 teams (12%) in July.</p>
+          <p><strong>AI Portfolio Planning Rollout (91%)</strong> completed 6 of 8 BU onboarding sessions. Final 2 (Tax Platform, Financial Services) confirmed June 28. On track to close Q2 June 30.</p>
+          <p><strong>FedRAMP High Authorization (84%)</strong> on track. Controls 73% complete across 325. Audit partner contracted, July 18 gate confirmed. No blockers. Contingency plan for Tier 1 control gaps not yet documented.</p>
+          <p><strong>Release Governance Framework</strong> closed Q1 2026. Live across 40+ engineering organizations. Post-implementation adoption: 88%. Follow-up planned for 5 remaining teams in July.</p>
         </div>
 
         <div class="sum-sec">
           <h3>Risks &amp; Blockers</h3>
-          <p><strong>Fusion Cloud Modernization (62% health, At Risk):</strong> 3 of 12 services — Payroll, Benefits, and Tax Calculation — remain without assigned migration owners. Wave 2 kickoff is July 5. Without owner assignment this week, the program slips to Q1 2027 delivery. This risk was first flagged 2 weeks ago with no resolution. Engineering VP escalation is required immediately.</p>
-          <p><strong>Portfolio Data Quality Initiative (58% health, At Risk):</strong> The data governance owner role has been open for 6 weeks with no appointment. This blocks AI roadmap feature activation for all 8 business units in Q3 and degrades Dragonboat AI signal accuracy. This appointment needs leadership action by July 10 to protect Q3 commitments.</p>
+          <p><strong>Fusion Cloud Modernization (62%, At Risk):</strong> Payroll, Benefits, and Tax Calculation have no assigned migration owners. Wave 2 kickoff: July 5. Without resolution this week, delivery slips to Q1 2027. First flagged 2 weeks ago — no action taken. Engineering VP escalation required immediately.</p>
+          <p><strong>Portfolio Data Quality Initiative (58%, At Risk):</strong> Governance owner role open 6 weeks. Blocks Q3 AI feature activation for all 8 BUs and degrades Dragonboat AI accuracy. Leadership action required by July 10.</p>
         </div>
 
         <div class="sum-sec">
@@ -833,22 +833,22 @@
           <div class="dec-list">
             <div class="dec-item">
               <span class="dec-num">1</span>
-              <p><strong>Fusion Cloud Modernization:</strong> Engineering VP to assign migration owners for Payroll, Benefits, and Tax Calculation services before July 5. <em>Risk if unresolved: Wave 2 delivery slips 2 quarters to Q1 2027.</em></p>
+              <p><strong>Fusion Cloud Modernization:</strong> Engineering VP assigns migration owners for Payroll, Benefits, and Tax Calculation by July 5. <em>Risk: Wave 2 slips 2 quarters to Q1 2027.</em></p>
             </div>
             <div class="dec-item">
               <span class="dec-num">2</span>
-              <p><strong>Portfolio Data Quality Initiative:</strong> VP of Data to appoint data governance owner. Role has been open 6 weeks. <em>Risk if unresolved: Q3 AI roadmap features blocked for all 8 business units.</em></p>
+              <p><strong>Portfolio Data Quality Initiative:</strong> VP of Data appoints data governance owner. Open 6 weeks. <em>Risk: Q3 AI features blocked for all 8 BUs.</em></p>
             </div>
             <div class="dec-item">
               <span class="dec-num">3</span>
-              <p><strong>TPM Operating Model Redesign:</strong> Executive sponsor needed to approve updated RACI. Outstanding 3 weeks. <em>Risk if unresolved: Q3 kickoff cannot proceed — program enters delay.</em></p>
+              <p><strong>TPM Operating Model Redesign:</strong> Executive sponsor approves RACI. Outstanding 3 weeks. <em>Risk: Q3 kickoff delayed.</em></p>
             </div>
           </div>
         </div>
 
         <div class="sum-sec">
           <h3>Looking Ahead — Week of June 29</h3>
-          <p>Two high-priority milestones land next week: <strong>AI Planning Rollout Q2 milestone (June 30)</strong> — confirmed on track — and the <strong>Fusion Cloud Modernization Wave 2 kickoff (July 5)</strong> — currently blocked. Recommend a 30-minute executive decision call by June 28 to resolve the Wave 2 ownership gap and unblock the RACI approval for TPM Operating Model. FedRAMP audit gate on July 18 remains 22 days out with no current blockers.</p>
+          <p>Two milestones next week: <strong>AI Planning Q2 milestone (June 30)</strong> — on track — and <strong>Fusion Wave 2 kickoff (July 5)</strong> — currently blocked. Recommend a 30-minute exec call by June 28 to resolve Wave 2 ownership and TPM RACI approval. FedRAMP audit gate July 18 — 22 days out, no blockers.</p>
         </div>
       </div>
     </div>
@@ -858,14 +858,14 @@
       <div class="panel-header">
         <p class="panel-eyebrow">✦ AI-Analyzed</p>
         <h1 class="panel-title">Risk &amp; Dependency Analyzer</h1>
-        <p class="panel-sub">AI-flagged risks, hidden dependencies, ownership gaps, and missing launch criteria — synthesized from RAID logs, milestone data, and cross-program patterns.</p>
+        <p class="panel-sub">AI-flagged risks, ownership gaps, and cross-program dependencies — synthesized from RAID logs and milestone data.</p>
       </div>
 
       <div class="hidden-banner">
         <span class="hb-icon">⚠</span>
         <div class="hb-body">
           <strong>2 hidden risks identified by AI</strong>
-          <p>These risks were not present in existing RAID logs. AI surfaced them by analyzing milestone dependencies, ownership gaps, and cross-program data patterns. Marked below with <span style="display:inline-flex;align-items:center;padding:1px 6px;border-radius:4px;background:var(--lime);color:var(--forest);font-size:.65rem;font-weight:800;margin:0 2px;">✦ AI</span>.</p>
+          <p>Absent from existing RAID logs — surfaced by AI through milestone dependency and cross-program pattern analysis. Marked <span style="display:inline-flex;align-items:center;padding:1px 6px;border-radius:4px;background:var(--lime);color:var(--forest);font-size:.65rem;font-weight:800;margin:0 2px;">✦ AI</span> below.</p>
         </div>
       </div>
 
@@ -885,7 +885,7 @@
           <tbody>
             <tr>
               <td>Fusion Cloud Modernization</td>
-              <td>3 of 12 services (Payroll, Benefits, Tax Calculation) have no assigned migration owner. Blocks Wave 2 kickoff July 5.</td>
+              <td>Payroll, Benefits, Tax Calculation without migration owners. Blocks Wave 2 kickoff July 5.</td>
               <td>Ownership gap</td>
               <td><span class="sev sev-h">● High</span></td>
               <td>Engineering VP</td>
@@ -894,7 +894,7 @@
             </tr>
             <tr>
               <td>Portfolio Data Quality</td>
-              <td>Data governance owner role open 6 weeks. Blocks Q3 AI roadmap feature activation for all 8 BUs.</td>
+              <td>Governance owner role open 6 weeks. Blocks Q3 AI feature activation for 8 BUs.</td>
               <td>Blocker</td>
               <td><span class="sev sev-h">● High</span></td>
               <td>Unassigned</td>
@@ -903,7 +903,7 @@
             </tr>
             <tr>
               <td>TPM Operating Model</td>
-              <td>RACI approval pending 3 weeks with no documented decision timeline or named exec sponsor.</td>
+              <td>RACI approval pending 3 weeks. No decision timeline or exec sponsor named.</td>
               <td>Decision gap</td>
               <td><span class="sev sev-h">● High</span></td>
               <td>VP Engineering</td>
@@ -912,7 +912,7 @@
             </tr>
             <tr>
               <td>AI Planning Rollout</td>
-              <td>2 of 8 BU leads (Tax Platform, Financial Services) have not completed platform training. Rollout gate June 30.</td>
+              <td>Tax Platform and Financial Services BU leads haven't completed platform training. Gate June 30.</td>
               <td>Readiness gap</td>
               <td><span class="sev sev-m">● Medium</span></td>
               <td>Alison Whittaker</td>
@@ -921,7 +921,7 @@
             </tr>
             <tr>
               <td>FedRAMP Authorization <span class="ai-tag">✦ AI</span></td>
-              <td><em>AI-identified:</em> No contingency plan documented if July 18 audit surfaces a Tier 1 control gap. A gap would push authorization to Q1 2027 with no current mitigation path.</td>
+              <td><em>AI-identified:</em> No contingency plan if July 18 audit surfaces a Tier 1 control gap. Would push authorization to Q1 2027.</td>
               <td>Hidden risk</td>
               <td><span class="sev sev-m">● Medium</span></td>
               <td>Alison Whittaker</td>
@@ -930,7 +930,7 @@
             </tr>
             <tr>
               <td>Fusion Cloud Modernization <span class="ai-tag">✦ AI</span></td>
-              <td><em>AI-identified:</em> Payroll and Tax Calculation services share a legacy batch processing dependency undocumented in any RAID log. Creates hidden coordination risk across 3 engineering teams if migration timelines diverge.</td>
+              <td><em>AI-identified:</em> Payroll and Tax Calculation share an undocumented legacy batch processing dependency — hidden coordination risk across 3 engineering teams if migration timelines diverge.</td>
               <td>Hidden dependency</td>
               <td><span class="sev sev-m">● Medium</span></td>
               <td>Unassigned</td>
@@ -939,7 +939,7 @@
             </tr>
             <tr>
               <td>Release Governance Framework</td>
-              <td>Post-implementation adoption at 88%. 5 teams (12%) still running legacy processes with no documented follow-up plan.</td>
+              <td>Adoption at 88%. 5 teams (12%) still on legacy processes. No follow-up plan documented.</td>
               <td>Adoption gap</td>
               <td><span class="sev sev-l">● Low</span></td>
               <td>Alison Whittaker</td>
@@ -952,19 +952,19 @@
 
       <div class="dep-card">
         <h3>✦ AI Cross-Program Dependency Map</h3>
-        <p>Dependencies identified by AI that span multiple programs — not captured in individual RAID logs.</p>
+        <p>Cross-program dependencies not captured in individual RAID logs.</p>
         <div class="dep-list">
           <div class="dep-item">
             <span>🔗</span>
-            <span><strong>Portfolio Data Quality → AI Planning Rollout:</strong> Data quality standards must be approved and a governance owner in place before Dragonboat AI signals can be validated. A delay here pushes AI signal activation from Q3 to Q4 — affecting 8 BUs simultaneously.</span>
+            <span><strong>Portfolio Data Quality → AI Planning Rollout:</strong> Governance owner must be in place before Dragonboat AI signals can be validated. Delay pushes AI signal activation from Q3 to Q4 across all 8 BUs.</span>
           </div>
           <div class="dep-item">
             <span>🔗</span>
-            <span><strong>TPM Operating Model → AI Planning Rollout:</strong> RACI approval is required before TPM governance workflows can be embedded in Dragonboat. Without it, the AI planning rollout achieves partial adoption — TPM teams cannot fully participate in AI-enabled planning.</span>
+            <span><strong>TPM Operating Model → AI Planning Rollout:</strong> RACI approval required before TPM governance workflows embed in Dragonboat. Without it, TPM teams cannot fully participate in AI-enabled planning.</span>
           </div>
           <div class="dep-item">
             <span>🔗</span>
-            <span><strong>Fusion Cloud Modernization → FedRAMP Authorization:</strong> If the Payroll service migration is delayed past July 5, it may impact FedRAMP control evidence submitted for the July 18 audit. The Payroll service migration generates required security evidence for 3 authorization controls.</span>
+            <span><strong>Fusion Cloud Modernization → FedRAMP Authorization:</strong> Payroll service delay past July 5 may impact FedRAMP control evidence for the July 18 audit — 3 authorization controls depend on that migration.</span>
           </div>
         </div>
       </div>
@@ -975,7 +975,7 @@
       <div class="panel-header">
         <p class="panel-eyebrow">✦ AI-Scored</p>
         <h1 class="panel-title">Readiness Scorecard</h1>
-        <p class="panel-sub">Each initiative scored across health, risk exposure, launch readiness, and open decisions. Scores are derived from program data, RAID logs, and milestone proximity.</p>
+        <p class="panel-sub">Initiatives scored on health, risk, readiness, and open decisions — derived from program data, RAID logs, and milestone proximity.</p>
       </div>
 
       <div class="sc-wrap">
@@ -1000,7 +1000,7 @@
               <td class="center"><span class="chip chip-r">High</span></td>
               <td class="center"><span class="chip chip-r">41%</span></td>
               <td class="center"><span class="chip chip-r">3 open</span></td>
-              <td class="rec-cell">Escalate ownership gaps to Engineering VP before July 5. Do not proceed to Wave 2 without all 3 service owners assigned.</td>
+              <td class="rec-cell">Escalate to Engineering VP by July 5. Do not proceed to Wave 2 without all 3 owners assigned.</td>
             </tr>
             <tr>
               <td>
@@ -1011,7 +1011,7 @@
               <td class="center"><span class="chip chip-a">Medium</span></td>
               <td class="center"><span class="chip chip-g">78%</span></td>
               <td class="center"><span class="chip chip-g">0 open</span></td>
-              <td class="rec-cell">On track for July 18 gate. Document a contingency plan for a Tier 1 control gap scenario before the audit date.</td>
+              <td class="rec-cell">On track for July 18. Document contingency plan for a Tier 1 control gap before audit.</td>
             </tr>
             <tr>
               <td>
@@ -1022,7 +1022,7 @@
               <td class="center"><span class="chip chip-g">Low</span></td>
               <td class="center"><span class="chip chip-g">89%</span></td>
               <td class="center"><span class="chip chip-g">0 open</span></td>
-              <td class="rec-cell">Ready to close Q2 milestone June 30. Complete final 2 BU training sessions by June 28. No blockers.</td>
+              <td class="rec-cell">Close Q2 milestone June 30. Complete final 2 BU training sessions by June 28. No blockers.</td>
             </tr>
             <tr>
               <td>
@@ -1033,7 +1033,7 @@
               <td class="center"><span class="chip chip-a">Medium</span></td>
               <td class="center"><span class="chip chip-a">55%</span></td>
               <td class="center"><span class="chip chip-r">1 open</span></td>
-              <td class="rec-cell">RACI decision is blocking Q3 kickoff. Identify executive sponsor and secure approval by June 30 or program enters delay.</td>
+              <td class="rec-cell">RACI blocking Q3 kickoff. Secure exec sponsor and approval by June 30.</td>
             </tr>
             <tr>
               <td>
@@ -1044,7 +1044,7 @@
               <td class="center"><span class="chip chip-r">High</span></td>
               <td class="center"><span class="chip chip-r">32%</span></td>
               <td class="center"><span class="chip chip-r">2 open</span></td>
-              <td class="rec-cell">Not ready for Q2 close. Data governance owner appointment is the critical path. Delays all downstream Q3 AI features for 8 BUs.</td>
+              <td class="rec-cell">Not ready for Q2 close. Governance owner is critical path — delays all Q3 AI features for 8 BUs.</td>
             </tr>
             <tr>
               <td>
@@ -1055,7 +1055,7 @@
               <td class="center"><span class="chip chip-g">Low</span></td>
               <td class="center"><span class="chip chip-n">N/A</span></td>
               <td class="center"><span class="chip chip-g">0 open</span></td>
-              <td class="rec-cell">Complete. Plan adoption follow-up for 5 remaining teams (12%) not yet live on the new governance model by July 31.</td>
+              <td class="rec-cell">Complete. Follow up with 5 remaining teams (12%) not yet on new model by July 31.</td>
             </tr>
           </tbody>
         </table>
@@ -1073,13 +1073,12 @@
       <div class="panel-header">
         <p class="panel-eyebrow">✦ AI-Powered</p>
         <h1 class="panel-title">Meeting Follow-Up Automation</h1>
-        <p class="panel-sub">Paste raw meeting notes below. AI extracts action items with owners and dates, decisions made, open questions, and flags for follow-up.</p>
+        <p class="panel-sub">Paste raw meeting notes. AI extracts action items, decisions, open questions, and follow-up flags.</p>
       </div>
 
       <div class="meeting-grid">
         <div class="meet-card">
           <h3>Paste Meeting Notes</h3>
-          <p>Raw notes, transcript excerpt, or summary from any planning, status, or governance meeting.</p>
           <textarea id="meeting-notes" placeholder="Example:&#10;&#10;Portfolio sync — June 26, 2026&#10;Attendees: Alison Whittaker, VP Engineering, VP Data, Exec Sponsor&#10;&#10;Alison: Wave 2 kickoff for Fusion Cloud Modernization is at risk. Three services still don't have migration owners — Payroll, Benefits, Tax Calc. Need Engineering VP to assign owners before July 5 or we slip a full quarter.&#10;&#10;Alison: FedRAMP audit partner contracted, July 18 gate is firm. Raised whether we have a contingency if a Tier 1 control gap is found. Will document fallback plan by July 14.&#10;&#10;Alison: Data governance owner still not appointed after 6 weeks. Sending decision request to VP of Data by June 28. Blocks Q3 AI features for all 8 BUs if not resolved.&#10;&#10;Alison: RACI for TPM Operating Model needs exec approval before Q3 kickoff. Outstanding 3 weeks — need exec sponsor identified by June 28.&#10;&#10;AI Planning Rollout update: 6 of 8 BUs onboarded. Final 2 sessions June 28. On track to close Q2 milestone June 30."></textarea>
           <button class="analyze-btn" id="analyze-btn" onclick="analyzeNotes()">
             <span aria-hidden="true">✦</span> Analyze Notes
@@ -1088,7 +1087,6 @@
 
         <div class="meet-card">
           <h3>AI-Generated Follow-Up</h3>
-          <p>Structured output extracted from your meeting notes.</p>
 
           <div class="load-bar" id="load-bar" role="progressbar" aria-label="Analyzing notes">
             <div class="lb-fill"></div>
@@ -1181,15 +1179,15 @@
               <div class="out-item flag">
                 <span class="out-item-icon" aria-hidden="true">⚠</span>
                 <div class="out-item-body">
-                  <strong>5 of 5 action items are owned by Alison Whittaker — single point of dependency across all programs</strong>
-                  <span>Consider delegating or sequencing tasks to reduce risk concentration. High-priority items due June 28 and July 5 are simultaneous.</span>
+                  <strong>5 of 5 action items owned by Alison Whittaker — single point of dependency</strong>
+                  <span>Consider delegating or sequencing. High-priority items due June 28 and July 5 are simultaneous.</span>
                 </div>
               </div>
               <div class="out-item flag">
                 <span class="out-item-icon" aria-hidden="true">⚠</span>
                 <div class="out-item-body">
-                  <strong>RACI escalation pending 3 weeks — no executive sponsor identified in the notes</strong>
-                  <span>AI recommends adding "Identify exec sponsor" as a prerequisite action item before June 28, not June 30.</span>
+                  <strong>RACI escalation pending 3 weeks — no exec sponsor identified</strong>
+                  <span>"Identify exec sponsor" should be a prerequisite action item before June 28, not June 30.</span>
                 </div>
               </div>
             </div>
