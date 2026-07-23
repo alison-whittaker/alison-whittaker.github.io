@@ -527,7 +527,7 @@
 <body>
   <header class="prototype-header">
     <a class="back-link" href="index.html#prototypes">← Back to prototypes</a>
-    <div class="page-note">Dummy data only · No real company, customer, or financial information</div>
+    <div class="page-note">Sample data only · No real company, customer, or financial information</div>
   </header>
 
   <main class="roadmap-app" data-roadmap-app>
@@ -543,7 +543,7 @@
       </div>
       <div class="status">
         Demo data as of Jul 23, 2026
-        <span>1 goal · 6 capabilities · 12 dummy initiatives</span>
+        <span>1 goal · 6 capabilities · 12 sample initiatives</span>
       </div>
     </header>
 
@@ -666,7 +666,7 @@
       sixqBoard.innerHTML = '';
 
       if (!groups.size) {
-        sixqBoard.innerHTML = '<div class="empty-state">No dummy initiatives match this filter.</div>';
+        sixqBoard.innerHTML = '<div class="empty-state">No sample initiatives match this filter.</div>';
         return;
       }
 
@@ -682,7 +682,7 @@
         header.innerHTML = `
           <span class="caret" aria-hidden="true">▾</span>
           <strong>${name}</strong>
-          <small>${new Set(items.map((item) => item.capability)).size} capabilities · ${items.length} dummy initiatives</small>
+          <small>${new Set(items.map((item) => item.capability)).size} capabilities · ${items.length} sample initiatives</small>
         `;
         header.addEventListener('click', () => {
           if (state.collapsed.has(name)) state.collapsed.delete(name);
@@ -712,7 +712,7 @@
               matches.forEach((item) => list.append(initiativeBullet(item)));
               cell.append(list);
             } else {
-              cell.innerHTML = '<span class="empty">No dummy initiatives scheduled</span>';
+              cell.innerHTML = '<span class="empty">No sample initiatives scheduled</span>';
             }
             grid.append(cell);
           });
@@ -746,10 +746,10 @@
       const quarterItems = filteredInitiatives().filter((item) => item.quarter === state.quarter);
       const groups = grouped(quarterItems);
       quarterlyPlan.innerHTML = '';
-      quarterlyNote.textContent = `Showing dummy initiatives for ${state.quarter}, grouped ${state.groupBy === 'goal' ? 'by goal' : 'by capability'}.`;
+      quarterlyNote.textContent = `Showing sample initiatives for ${state.quarter}, grouped ${state.groupBy === 'goal' ? 'by goal' : 'by capability'}.`;
 
       if (!groups.size) {
-        quarterlyPlan.innerHTML = '<div class="empty-state">No dummy initiatives match this quarter and filter.</div>';
+        quarterlyPlan.innerHTML = '<div class="empty-state">No sample initiatives match this quarter and filter.</div>';
         return;
       }
 
@@ -759,7 +759,7 @@
         section.innerHTML = `
           <header class="quarterly-group-header">
             <strong>${name}</strong>
-            <p>${items.length} dummy initiatives</p>
+            <p>${items.length} sample initiatives</p>
           </header>
         `;
 
