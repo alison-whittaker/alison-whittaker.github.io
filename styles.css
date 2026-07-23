@@ -102,14 +102,14 @@ nav a:hover { color: var(--ink); }
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1.18fr) minmax(380px, .82fr);
-  gap: 72px;
+  gap: 54px;
   align-items: center;
-  min-height: 720px;
-  padding-block: 100px;
+  min-height: 560px;
+  padding-block: 70px;
 }
 
 .eyebrow {
-  margin: 0 0 20px;
+  margin: 0 0 14px;
   color: var(--accent);
   font-size: .72rem;
   font-weight: 800;
@@ -130,7 +130,7 @@ h1 {
 
 .hero-intro {
   max-width: 700px;
-  margin: 34px 0 0;
+  margin: 24px 0 0;
   color: var(--muted);
   font-size: clamp(1.08rem, 1.5vw, 1.35rem);
   line-height: 1.65;
@@ -140,7 +140,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 38px;
+  margin-top: 28px;
 }
 
 .button {
@@ -168,10 +168,10 @@ h1 {
 
 .proof-card {
   display: flex;
-  min-height: 190px;
+  min-height: 150px;
   flex-direction: column;
   justify-content: space-between;
-  padding: 26px;
+  padding: 22px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -201,7 +201,7 @@ h1 {
 .proof-card-featured span { color: #5d514c; }
 
 .pillars {
-  padding-block: 34px;
+  padding-block: 24px;
   border-block: 1px solid var(--line);
   background: var(--surface);
 }
@@ -212,21 +212,21 @@ h1 {
   gap: 24px;
 }
 
-.pillars article { padding: 18px 20px 22px 0; }
+.pillars article { padding: 12px 20px 16px 0; }
 .pillars article + article { border-left: 1px solid var(--line); padding-left: 34px; }
 .pillar-number { color: var(--accent); font-size: .68rem; font-weight: 800; letter-spacing: .12em; }
-.pillars h2 { margin: 18px 0 8px; font-size: 1.15rem; letter-spacing: -.025em; }
+.pillars h2 { margin: 12px 0 6px; font-size: 1.15rem; letter-spacing: -.025em; }
 .pillars p { margin: 0; color: var(--muted); font-size: .92rem; }
 
 .authority-section {
-  padding-block: 56px 62px;
+  padding-block: 40px 46px;
   border-bottom: 1px solid var(--line);
   background: #efe5df;
   color: var(--ink);
 }
 
 .authority-label {
-  margin: 0 0 32px;
+  margin: 0 0 22px;
   color: var(--muted);
   font-size: .68rem;
   font-weight: 800;
@@ -240,7 +240,7 @@ h1 {
   grid-template-columns: repeat(5, 1fr);
   align-items: center;
   gap: 24px;
-  padding-bottom: 46px;
+  padding-bottom: 30px;
   border-bottom: 1px solid var(--line);
   color: var(--cocoa);
   text-align: center;
@@ -262,12 +262,12 @@ h1 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 0;
-  margin-top: 38px;
+  margin-top: 28px;
 }
 
 .authority-stats div {
   display: flex;
-  min-height: 112px;
+  min-height: 86px;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 24px;
@@ -292,26 +292,26 @@ h1 {
 }
 
 .source-note {
-  margin: 28px 0 0;
+  margin: 18px 0 0;
   color: #96847b;
   font-size: .67rem;
   text-align: right;
 }
 
-.section { padding-block: 120px; }
+.section { padding-block: 82px; }
 
 .section-heading {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
-  gap: 90px;
+  gap: 56px;
   align-items: end;
-  margin-bottom: 54px;
+  margin-bottom: 36px;
 }
 
 .section-heading h2, .approach-intro h2, .contact-section h2 {
   max-width: 760px;
   margin: 0;
-  font-size: clamp(2.55rem, 5vw, 5rem);
+  font-size: clamp(2.25rem, 4.4vw, 4.35rem);
   letter-spacing: -.055em;
   line-height: 1.02;
 }
@@ -327,8 +327,8 @@ h1 {
 .experience-card {
   display: grid;
   grid-template-columns: 170px minmax(0, 1fr);
-  gap: 20px 40px;
-  padding: 38px;
+  gap: 16px 34px;
+  padding: 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -347,8 +347,8 @@ h1 {
 .role { margin: 0 0 12px; color: var(--muted); font-size: .76rem; font-weight: 750; letter-spacing: .06em; text-transform: uppercase; }
 .experience-main h3 { margin: 0 0 16px; font-size: clamp(1.5rem, 2.6vw, 2.2rem); letter-spacing: -.035em; line-height: 1.12; }
 .experience-main > p:not(.role) { margin: 0; color: var(--muted); }
-.experience-main ul { margin: 24px 0 0; padding-left: 1.15em; }
-.experience-main li { padding-left: .5em; margin-top: 10px; color: var(--muted); }
+.experience-main ul { margin: 16px 0 0; padding-left: 1.15em; }
+.experience-main li { padding-left: .5em; margin-top: 7px; color: var(--muted); }
 
 .experience-tags {
   display: flex;
@@ -368,7 +368,7 @@ h1 {
 
 .earlier-work {
   max-width: 900px;
-  margin: 30px auto 0;
+  margin: 22px auto 0;
   color: var(--muted);
   text-align: center;
 }
@@ -389,20 +389,20 @@ h1 {
 }
 
 .impact-card {
-  min-height: 320px;
-  padding: 30px;
+  min-height: 240px;
+  padding: 24px;
   border: 1px solid #c5ddd5;
   border-radius: var(--radius);
   background: var(--surface);
 }
 
-.impact-card-large { grid-row: span 2; min-height: 656px; }
+.impact-card-large { grid-row: span 2; min-height: 496px; }
 .impact-card-accent { display: flex; align-items: flex-end; background: var(--accent-soft); color: var(--cocoa); }
 .impact-icon { display: inline-grid; width: 44px; height: 44px; place-items: center; border: 1px solid #9bcabe; border-radius: 50%; color: var(--forest); font-size: 1.25rem; }
-.impact-card h3 { margin: 90px 0 14px; font-size: 1.7rem; letter-spacing: -.035em; }
+.impact-card h3 { margin: 52px 0 12px; font-size: 1.55rem; letter-spacing: -.035em; }
 .impact-card p { color: var(--muted); }
-.impact-card ul { margin: 32px 0 0; padding: 0; list-style: none; }
-.impact-card li { padding-block: 11px; border-top: 1px solid #c5ddd5; color: var(--muted); font-size: .84rem; }
+.impact-card ul { margin: 24px 0 0; padding: 0; list-style: none; }
+.impact-card li { padding-block: 8px; border-top: 1px solid #c5ddd5; color: var(--muted); font-size: .84rem; }
 .impact-card .quote { margin: 0; color: var(--cocoa); font-size: clamp(1.5rem, 2.2vw, 2.2rem); font-weight: 700; letter-spacing: -.035em; line-height: 1.15; }
 
 .recognition-section {
@@ -418,10 +418,10 @@ h1 {
 
 .testimonial-card {
   display: flex;
-  min-height: 540px;
+  min-height: 390px;
   flex-direction: column;
   margin: 0;
-  padding: 42px;
+  padding: 32px;
   border-radius: var(--radius);
   background: var(--accent-soft);
 }
@@ -429,12 +429,12 @@ h1 {
 .quote-mark {
   color: var(--accent);
   font-family: Georgia, serif;
-  font-size: 7rem;
+  font-size: 5rem;
   line-height: .65;
 }
 
 .testimonial-card > p {
-  margin: 26px 0 40px;
+  margin: 18px 0 28px;
   color: var(--ink);
   font-size: clamp(1.25rem, 1.75vw, 1.7rem);
   font-weight: 720;
@@ -459,7 +459,7 @@ h1 {
   flex-direction: column;
   gap: 4px;
   margin-top: auto;
-  padding-top: 30px;
+  padding-top: 22px;
   border-top: 1px solid color-mix(in srgb, var(--accent) 34%, transparent);
   background: transparent;
   color: var(--ink);
@@ -475,7 +475,7 @@ h1 {
   align-items: end;
   justify-content: space-between;
   gap: 30px;
-  margin: 72px 0 26px;
+  margin: 48px 0 20px;
 }
 
 .awards-heading .eyebrow {
@@ -501,8 +501,8 @@ h1 {
   display: grid;
   grid-template-columns: 72px 1fr;
   gap: 24px;
-  min-height: 140px;
-  padding: 28px 32px;
+  min-height: 112px;
+  padding: 22px 26px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -531,11 +531,11 @@ h1 {
 .approach-section {
   display: grid;
   grid-template-columns: .85fr 1.15fr;
-  gap: 100px;
+  gap: 64px;
 }
 
 .approach-copy > p {
-  margin: 0 0 24px;
+  margin: 0 0 16px;
   color: var(--muted);
   font-size: 1.12rem;
 }
@@ -543,17 +543,17 @@ h1 {
 .approach-steps {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 50px;
+  margin-top: 32px;
   border-top: 1px solid var(--line);
   border-left: 1px solid var(--line);
 }
 
 .approach-steps div {
   display: flex;
-  min-height: 110px;
+  min-height: 86px;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 16px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
@@ -573,7 +573,7 @@ h1 {
 }
 
 .search-grid article {
-  padding: 30px;
+  padding: 24px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -584,7 +584,7 @@ h1 {
 }
 
 .search-grid h3 {
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   color: var(--forest);
   font-size: 1.25rem;
 }
@@ -592,7 +592,7 @@ h1 {
 .search-grid p {
   margin: 0;
   color: var(--muted);
-  line-height: 1.8;
+  line-height: 1.65;
 }
 
 .tools-list {
@@ -633,14 +633,14 @@ h1 {
 }
 
 .contact-section {
-  padding-block: 110px;
+  padding-block: 78px;
   background: #e4f1ec;
 }
 
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr .8fr;
-  gap: 100px;
+  gap: 64px;
 }
 
 .contact-grid > div > p:not(.eyebrow) { max-width: 690px; color: #614b43; font-size: 1.05rem; }
@@ -651,7 +651,7 @@ h1 {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 24px 0;
+  padding: 18px 0;
   border-bottom: 1px solid #c8a99b;
   text-decoration: none;
 }
@@ -665,7 +665,7 @@ footer { padding-block: 28px; background: var(--cocoa); color: #f5ece7; }
 .footer-inner p { margin: 0; font-size: .78rem; }
 
 @media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; gap: 54px; min-height: auto; padding-block: 80px; }
+  .hero { grid-template-columns: 1fr; gap: 38px; min-height: auto; padding-block: 58px; }
   .proof-grid { max-width: 700px; }
   .section-heading, .approach-section, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
   .pillars-grid { grid-template-columns: 1fr; }
@@ -673,10 +673,10 @@ footer { padding-block: 28px; background: var(--cocoa); color: #f5ece7; }
   .authority-stats { grid-template-columns: repeat(3, 1fr); row-gap: 38px; }
   .authority-stats div:nth-child(4) { border-left: 0; padding-left: 0; }
   .impact-grid { grid-template-columns: 1fr 1fr; }
-  .impact-card-large { grid-row: auto; min-height: 320px; }
-  .impact-card-large h3 { margin-top: 60px; }
+  .impact-card-large { grid-row: auto; min-height: 240px; }
+  .impact-card-large h3 { margin-top: 42px; }
   .recognition-layout { grid-template-columns: 1fr; }
-  .testimonial-card { min-height: 440px; }
+  .testimonial-card { min-height: 320px; }
   .search-grid { grid-template-columns: 1fr; }
   .tools-list { grid-template-columns: 1fr 1fr; gap: 24px 0; }
   .tools-list div, .tools-list div:first-child, .tools-list div:last-child { padding: 0 20px; border-left: 1px solid var(--line); }
@@ -705,9 +705,9 @@ footer { padding-block: 28px; background: var(--cocoa); color: #f5ece7; }
   nav.open { display: flex; }
   nav a { padding: 13px; }
   h1 { font-size: clamp(3.1rem, 16vw, 4.7rem); }
-  .hero { padding-block: 62px 78px; }
+  .hero { padding-block: 46px 56px; }
   .proof-grid { grid-template-columns: 1fr; }
-  .proof-card { min-height: 150px; }
+  .proof-card { min-height: 126px; }
   .brand-rail { grid-template-columns: repeat(2, 1fr); row-gap: 30px; }
   .brand-rail span:last-child { grid-column: 1 / -1; }
   .authority-stats { grid-template-columns: 1fr 1fr; }
@@ -717,14 +717,14 @@ footer { padding-block: 28px; background: var(--cocoa); color: #f5ece7; }
   .authority-stats div:last-child { grid-column: 1 / -1; }
   .authority-stats span { max-width: 145px; }
   .source-note { text-align: left; }
-  .section { padding-block: 84px; }
-  .experience-card { grid-template-columns: 1fr; padding: 25px; }
+  .section { padding-block: 58px; }
+  .experience-card { grid-template-columns: 1fr; padding: 22px; }
   .experience-tags { grid-column: 1; }
   .impact-grid { grid-template-columns: 1fr; }
-  .impact-card, .impact-card-large { min-height: 290px; }
-  .impact-card h3 { margin-top: 65px; }
-  .testimonial-card { min-height: 0; padding: 28px; }
-  .testimonial-card > p { margin: 20px 0 32px; }
+  .impact-card, .impact-card-large { min-height: 220px; }
+  .impact-card h3 { margin-top: 42px; }
+  .testimonial-card { min-height: 0; padding: 24px; }
+  .testimonial-card > p { margin: 16px 0 24px; }
   .awards-heading { align-items: flex-start; flex-direction: column; gap: 12px; }
   .award-list { grid-template-columns: 1fr; }
   .award-list article { grid-template-columns: 1fr; gap: 10px; padding: 24px; border-right: 0; }
@@ -732,7 +732,7 @@ footer { padding-block: 28px; background: var(--cocoa); color: #f5ece7; }
   .award-list article:nth-last-child(-n + 2) { border-bottom: 1px solid var(--line); }
   .award-list article:last-child { border-bottom: 0; }
   .approach-steps { grid-template-columns: 1fr; }
-  .contact-section { padding-block: 80px; }
+  .contact-section { padding-block: 56px; }
   .contact-link { align-items: flex-start; flex-direction: column; }
   .contact-link strong { text-align: left; }
   .footer-inner { flex-direction: column; }
