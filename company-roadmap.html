@@ -543,7 +543,7 @@
       </div>
       <div class="status">
         Demo data as of Jul 23, 2026
-        <span>1 goal · 6 capabilities · 12 sample initiatives</span>
+        <span>1 goal · 6 workstreams · 12 sample initiatives</span>
       </div>
     </header>
 
@@ -682,7 +682,7 @@
         header.innerHTML = `
           <span class="caret" aria-hidden="true">▾</span>
           <strong>${name}</strong>
-          <small>${new Set(items.map((item) => item.capability)).size} capabilities · ${items.length} sample initiatives</small>
+          <small>${new Set(items.map((item) => item.capability)).size} workstreams · ${items.length} sample initiatives</small>
         `;
         header.addEventListener('click', () => {
           if (state.collapsed.has(name)) state.collapsed.delete(name);
@@ -693,7 +693,7 @@
         const grid = document.createElement('div');
         grid.className = 'sixq-grid';
         grid.innerHTML = `
-          <div class="lane-heading">Capability</div>
+          <div class="lane-heading">Workstream</div>
           ${quarters.map((quarter) => `<div class="quarter-heading">${quarter}</div>`).join('')}
         `;
 
