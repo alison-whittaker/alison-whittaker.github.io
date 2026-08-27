@@ -548,6 +548,49 @@ h1 {
 .impact-card li { padding-block: 6px; border-top: 1px solid #c5ddd5; color: var(--muted); font-size: .76rem; }
 .impact-card .quote { margin: 0; color: var(--cocoa); font-size: clamp(1.02rem, 1.45vw, 1.34rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.18; }
 
+.fedramp-section {
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.fedramp-card {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 34px;
+  align-items: center;
+  padding-block: 28px;
+}
+
+.fedramp-card h2 {
+  max-width: 620px;
+  margin: 0;
+  font-size: clamp(1.32rem, 2.35vw, 2.1rem);
+  letter-spacing: -.03em;
+  line-height: 1.1;
+}
+
+.fedramp-copy p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: .88rem;
+}
+
+.fedramp-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fedramp-points span {
+  padding: 6px 10px;
+  border: 1px solid #a9d7ca;
+  border-radius: 999px;
+  background: var(--lime);
+  color: var(--forest);
+  font-size: .68rem;
+  font-weight: 750;
+}
+
 .recognition-section {
   background: var(--surface);
 }
@@ -820,6 +863,7 @@ footer { padding-block: 20px; background: var(--cocoa); color: #f5ece7; }
   .impact-grid { grid-template-columns: 1fr 1fr; }
   .impact-card-large { grid-row: auto; min-height: 176px; }
   .impact-card-large h3 { margin-top: 30px; }
+  .fedramp-card { grid-template-columns: 1fr; gap: 18px; }
   .recognition-layout { grid-template-columns: 1fr; }
   .testimonial-card { min-height: 240px; }
   .search-grid { grid-template-columns: 1fr; }

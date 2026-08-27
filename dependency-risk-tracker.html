@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dependency & Release Governance Tracker | Alison Whittaker</title>
+  <link rel="icon" type="image/png" href="alison-whittaker-profile.png">
+  <style>
+    :root {
+      --ink: #3d2924;
+      --muted: #76635c;
+      --paper: #f8f5f1;
+      --surface: #fffdf9;
+      --line: #ded2ca;
+      --accent: #3d9a82;
+      --forest: #2f7566;
+      --lime: #cce8dd;
+      --cocoa: #4b312b;
+      --red: #b83020;
+      --red-soft: #fdecea;
+      --amber: #9a6e00;
+      --amber-soft: #fef6e4;
+      --shadow: 0 18px 50px rgba(76, 49, 43, .09);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .proto-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      min-height: 68px;
+      padding: 12px max(20px, calc((100vw - 1180px) / 2));
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      backdrop-filter: blur(18px);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 750;
+    }
+
+    .header-note {
+      color: var(--muted);
+      font-size: .74rem;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .tracker {
+      width: min(calc(100% - 36px), 1180px);
+      margin: 24px auto 42px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 22px;
+      align-items: stretch;
+      margin-bottom: 16px;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero-main {
+      padding: 28px;
+      background: linear-gradient(150deg, var(--lime) 0%, var(--surface) 58%);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--forest);
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin: 0;
+      color: var(--cocoa);
+      font-size: clamp(1.8rem, 3.6vw, 3.2rem);
+      letter-spacing: -.04em;
+      line-height: 1.02;
+    }
+
+    .hero-main p {
+      max-width: 720px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 16px;
+    }
+
+    .metric {
+      min-height: 92px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--paper);
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--accent);
+      font-size: 1.75rem;
+      letter-spacing: -.04em;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 7px;
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 750;
+    }
+
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    button,
+    select {
+      min-height: 36px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    button { padding: 0 13px; }
+    select { padding: 0 34px 0 13px; }
+    button.is-active { border-color: #a9d7ca; background: var(--lime); color: var(--forest); }
+
+    .updated {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 750;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(320px, .75fr);
+      gap: 16px;
+      align-items: start;
+    }
+
+    .section-card {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--line);
+      background: var(--cocoa);
+      color: var(--paper);
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: .98rem;
+      letter-spacing: -.01em;
+    }
+
+    .section-head span {
+      color: #d8c9c1;
+      font-size: .7rem;
+      font-weight: 800;
+    }
+
+    .dep-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .78rem;
+    }
+
+    .dep-table th,
+    .dep-table td {
+      padding: 13px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .dep-table th {
+      color: var(--muted);
+      font-size: .65rem;
+      font-weight: 900;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      background: var(--paper);
+    }
+
+    .dep-table tr:last-child td { border-bottom: 0; }
+    .dep-table tr[hidden] { display: none; }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      min-height: 22px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: .66rem;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .tag.high { background: var(--red-soft); color: var(--red); }
+    .tag.medium { background: var(--amber-soft); color: var(--amber); }
+    .tag.low { background: var(--lime); color: var(--forest); }
+    .owner { color: var(--muted); font-size: .72rem; }
+
+    .side-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 10px;
+      padding: 16px;
+    }
+
+    .gate {
+      display: grid;
+      grid-template-columns: 82px 1fr;
+      gap: 10px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--paper);
+    }
+
+    .gate time {
+      color: var(--forest);
+      font-size: .68rem;
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+
+    .gate strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: .82rem;
+    }
+
+    .gate span {
+      color: var(--muted);
+      font-size: .72rem;
+    }
+
+    .governance {
+      padding: 16px;
+    }
+
+    .governance p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: .82rem;
+    }
+
+    .actions {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .actions li {
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      background: var(--paper);
+      color: var(--muted);
+      font-size: .76rem;
+    }
+
+    .actions strong {
+      display: block;
+      color: var(--ink);
+      font-size: .8rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .summary-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .proto-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .header-note { text-align: left; }
+      .tracker { width: min(calc(100% - 22px), 1180px); margin-top: 16px; }
+      .hero-main { padding: 22px; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); }
+      .dep-table { min-width: 760px; }
+      .table-scroll { overflow-x: auto; }
+      .gate { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header class="proto-header">
+    <a class="back-link" href="index.html#prototypes">← Back to prototypes</a>
+    <div class="header-note">Prototype data only · Updated August 26, 2026</div>
+  </header>
+
+  <main class="tracker">
+    <section class="hero">
+      <div class="panel hero-main">
+        <p class="eyebrow">Cross-team governance prototype</p>
+        <h1>Dependency &amp; Release Governance Tracker</h1>
+        <p>Sample workspace for mapping technical dependencies across engineering teams, release gates, risk ownership, escalation status, and launch readiness decisions.</p>
+      </div>
+
+      <aside class="panel summary-grid" aria-label="Dependency summary">
+        <div class="metric"><strong>12</strong><span>tracked dependencies</span></div>
+        <div class="metric"><strong>4</strong><span>release gates</span></div>
+        <div class="metric"><strong>3</strong><span>critical blockers</span></div>
+        <div class="metric"><strong>78%</strong><span>launch confidence</span></div>
+      </aside>
+    </section>
+
+    <section class="toolbar" aria-label="Tracker filters">
+      <div class="filters">
+        <button class="is-active" type="button" data-filter="all">All</button>
+        <button type="button" data-filter="high">High risk</button>
+        <button type="button" data-filter="blocked">Blocked</button>
+        <button type="button" data-filter="owner">Needs owner</button>
+        <select data-team-filter aria-label="Filter by team">
+          <option value="all">All teams</option>
+          <option value="platform">Platform Services</option>
+          <option value="identity">Identity</option>
+          <option value="data">Data Platform</option>
+          <option value="security">Security</option>
+        </select>
+      </div>
+      <div class="updated">Release train: Q4 platform launch · Sample status as of Aug 26</div>
+    </section>
+
+    <div class="layout">
+      <section class="section-card">
+        <div class="section-head">
+          <h2>Engineering Dependency Map</h2>
+          <span>Risk, owner, impact, unblock date</span>
+        </div>
+        <div class="table-scroll">
+          <table class="dep-table">
+            <thead>
+              <tr>
+                <th>Dependency</th>
+                <th>Teams</th>
+                <th>Status</th>
+                <th>Risk</th>
+                <th>Owner</th>
+                <th>Release impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-risk="high" data-status="blocked" data-owner="set" data-team="platform">
+                <td><strong>API contract freeze</strong><br><span class="owner">Due Sep 6</span></td>
+                <td>Platform Services → Product Integrations</td>
+                <td><span class="tag high">Blocked</span></td>
+                <td>High</td>
+                <td>Platform PM</td>
+                <td>Blocks integration test entry for three downstream teams.</td>
+              </tr>
+              <tr data-risk="high" data-status="blocked" data-owner="missing" data-team="identity">
+                <td><strong>Identity entitlement model</strong><br><span class="owner">Due Sep 9</span></td>
+                <td>Identity → Admin Experience</td>
+                <td><span class="tag high">Needs owner</span></td>
+                <td>High</td>
+                <td>Unassigned</td>
+                <td>Launch readiness cannot pass without permission test evidence.</td>
+              </tr>
+              <tr data-risk="medium" data-status="open" data-owner="set" data-team="data">
+                <td><strong>Reporting event schema</strong><br><span class="owner">Due Sep 13</span></td>
+                <td>Data Platform → Analytics</td>
+                <td><span class="tag medium">Open</span></td>
+                <td>Medium</td>
+                <td>Data TPM</td>
+                <td>May delay executive adoption dashboard by one sprint.</td>
+              </tr>
+              <tr data-risk="high" data-status="blocked" data-owner="set" data-team="security">
+                <td><strong>Security control evidence</strong><br><span class="owner">Due Sep 17</span></td>
+                <td>Security → Release Governance</td>
+                <td><span class="tag high">Blocked</span></td>
+                <td>High</td>
+                <td>Security Lead</td>
+                <td>Required before go/no-go review and customer pilot expansion.</td>
+              </tr>
+              <tr data-risk="low" data-status="open" data-owner="set" data-team="platform">
+                <td><strong>Feature flag cleanup</strong><br><span class="owner">Due Sep 20</span></td>
+                <td>Platform Services → Release Ops</td>
+                <td><span class="tag low">On track</span></td>
+                <td>Low</td>
+                <td>Release PM</td>
+                <td>Needed for operational handoff but not launch blocking.</td>
+              </tr>
+              <tr data-risk="medium" data-status="open" data-owner="missing" data-team="data">
+                <td><strong>Data retention exception review</strong><br><span class="owner">Due Sep 23</span></td>
+                <td>Data Platform → Security</td>
+                <td><span class="tag medium">Needs owner</span></td>
+                <td>Medium</td>
+                <td>Unassigned</td>
+                <td>Could create audit follow-up if unresolved before readiness review.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="side-stack">
+        <section class="section-card">
+          <div class="section-head">
+            <h2>Release Gate Timeline</h2>
+            <span>Q4 launch train</span>
+          </div>
+          <div class="timeline">
+            <div class="gate">
+              <time>Sep 6</time>
+              <div><strong>Design freeze</strong><span>API contract and entitlement model locked.</span></div>
+            </div>
+            <div class="gate">
+              <time>Sep 17</time>
+              <div><strong>Security evidence review</strong><span>Control evidence and exception log ready.</span></div>
+            </div>
+            <div class="gate">
+              <time>Sep 27</time>
+              <div><strong>Integration exit</strong><span>Cross-team regression and data validation complete.</span></div>
+            </div>
+            <div class="gate">
+              <time>Oct 4</time>
+              <div><strong>Executive go/no-go</strong><span>Launch confidence, residual risk, and support plan reviewed.</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <div class="section-head">
+            <h2>Governance Summary</h2>
+            <span>AI-ready PMO pattern</span>
+          </div>
+          <div class="governance">
+            <p>Three dependencies require executive visibility this week: API contract freeze, entitlement ownership, and security evidence readiness.</p>
+            <ul class="actions">
+              <li><strong>Escalate missing entitlement owner</strong> Resolve by Sep 2 to protect design freeze.</li>
+              <li><strong>Hold security evidence review</strong> Confirm required artifacts before Sep 17 gate.</li>
+              <li><strong>Update dependency aging report</strong> Add owner and unblock date to every high-risk row.</li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('[data-filter]');
+    const teamFilter = document.querySelector('[data-team-filter]');
+    const rows = document.querySelectorAll('.dep-table tbody tr');
+    let activeFilter = 'all';
+
+    function applyFilters() {
+      const team = teamFilter.value;
+      rows.forEach((row) => {
+        const matchesButton =
+          activeFilter === 'all' ||
+          row.dataset.risk === activeFilter ||
+          row.dataset.status === activeFilter ||
+          (activeFilter === 'owner' && row.dataset.owner === 'missing');
+        const matchesTeam = team === 'all' || row.dataset.team === team;
+        row.hidden = !(matchesButton && matchesTeam);
+      });
+    }
+
+    buttons.forEach((button) => {
+      button.addEventListener('click', () => {
+        buttons.forEach((item) => item.classList.remove('is-active'));
+        button.classList.add('is-active');
+        activeFilter = button.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    teamFilter.addEventListener('change', applyFilters);
+  </script>
+</body>
+</html>
