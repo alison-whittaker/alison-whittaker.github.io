@@ -144,9 +144,9 @@ button.is-active {
 
 .panel-title {
   color: var(--proto-ink) !important;
-  font-size: clamp(1.65rem, 3vw, 2.85rem) !important;
-  letter-spacing: -.04em;
-  line-height: 1.02;
+  font-size: clamp(1.5rem, 2.35vw, 2.25rem) !important;
+  letter-spacing: -.03em;
+  line-height: 1.08;
 }
 
 .panel-sub {
@@ -195,6 +195,14 @@ button.is-active {
 .metric {
   min-height: auto !important;
   padding: 14px 16px !important;
+}
+
+.stat-val,
+.metric strong,
+.rh-num,
+.bu-score,
+.ssb-num {
+  font-size: clamp(1.3rem, 2.2vw, 1.9rem) !important;
 }
 
 .program-card,
@@ -459,7 +467,7 @@ button.is-active {
   }
 
   .panel-title {
-    font-size: clamp(1.62rem, 10vw, 2.35rem) !important;
+    font-size: clamp(1.4rem, 7.4vw, 1.9rem) !important;
   }
 }
 
