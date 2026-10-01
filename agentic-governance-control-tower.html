@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agentic AI Governance &amp; Portfolio Control Tower | Alison Whittaker</title>
+  <link rel="icon" type="image/png" href="alison-whittaker-profile.png">
+  <style>
+    :root {
+      --ink:#3d2924; --muted:#76635c; --paper:#f8f5f1; --surface:#fffdf9;
+      --line:#ded2ca; --accent:#3d9a82; --forest:#2f7566; --lime:#cce8dd;
+      --cocoa:#4b312b; --red:#b83020; --red-soft:#fdecea; --amber:#9a6e00;
+      --amber-soft:#fef6e4; --blue:#476cff; --violet:#8756d9; --radius:10px;
+      --shadow:0 1px 2px rgba(76,49,43,.06);
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{min-height:100vh;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45;}
+    a{color:inherit;text-decoration:none;}
+    button,select{font:inherit;}
+
+    .proto-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 32px;background:var(--ink);color:#fff;}
+    .ph-left{display:flex;align-items:center;gap:16px;}
+    .ph-back{color:rgba(255,255,255,.72);font-size:.8rem;font-weight:700;border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:5px 12px;white-space:nowrap;}
+    .ph-meta{display:flex;flex-direction:column;gap:1px;}
+    .ph-eyebrow{font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.48);}
+    .ph-title{font-size:1rem;font-weight:800;color:#fff;}
+    .ph-badge{display:flex;align-items:center;gap:7px;font-size:.73rem;font-weight:800;color:var(--lime);border:1px solid rgba(204,232,221,.35);padding:5px 12px;border-radius:99px;white-space:nowrap;}
+    .ai-pulse{width:7px;height:7px;border-radius:50%;background:var(--accent);animation:pulse 2s ease-in-out infinite;}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+    .suite-bar{display:flex;align-items:center;gap:20px;padding:7px 32px;background:#2a1c18;border-bottom:1px solid rgba(255,255,255,.06);overflow-x:auto;}
+    .sb-label{font-size:.67rem;font-weight:800;letter-spacing:.08em;color:rgba(255,255,255,.3);text-transform:uppercase;white-space:nowrap;flex-shrink:0;}
+    .sb-links{display:flex;gap:3px;}
+    .sb-link{font-size:.77rem;font-weight:650;color:rgba(255,255,255,.55);padding:4px 12px;border-radius:99px;white-space:nowrap;}
+    .sb-link:hover{color:rgba(255,255,255,.88);background:rgba(255,255,255,.08);}
+    .sb-link.active{color:var(--ink);background:var(--lime);}
+
+    .tab-bar{display:flex;gap:4px;padding:8px 32px;background:var(--surface);border-bottom:1px solid var(--line);overflow-x:auto;}
+    .tab-btn{padding:7px 14px;border:1px solid transparent;border-radius:7px;background:none;color:var(--muted);cursor:pointer;font-size:.8rem;font-weight:700;white-space:nowrap;}
+    .tab-btn.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+    .proto-main{width:min(calc(100% - 48px),1180px);margin:0 auto;padding:24px 0 52px;}
+    .tab-panel{display:none;}
+    .tab-panel.active{display:block;}
+    .panel-header{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:end;margin-bottom:18px;}
+    .panel-eyebrow{margin:0 0 5px;color:var(--accent);font-size:.7rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase;}
+    .panel-title{margin:0;color:var(--ink);font-size:clamp(1.42rem,2vw,2rem);letter-spacing:-.02em;line-height:1.12;}
+    .panel-sub{margin:0;color:var(--muted);font-size:.9rem;max-width:720px;}
+
+    .stats-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-bottom:18px;}
+    .stat-card{position:relative;overflow:hidden;min-height:88px;padding:13px 15px;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:var(--shadow);}
+    .stat-card:before{position:absolute;inset:0 0 auto;height:3px;content:"";background:var(--accent);}
+    .stat-val{display:block;color:var(--ink);font-size:clamp(1.3rem,2.2vw,1.9rem);font-weight:850;letter-spacing:-.04em;line-height:1;}
+    .stat-lbl{display:block;margin-top:7px;color:var(--muted);font-size:.73rem;font-weight:700;line-height:1.3;}
+
+    .grid-2{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(320px,.85fr);gap:14px;align-items:start;}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;}
+    .card{border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow);overflow:hidden;}
+    .card-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line);background:#f4eee8;}
+    .card-head h2,.card-head h3{font-size:.95rem;letter-spacing:-.01em;}
+    .card-body{padding:16px;}
+    .badge{display:inline-flex;align-items:center;gap:6px;border-radius:6px;padding:3px 8px;font-size:.66rem;font-weight:850;letter-spacing:.04em;text-transform:uppercase;}
+    .b-ok{background:var(--lime);color:var(--forest);}
+    .b-warn{background:var(--amber-soft);color:var(--amber);}
+    .b-risk{background:var(--red-soft);color:var(--red);}
+    .b-info{background:#eef1ff;color:var(--blue);}
+    .muted{color:var(--muted);}
+
+    .agent-list{display:grid;gap:9px;}
+    .agent-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:#fbf8f4;}
+    .agent-row h3{margin-bottom:4px;font-size:.9rem;}
+    .agent-row p{color:var(--muted);font-size:.78rem;}
+    .agent-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;}
+    .chip{border:1px solid var(--line);border-radius:5px;padding:3px 7px;color:var(--forest);font-size:.66rem;font-weight:750;background:#fff;}
+    .risk-score{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;font-size:.9rem;font-weight:900;}
+    .score-ok{background:var(--lime);color:var(--forest);}
+    .score-warn{background:var(--amber-soft);color:var(--amber);}
+    .score-risk{background:var(--red-soft);color:var(--red);}
+
+    .control-stack{display:grid;gap:10px;}
+    .control-item{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);}
+    .control-item:last-child{border-bottom:0;}
+    .control-icon{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);border-radius:8px;color:var(--forest);font-size:.78rem;font-weight:800;}
+    .control-item strong{font-size:.82rem;}
+    .control-item span{display:block;color:var(--muted);font-size:.72rem;}
+    .toggle{width:38px;height:20px;border-radius:99px;background:var(--lime);position:relative;}
+    .toggle:after{position:absolute;right:3px;top:3px;width:14px;height:14px;border-radius:50%;background:var(--forest);content:"";}
+    .toggle.off{background:var(--line);}
+    .toggle.off:after{right:auto;left:3px;background:var(--muted);}
+
+    .matrix{display:grid;grid-template-columns:1fr repeat(4,90px);overflow:auto;border:1px solid var(--line);border-radius:8px;}
+    .matrix div{padding:10px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);font-size:.76rem;}
+    .matrix div:nth-child(5n){border-right:0;}
+    .matrix div:nth-last-child(-n+5){border-bottom:0;}
+    .matrix .mh{background:var(--cocoa);color:#fff;font-size:.66rem;font-weight:850;text-transform:uppercase;letter-spacing:.06em;white-space:nowrap;}
+    .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--accent);}
+    .dot.a{background:var(--amber);}
+    .dot.r{background:var(--red);}
+
+    .timeline{display:grid;gap:10px;}
+    .event{display:grid;grid-template-columns:92px minmax(0,1fr);gap:12px;padding-bottom:10px;border-bottom:1px solid var(--line);}
+    .event:last-child{border-bottom:0;padding-bottom:0;}
+    .event time{color:var(--muted);font-size:.72rem;font-weight:800;}
+    .event strong{display:block;font-size:.82rem;}
+    .event p{margin-top:3px;color:var(--muted);font-size:.76rem;}
+
+    .decision-card{padding:16px;border-left:4px solid var(--accent);}
+    .decision-card h3{margin-bottom:8px;font-size:.96rem;}
+    .decision-card p{color:var(--muted);font-size:.82rem;}
+    .decision-list{display:grid;gap:9px;margin-top:12px;}
+    .decision-list div{padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);}
+    .decision-list strong{font-size:.8rem;}
+    .decision-list span{display:block;color:var(--muted);font-size:.72rem;margin-top:3px;}
+
+    footer{padding:20px 32px;border-top:1px solid var(--line);background:var(--surface);}
+    footer .fi{display:flex;justify-content:space-between;align-items:center;gap:20px;max-width:1180px;margin:0 auto;}
+    footer p,footer a{font-size:.75rem;color:var(--muted);}
+    footer a{color:var(--accent);font-weight:750;}
+
+    @media(max-width:960px){
+      .panel-header,.grid-2{grid-template-columns:1fr;}
+      .stats-row{grid-template-columns:repeat(2,minmax(0,1fr));}
+      .grid-3{grid-template-columns:1fr;}
+    }
+    @media(max-width:680px){
+      .proto-header{align-items:flex-start;flex-direction:column;padding:14px 16px;}
+      .suite-bar,.tab-bar{padding-inline:16px;}
+      .proto-main{width:min(calc(100% - 30px),1180px);padding-top:24px;}
+      .stats-row{grid-template-columns:1fr 1fr;}
+      .agent-row{grid-template-columns:1fr;}
+      .risk-score{width:42px;height:42px;}
+      footer .fi{align-items:flex-start;flex-direction:column;}
+    }
+  </style>
+  <link rel="stylesheet" href="prototype-polish.css">
+</head>
+<body>
+  <header class="proto-header">
+    <div class="ph-left">
+      <a class="ph-back" href="index.html#prototypes">Back</a>
+      <div class="ph-meta">
+        <p class="ph-eyebrow">Prototype · Agentic Enterprise Governance</p>
+        <p class="ph-title">Agentic AI Governance &amp; Portfolio Control Tower</p>
+      </div>
+    </div>
+    <div class="ph-badge"><span class="ai-pulse"></span>AI-Governed · Mock Data</div>
+  </header>
+
+  <nav class="suite-bar">
+    <span class="sb-label">Portfolio Suite</span>
+    <div class="sb-links">
+      <a href="agentic-governance-control-tower.html" class="sb-link active">Governance Tower</a>
+      <a href="pmo-intake-scorer.html" class="sb-link">Demand Triage</a>
+      <a href="dependency-risk-tracker.html" class="sb-link">Dependency Risk</a>
+      <a href="exec-report-generator.html" class="sb-link">Decision Briefs</a>
+      <a href="change-readiness-tracker.html" class="sb-link">Adoption Signals</a>
+    </div>
+  </nav>
+
+  <nav class="tab-bar" role="tablist">
+    <button class="tab-btn active" data-tab="overview" role="tab" aria-selected="true">Control Tower</button>
+    <button class="tab-btn" data-tab="registry" role="tab" aria-selected="false">Agent Registry</button>
+    <button class="tab-btn" data-tab="controls" role="tab" aria-selected="false">Controls &amp; Audit</button>
+    <button class="tab-btn" data-tab="decisions" role="tab" aria-selected="false">Executive Decisions</button>
+  </nav>
+
+  <main class="proto-main">
+    <section class="tab-panel active" id="tab-overview" role="tabpanel">
+      <div class="panel-header">
+        <div>
+          <p class="panel-eyebrow">Agentic enterprise control layer</p>
+          <h1 class="panel-title">Govern AI agents like a new digital workforce.</h1>
+        </div>
+        <p class="panel-sub">A mock executive operating layer for agentic AI adoption: identity, ownership, permissions, value, cost, risk, human oversight, audit signals, and launch readiness in one view.</p>
+      </div>
+
+      <div class="stats-row">
+        <div class="stat-card"><span class="stat-val">28</span><span class="stat-lbl">registered agents</span></div>
+        <div class="stat-card"><span class="stat-val">11</span><span class="stat-lbl">production workflows</span></div>
+        <div class="stat-card"><span class="stat-val">92%</span><span class="stat-lbl">owner assignment</span></div>
+        <div class="stat-card"><span class="stat-val">$184K</span><span class="stat-lbl">monthly run-rate governed</span></div>
+        <div class="stat-card"><span class="stat-val">6</span><span class="stat-lbl">exec decisions needed</span></div>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <div class="card-head">
+            <h2>Highest-leverage agent workflows</h2>
+            <span class="badge b-info">Portfolio View</span>
+          </div>
+          <div class="card-body agent-list">
+            <div class="agent-row">
+              <div>
+                <h3>Portfolio Intake Triage Agent</h3>
+                <p>Classifies new requests, flags duplicate demand, drafts scoring rationale, and routes exceptions to PMO review.</p>
+                <div class="agent-meta"><span class="chip">Business Ops</span><span class="chip">Human approval</span><span class="chip">Jira + Dragonboat</span></div>
+              </div>
+              <span class="risk-score score-ok">84</span>
+            </div>
+            <div class="agent-row">
+              <div>
+                <h3>Launch Readiness Evidence Agent</h3>
+                <p>Collects release gate evidence, checks missing owners, and prepares audit-ready readiness summaries.</p>
+                <div class="agent-meta"><span class="chip">Engineering</span><span class="chip">FedRAMP-adjacent</span><span class="chip">Review required</span></div>
+              </div>
+              <span class="risk-score score-warn">67</span>
+            </div>
+            <div class="agent-row">
+              <div>
+                <h3>Executive Narrative Agent</h3>
+                <p>Converts portfolio signals into weekly decision briefs with recommended tradeoffs and escalation paths.</p>
+                <div class="agent-meta"><span class="chip">Exec Staff</span><span class="chip">Read-only</span><span class="chip">Low risk</span></div>
+              </div>
+              <span class="risk-score score-ok">91</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="card">
+          <div class="card-head">
+            <h2>Governance posture</h2>
+            <span class="badge b-warn">2 Gaps</span>
+          </div>
+          <div class="card-body control-stack">
+            <div class="control-item"><span class="control-icon">ID</span><div><strong>Agent identity and owner</strong><span>26 of 28 mapped to accountable business owner</span></div><span class="toggle"></span></div>
+            <div class="control-item"><span class="control-icon">A</span><div><strong>Access boundaries</strong><span>4 agents need narrowed source-system permissions</span></div><span class="toggle"></span></div>
+            <div class="control-item"><span class="control-icon">$</span><div><strong>Cost thresholding</strong><span>Auto-pause at 115% of monthly forecast</span></div><span class="toggle"></span></div>
+            <div class="control-item"><span class="control-icon">H</span><div><strong>Human review gates</strong><span>Decision and external-share actions require approval</span></div><span class="toggle"></span></div>
+            <div class="control-item"><span class="control-icon">M</span><div><strong>Memory retention</strong><span>Two pilot agents missing retention policy</span></div><span class="toggle off"></span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-registry" role="tabpanel">
+      <div class="panel-header">
+        <div>
+          <p class="panel-eyebrow">Agent registry</p>
+          <h1 class="panel-title">One inventory for identity, autonomy, value, access, and risk.</h1>
+        </div>
+        <p class="panel-sub">This view shows how leaders could govern agent sprawl before it becomes operational, security, compliance, or cost exposure.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head">
+          <h2>Agent x control matrix</h2>
+          <span class="badge b-ok">Governed</span>
+        </div>
+        <div class="card-body">
+          <div class="matrix" role="table" aria-label="Agent control matrix">
+            <div class="mh">Agent</div><div class="mh">Owner</div><div class="mh">Access</div><div class="mh">Value</div><div class="mh">Risk</div>
+            <div>Portfolio Intake Triage</div><div><span class="dot"></span> Assigned</div><div>Jira, Dragonboat</div><div>$1.2M capacity focus</div><div><span class="dot"></span> Low</div>
+            <div>Launch Evidence Collector</div><div><span class="dot"></span> Assigned</div><div>Jira, Confluence</div><div>2-week audit prep saved</div><div><span class="dot a"></span> Moderate</div>
+            <div>Dependency Negotiator</div><div><span class="dot a"></span> Pending</div><div>Roadmap read-only</div><div>6 blockers surfaced</div><div><span class="dot a"></span> Moderate</div>
+            <div>Customer Signal Summarizer</div><div><span class="dot"></span> Assigned</div><div>VOC repository</div><div>3 launches informed</div><div><span class="dot r"></span> High</div>
+            <div>Executive Narrative Agent</div><div><span class="dot"></span> Assigned</div><div>Portfolio metrics</div><div>4 hours/week saved</div><div><span class="dot"></span> Low</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-controls" role="tabpanel">
+      <div class="panel-header">
+        <div>
+          <p class="panel-eyebrow">Runtime controls</p>
+          <h1 class="panel-title">Policy matters when it runs as a control.</h1>
+        </div>
+        <p class="panel-sub">Example controls translate AI governance into daily operating mechanisms: thresholds, audit events, review gates, monitoring, and incident escalation.</p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card decision-card">
+          <h3>Access Boundary Review</h3>
+          <p>Four agents request write access to planning data. Recommendation: keep write actions behind workflow approval until owner confidence exceeds 90%.</p>
+          <div class="decision-list"><div><strong>Owner</strong><span>Portfolio Operations</span></div><div><strong>Decision due</strong><span>Oct 8, 2026</span></div></div>
+        </article>
+        <article class="card decision-card">
+          <h3>Cost Anomaly Guardrail</h3>
+          <p>Run-rate is trending 18% above forecast due to repeated executive brief generation. Recommendation: cache repeated summaries and cap ad hoc runs.</p>
+          <div class="decision-list"><div><strong>Owner</strong><span>Business Operations</span></div><div><strong>Decision due</strong><span>Oct 11, 2026</span></div></div>
+        </article>
+        <article class="card decision-card">
+          <h3>Human Oversight Model</h3>
+          <p>Read-only analysis agents are approved for scale. Agents that draft decisions, route work, or change status require explicit human confirmation.</p>
+          <div class="decision-list"><div><strong>Owner</strong><span>AI Governance Council</span></div><div><strong>Decision due</strong><span>Oct 15, 2026</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="tab-panel" id="tab-decisions" role="tabpanel">
+      <div class="panel-header">
+        <div>
+          <p class="panel-eyebrow">Executive decision intelligence</p>
+          <h1 class="panel-title">Convert governance signals into leadership decisions.</h1>
+        </div>
+        <p class="panel-sub">The control tower does not just report risk. It frames decisions, names tradeoffs, and gives leaders a clean path to action.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card">
+          <div class="card-head">
+            <h2>Recommended decisions</h2>
+            <span class="badge b-warn">This week</span>
+          </div>
+          <div class="card-body timeline">
+            <div class="event"><time>Now</time><div><strong>Approve production scale for three low-risk agents.</strong><p>Benefit: reduces manual PMO reporting load by 18-22 hours per week.</p></div></div>
+            <div class="event"><time>Oct 8</time><div><strong>Resolve memory policy for pilot agents.</strong><p>Decision needed before Legal and Security signoff for broader rollout.</p></div></div>
+            <div class="event"><time>Oct 15</time><div><strong>Fund agent observability workstream.</strong><p>Tradeoff: delay one roadmap analytics enhancement or add one engineering pod.</p></div></div>
+          </div>
+        </article>
+        <aside class="card">
+          <div class="card-head">
+            <h2>AI-generated executive brief</h2>
+            <span class="badge b-info">Draft</span>
+          </div>
+          <div class="card-body">
+            <p class="muted">Agentic AI adoption is ready to expand from pilot to controlled scale if leadership resolves two governance gaps: memory retention and source-system write permissions. Current value signals are strong, with 11 production workflows and measurable savings in reporting, intake, and launch readiness. The recommended path is to scale low-risk, read-only agents while keeping high-impact workflow changes behind human approval gates.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="fi">
+      <p>Agentic AI Governance &amp; Portfolio Control Tower · Alison Whittaker · Working Prototype</p>
+      <a href="index.html#prototypes">Back to portfolio</a>
+    </div>
+  </footer>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-btn');
+    const panels = document.querySelectorAll('.tab-panel');
+    tabs.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        tabs.forEach((tab) => { tab.classList.remove('active'); tab.setAttribute('aria-selected', 'false'); });
+        panels.forEach((panel) => panel.classList.remove('active'));
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+        document.getElementById('tab-' + btn.dataset.tab)?.classList.add('active');
+      });
+    });
+  </script>
+  <script src="prototype-polish.js"></script>
+</body>
+</html>

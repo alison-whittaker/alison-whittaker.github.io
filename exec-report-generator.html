@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Executive Reporting Generator · Alison Whittaker</title>
+  <title>AI Executive Decision Brief Generator · Alison Whittaker</title>
   <link rel="icon" type="image/png" href="alison-whittaker-profile.png">
   <style>
     :root {
@@ -179,8 +179,8 @@
     <div class="ph-left">
       <a class="ph-back" href="index.html">← Back</a>
       <div class="ph-meta">
-        <p class="ph-eyebrow">Prototype · AI Portfolio Tooling</p>
-        <p class="ph-title">AI Executive Reporting Generator</p>
+        <p class="ph-eyebrow">Prototype · Decision Intelligence</p>
+        <p class="ph-title">AI Executive Decision Brief Generator</p>
       </div>
     </div>
     <div class="ph-badge"><span class="ai-pulse"></span>AI-Enabled · Mock Data</div>
@@ -189,17 +189,18 @@
   <nav class="suite-bar">
     <span class="sb-label">Portfolio Suite</span>
     <div class="sb-links">
-      <a href="portfolio-dashboard.html" class="sb-link">Health Dashboard</a>
-      <a href="exec-report-generator.html" class="sb-link active">Exec Reporter</a>
-      <a href="change-readiness-tracker.html" class="sb-link">Change Tracker</a>
-      <a href="pmo-intake-scorer.html" class="sb-link">PMO Intake</a>
+      <a href="agentic-governance-control-tower.html" class="sb-link">Governance Tower</a>
+      <a href="pmo-intake-scorer.html" class="sb-link">Demand Triage</a>
+      <a href="dependency-risk-tracker.html" class="sb-link">Dependency Risk</a>
+      <a href="exec-report-generator.html" class="sb-link active">Decision Briefs</a>
+      <a href="change-readiness-tracker.html" class="sb-link">Adoption Signals</a>
     </div>
   </nav>
 
   <nav class="tab-bar" role="tablist">
     <button class="tab-btn active" data-tab="inputs" role="tab" aria-selected="true">Inputs</button>
-    <button class="tab-btn" data-tab="report" role="tab" aria-selected="false">Generated Report</button>
-    <button class="tab-btn" data-tab="library" role="tab" aria-selected="false">Report Library</button>
+    <button class="tab-btn" data-tab="report" role="tab" aria-selected="false">Decision Brief</button>
+    <button class="tab-btn" data-tab="library" role="tab" aria-selected="false">Brief Library</button>
   </nav>
 
   <main class="proto-main">
@@ -208,8 +209,8 @@
     <div class="tab-panel active" id="tab-inputs" role="tabpanel">
       <div class="panel-header">
         <p class="panel-eyebrow">✦ Data Sources</p>
-        <h1 class="panel-title">Reporting Inputs</h1>
-        <p class="panel-sub">Jira status, meeting notes, and RAID log — select a template and generate your exec update.</p>
+        <h1 class="panel-title">Decision Inputs</h1>
+        <p class="panel-sub">Jira status, meeting notes, RAID signals, and open tradeoffs - select a template and generate an executive decision brief.</p>
       </div>
 
       <div class="stats-row">
@@ -339,13 +340,13 @@ AI Planning Rollout: 6 of 8 BUs onboarded. Final 2 sessions June 28. On track to
         <div class="tmpl-group">
           <span class="tmpl-label">Report Template</span>
           <div class="tmpl-btns">
-            <button class="tmpl-btn sel" onclick="selectTemplate(this)">Weekly Portfolio Update</button>
+            <button class="tmpl-btn sel" onclick="selectTemplate(this)">Weekly Decision Brief</button>
             <button class="tmpl-btn" onclick="selectTemplate(this)">Steering Committee Brief</button>
             <button class="tmpl-btn" onclick="selectTemplate(this)">Board Summary</button>
           </div>
         </div>
         <button class="gen-btn" id="gen-btn" onclick="generateReport()">
-          <span aria-hidden="true">✦</span> Generate Report
+          <span aria-hidden="true">✦</span> Generate Brief
         </button>
       </div>
     </div>
@@ -354,22 +355,22 @@ AI Planning Rollout: 6 of 8 BUs onboarded. Final 2 sessions June 28. On track to
     <div class="tab-panel" id="tab-report" role="tabpanel">
       <div class="panel-header">
         <p class="panel-eyebrow">✦ AI-Generated</p>
-        <h1 class="panel-title">Generated Report</h1>
-        <p class="panel-sub">Synthesized from Jira, meeting notes, and RAID log. Ready to copy or distribute.</p>
+        <h1 class="panel-title">Generated Decision Brief</h1>
+        <p class="panel-sub">Synthesized from Jira, meeting notes, and RAID signals. Ready for leadership review, tradeoff discussion, or distribution.</p>
       </div>
 
       <div class="load-bar" id="load-bar"><div class="lb-fill"></div></div>
 
       <div id="report-empty" class="report-empty">
         <div class="re-icon">✦</div>
-        <p style="font-weight:700;color:var(--ink);margin-bottom:6px">No report generated yet</p>
-        <p style="font-size:.85rem">Go to <strong>Inputs</strong>, select a template, and click <strong>Generate Report</strong>.</p>
+        <p style="font-weight:700;color:var(--ink);margin-bottom:6px">No decision brief generated yet</p>
+        <p style="font-size:.85rem">Go to <strong>Inputs</strong>, select a template, and click <strong>Generate Brief</strong>.</p>
       </div>
 
       <div class="report-out" id="report-out">
         <div class="report-actions">
-          <button class="ra-btn ra-primary">↓ Copy Report</button>
-          <button class="ra-btn">⇄ Save to Library</button>
+          <button class="ra-btn ra-primary">↓ Copy Brief</button>
+          <button class="ra-btn">⇄ Save Brief</button>
           <button class="ra-btn" onclick="switchTab('inputs')">← Edit Inputs</button>
         </div>
         <div class="ai-card">
@@ -421,20 +422,20 @@ AI Planning Rollout: 6 of 8 BUs onboarded. Final 2 sessions June 28. On track to
     <div class="tab-panel" id="tab-library" role="tabpanel">
       <div class="panel-header">
         <p class="panel-eyebrow">Archive</p>
-        <h1 class="panel-title">Report Library</h1>
-        <p class="panel-sub">Past weekly updates and committee briefs. Click any report to view.</p>
+        <h1 class="panel-title">Decision Brief Library</h1>
+        <p class="panel-sub">Past weekly updates, committee briefs, and leadership decision records. Click any brief to view.</p>
       </div>
       <div class="lib-grid">
         <div class="lib-card">
           <p class="lc-week">Week of June 22–28, 2026</p>
-          <p class="lc-title">Weekly Portfolio Update</p>
+          <p class="lc-title">Weekly Decision Brief</p>
           <div class="lc-pills"><span class="lc-pill lcp-r">2 At Risk</span><span class="lc-pill lcp-a">1 Escalation</span><span class="lc-pill lcp-g">1 Complete</span></div>
           <p class="lc-preview">Portfolio health 74%. Wave 2 ownership gap escalated. Data governance owner outstanding 6 weeks.</p>
           <div class="lc-footer"><span class="lc-tmpl">Weekly Update</span><span class="lc-view">View →</span></div>
         </div>
         <div class="lib-card">
           <p class="lc-week">Week of June 15–21, 2026</p>
-          <p class="lc-title">Weekly Portfolio Update</p>
+          <p class="lc-title">Weekly Decision Brief</p>
           <div class="lc-pills"><span class="lc-pill lcp-r">2 At Risk</span><span class="lc-pill lcp-a">1 Watch</span></div>
           <p class="lc-preview">Portfolio health 78%. FedRAMP audit partner shortlist reviewed. AI Planning: 4 of 8 BUs onboarded. TPM RACI submitted.</p>
           <div class="lc-footer"><span class="lc-tmpl">Weekly Update</span><span class="lc-view">View →</span></div>
@@ -448,7 +449,7 @@ AI Planning Rollout: 6 of 8 BUs onboarded. Final 2 sessions June 28. On track to
         </div>
         <div class="lib-card">
           <p class="lc-week">Week of June 8–14, 2026</p>
-          <p class="lc-title">Weekly Portfolio Update</p>
+          <p class="lc-title">Weekly Decision Brief</p>
           <div class="lc-pills"><span class="lc-pill lcp-g">3 On Track</span><span class="lc-pill lcp-a">1 Watch</span></div>
           <p class="lc-preview">Portfolio health 82%. FedRAMP controls at 58%. AI Planning Wave 1 BU onboarding kicked off. Release Governance Q1 close-out complete.</p>
           <div class="lc-footer"><span class="lc-tmpl">Weekly Update</span><span class="lc-view">View →</span></div>
@@ -467,7 +468,7 @@ AI Planning Rollout: 6 of 8 BUs onboarded. Final 2 sessions June 28. On track to
 
   <footer>
     <div class="fi">
-      <p>AI Executive Reporting Generator · Alison Whittaker · Working Prototype</p>
+      <p>AI Executive Decision Brief Generator · Alison Whittaker · Working Prototype</p>
       <a href="index.html">← Back to portfolio</a>
     </div>
   </footer>

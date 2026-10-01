@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dependency & Release Governance Tracker | Alison Whittaker</title>
+  <title>Predictive Dependency &amp; Release Governance Tracker | Alison Whittaker</title>
   <link rel="icon" type="image/png" href="alison-whittaker-profile.png">
   <style>
     :root {
@@ -20,7 +20,7 @@
       --red-soft: #fdecea;
       --amber: #9a6e00;
       --amber-soft: #fef6e4;
-      --shadow: 0 18px 50px rgba(76, 49, 43, .09);
+      --shadow: 0 1px 2px rgba(76, 49, 43, .06);
     }
 
     * { box-sizing: border-box; }
@@ -43,11 +43,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      min-height: 68px;
+      min-height: 60px;
       padding: 12px max(20px, calc((100vw - 1180px) / 2));
       border-bottom: 1px solid var(--line);
       background: color-mix(in srgb, var(--paper) 92%, transparent);
-      backdrop-filter: blur(18px);
+      backdrop-filter: none;
     }
 
     .back-link {
@@ -71,7 +71,7 @@
 
     .tracker {
       width: min(calc(100% - 36px), 1180px);
-      margin: 24px auto 42px;
+      margin: 18px auto 42px;
     }
 
     .hero {
@@ -84,14 +84,14 @@
 
     .panel {
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 10px;
       background: var(--surface);
       box-shadow: var(--shadow);
     }
 
     .hero-main {
-      padding: 28px;
-      background: linear-gradient(150deg, var(--lime) 0%, var(--surface) 58%);
+      padding: 22px;
+      background: #eef6f1;
     }
 
     .eyebrow {
@@ -107,9 +107,9 @@
       max-width: 720px;
       margin: 0;
       color: var(--cocoa);
-      font-size: clamp(1.8rem, 3.6vw, 3.2rem);
-      letter-spacing: -.04em;
-      line-height: 1.02;
+      font-size: clamp(1.42rem, 2vw, 2rem);
+      letter-spacing: -.02em;
+      line-height: 1.12;
     }
 
     .hero-main p {
@@ -159,7 +159,7 @@
       margin-bottom: 16px;
       padding: 12px;
       border: 1px solid var(--line);
-      border-radius: 12px;
+      border-radius: 10px;
       background: var(--surface);
     }
 
@@ -173,7 +173,7 @@
     select {
       min-height: 36px;
       border: 1px solid var(--line);
-      border-radius: 999px;
+      border-radius: 7px;
       background: var(--paper);
       color: var(--ink);
       cursor: pointer;
@@ -202,7 +202,7 @@
     .section-card {
       overflow: hidden;
       border: 1px solid var(--line);
-      border-radius: 14px;
+      border-radius: 10px;
       background: var(--surface);
       box-shadow: var(--shadow);
     }
@@ -380,12 +380,23 @@
     <div class="header-note">Prototype data only · Updated August 26, 2026</div>
   </header>
 
+  <nav class="suite-bar">
+    <span class="sb-label">Portfolio Suite</span>
+    <div class="sb-links">
+      <a href="agentic-governance-control-tower.html" class="sb-link">Governance Tower</a>
+      <a href="pmo-intake-scorer.html" class="sb-link">Demand Triage</a>
+      <a href="dependency-risk-tracker.html" class="sb-link active">Dependency Risk</a>
+      <a href="exec-report-generator.html" class="sb-link">Decision Briefs</a>
+      <a href="change-readiness-tracker.html" class="sb-link">Adoption Signals</a>
+    </div>
+  </nav>
+
   <main class="tracker">
     <section class="hero">
       <div class="panel hero-main">
-        <p class="eyebrow">Cross-team governance prototype</p>
-        <h1>Dependency &amp; Release Governance Tracker</h1>
-        <p>Sample workspace for mapping technical dependencies across engineering teams, release gates, risk ownership, escalation status, and launch readiness decisions.</p>
+        <p class="eyebrow">Predictive delivery governance prototype</p>
+        <h1>Dependency &amp; Release Governance Intelligence</h1>
+        <p>Sample workspace for spotting dependency drift, release-gate exposure, owner gaps, escalation status, and launch-readiness decisions before they become blockers.</p>
       </div>
 
       <aside class="panel summary-grid" aria-label="Dependency summary">
