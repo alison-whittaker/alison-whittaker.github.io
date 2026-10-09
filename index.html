@@ -1,1 +1,478 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Alison Whittaker's synthetic PMO decision intelligence prototype: strategy, forecasts, human approval, mock tool actions and AI governance."><title>Decision Intelligence | Alison Whittaker</title><link rel="stylesheet" href="style.css"><script defer src="data.js"></script><script defer src="app.js"></script></head><body><a class="skip" href="#main">Skip to workspace</a><aside class="sidebar"><a class="brand" href="../index.html"><span class="mark">di</span><span>Decision<br>Intelligence</span></a><p class="caption">PMO OPERATING WORKSPACE</p><nav aria-label="Workspace views" id="navigation"></nav><div class="side-bottom"><p><b>Meridian Works</b><br>Fictional portfolio · Seed 42</p><p class="caption">DESIGNED BY ALISON WHITTAKER</p><a href="requirements.md">Read requirements ↗</a><a href="README.md">Demo guide ↗</a></div></aside><div class="workspace"><header><span class="badge">SYNTHETIC DEMO</span><span id="refresh-label"></span><button id="refresh">Refresh feed</button><button id="theme" aria-label="Toggle light or dark theme">Dark mode</button></header><main id="main" tabindex="-1"><div class="heading"><div><p class="caption" id="eyebrow"></p><h1 id="title"></h1><p id="subtitle"></p></div><button class="primary" id="tour">Start 5-minute walkthrough</button></div><div id="notice" role="status" aria-live="polite"></div><section class="summary" aria-label="AI change summary"><span class="spark">✦</span><div><b>What changed</b><p id="summary"></p><small>Recorded analysis · confidence 89% · demo-model-v1 / summary-v1 · sources: seeded history, RAID, dependencies</small></div></section><div class="filter"><label for="program">Portfolio scope</label><select id="program"><option value="all">All 12 programs</option></select><span>One data model. Every view stays in sync.</span></div><div id="content"></div></main><footer>Prototype data notice: every portfolio, program, person, budget and metric is synthetic. No real company, employer or client data is used. All integrations are mocked. <button id="reset">Reset demo</button></footer></div><dialog id="detail"><div id="detail-content"></div><button id="close">Close</button></dialog></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Alison Whittaker is an enterprise AI transformation and portfolio operations leader building forward-looking systems for agentic AI governance, decision intelligence, portfolio execution, and measurable adoption.">
+  <meta name="keywords" content="agentic AI governance, AI portfolio operating system, decision intelligence, AI strategy, AI adoption, AI enablement, AI governance, AI TRiSM, generative AI, autonomous agents, human-in-the-loop controls, enterprise transformation, technical program management, senior program manager, principal program manager, PMO leadership, portfolio governance, product operations, portfolio operations, operating model design, Dragonboat, Jira, GitHub, Confluence, Smartsheet, Asana, BI dashboards, Agile, Scrum, SAFe, Kanban, OKRs, RAID, dependency management, risk management, decision frameworks, cloud transformation, SaaS platforms, change management, release governance, FedRAMP readiness">
+  <meta property="og:title" content="Alison Whittaker | Agentic AI Governance, Decision Intelligence & Enterprise Transformation">
+  <meta property="og:description" content="Enterprise AI transformation leader building governed, measurable operating systems for agentic AI, portfolio execution, and adoption at scale.">
+  <meta property="og:image" content="alison-whittaker-profile.png">
+  <title>Alison Whittaker | Agentic AI Governance, Decision Intelligence & Enterprise Transformation</title>
+  <link rel="icon" type="image/png" href="alison-whittaker-profile.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Alison Whittaker, home">
+      <img class="wordmark-photo" src="alison-whittaker-profile.png" alt="Alison Whittaker">
+      <span>Alison Whittaker</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="#experience">Experience</a>
+      <a href="#prototypes">Prototypes</a>
+      <a href="#impact">Impact</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">Agentic AI governance · Decision intelligence · Portfolio operating systems · Enterprise transformation</p>
+        <h1>I build the operating layer that turns AI ambition into governed execution.</h1>
+        <p class="hero-intro">Enterprise AI transformation leader with 15+ years connecting strategy, product operations, governance, adoption, and executive decision-making across Intuit, Oracle, Intel, Visa, and Wells Fargo.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#experience">Explore my work</a>
+          <a class="button button-secondary" href="Alison-Whittaker-Resume-2026.pdf" download>Download résumé</a>
+        </div>
+      </div>
+
+      <aside class="proof-grid" aria-label="Career highlights">
+        <div class="proof-card proof-card-featured">
+          <strong>40+</strong>
+          <span>global engineering organizations aligned at Oracle</span>
+        </div>
+        <div class="proof-card">
+          <strong>Fortune 100</strong>
+          <span>transformation experience across technology and financial services</span>
+        </div>
+        <div class="proof-card">
+          <strong>500+</strong>
+          <span>users supported through AI-enabled planning adoption at Intuit</span>
+        </div>
+        <div class="proof-card">
+          <strong>1000+</strong>
+          <span>operations roadmap initiatives kept current and sequenced</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="pillars" aria-label="Leadership focus">
+      <div class="wrap pillars-grid">
+        <article>
+          <span class="pillar-number">01</span>
+          <h2>Govern AI as it scales</h2>
+          <p>Define ownership, access, human oversight, risk thresholds, and audit-ready operating controls.</p>
+        </article>
+        <article>
+          <span class="pillar-number">02</span>
+          <h2>Close the decision loop</h2>
+          <p>Turn portfolio signals into clear tradeoffs, executive choices, and accountable follow-through.</p>
+        </article>
+        <article>
+          <span class="pillar-number">03</span>
+          <h2>Scale adoption responsibly</h2>
+          <p>Help teams adopt AI-native workflows with measurable value, confidence, and durable behavior change.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="authority-section" aria-label="Professional credibility">
+      <div class="wrap">
+        <p class="authority-label">Trusted across complex, global organizations</p>
+        <div class="brand-rail" aria-label="Selected organizations">
+          <span>Intuit</span>
+          <span>Oracle</span>
+          <span>Intel</span>
+          <span>Visa</span>
+          <span>Wells Fargo</span>
+        </div>
+        <div class="authority-stats">
+          <div>
+            <strong>13</strong>
+            <span>peer recommendations</span>
+          </div>
+          <div>
+            <strong>4</strong>
+            <span>honors &amp; awards</span>
+          </div>
+          <div>
+            <strong>1.6K+</strong>
+            <span>LinkedIn followers</span>
+          </div>
+          <div>
+            <strong>500+</strong>
+            <span>professional connections</span>
+          </div>
+          <div>
+            <strong>4+</strong>
+            <span>enterprise sectors</span>
+          </div>
+        </div>
+        <p class="source-note">Professional network figures reflect Alison's June 2026 LinkedIn profile.</p>
+      </div>
+    </section>
+
+    <section class="section wrap" id="experience">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Selected experience</p>
+          <h2>Transformation at enterprise scale.</h2>
+        </div>
+        <p>Across AI adoption, cloud platforms, product operations, and digital transformation, the through line is the same: build clarity, alignment, and durable execution.</p>
+      </div>
+
+      <div class="experience-list">
+        <article class="experience-card">
+          <div class="experience-meta">
+            <span class="company">Intuit (Contract)</span>
+            <span>2026 — Present</span>
+          </div>
+          <div class="experience-main">
+            <p class="role">Enterprise Program Manager · AI Enablement & Adoption</p>
+            <h3>Scaling AI-enabled portfolio planning into a new way of working.</h3>
+            <p>Leading enterprise adoption of an AI-enabled planning platform across Product, Engineering, TPM, and Business Operations.</p>
+            <ul>
+              <li>Driving change management, stakeholder engagement, and training across four teams and 500+ users.</li>
+              <li>Strengthening portfolio governance through scalable reporting, feedback, and issue-resolution processes.</li>
+              <li>Operationalizing an annual Operations roadmap with 1000+ initiatives kept current, actionable, and appropriately sequenced.</li>
+            </ul>
+          </div>
+          <div class="experience-tags">
+            <span>AI adoption</span><span>Portfolio planning</span><span>Change leadership</span>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <div class="experience-meta">
+            <span class="company">Oracle</span>
+            <span>2021 — 2026</span>
+          </div>
+          <div class="experience-main">
+            <p class="role">Senior Principal Program Manager</p>
+            <h3>Creating one execution system across 40+ engineering organizations.</h3>
+            <p>Led enterprise program governance, release readiness, and cloud-native and microservices modernization initiatives supporting Oracle Fusion Applications across 40+ global engineering organizations.</p>
+            <ul>
+              <li>Established governance frameworks, executive reporting structures, and operating cadences that cut decision/reporting cycle time by 50%.</li>
+              <li>Accelerated standardized delivery processes by driving enterprise planning tool adoption, reducing inception-to-first-launch timelines 33-50%.</li>
+              <li>Supported regulated cloud delivery, cloud-native and microservices transformation, FedRAMP readiness, regional rollout governance, and operational modernization across complex SaaS ecosystems.</li>
+            </ul>
+          </div>
+          <div class="experience-tags">
+            <span>Cloud transformation</span><span>Release governance</span><span>FedRAMP</span>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <div class="experience-meta">
+            <span class="company">Spatial</span>
+            <span>2020</span>
+          </div>
+          <div class="experience-main">
+            <p class="role">Senior NPI Program Manager</p>
+            <h3>Building a PMO for a fast-moving organization from the ground up.</h3>
+            <p>Created the governance, tooling, reporting, and operating cadences needed to support rapid organizational growth.</p>
+            <ul>
+              <li>Led programs across Product, Engineering, UX, Marketing, and Executive Leadership.</li>
+              <li>Connected roadmap planning and prioritization to budget alignment.</li>
+              <li>Standardized workflows to improve operational efficiency and execution predictability.</li>
+            </ul>
+          </div>
+          <div class="experience-tags">
+            <span>PMO design</span><span>NPI operations</span><span>Executive planning</span>
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <div class="experience-meta">
+            <span class="company">Intel</span>
+            <span>2016 — 2019</span>
+          </div>
+          <div class="experience-main">
+            <p class="role">Senior Marketing Program Manager</p>
+            <h3>Modernizing global digital delivery across product, engineering, and marketing.</h3>
+            <p>Led enterprise digital programs and introduced scalable delivery frameworks for high-visibility global initiatives.</p>
+            <ul>
+              <li>Lifted engagement 40% by simplifying a low-performing campaign landing strategy later adopted across global markets.</li>
+              <li>Delivered Intel's first global product catalog platform.</li>
+              <li>Directed strategy and execution for Intel's 2018 Winter Olympics digital activation.</li>
+            </ul>
+          </div>
+          <div class="experience-tags">
+            <span>Digital transformation</span><span>Platform delivery</span><span>Global programs</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="earlier-work">Earlier transformation and program leadership includes Wells Fargo, Visa, Razorfish, MRM, McCann Worldgroup, Publicis, and Scient.</p>
+    </section>
+
+    <section class="section prototype-section" id="prototypes">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Featured interactive prototype</p>
+            <h2>Decision Intelligence for PMO Prototypes</h2>
+          </div>
+          <p>From reporting what happened to deciding what to do next: strategy, execution and cost connected through a governed decision loop.</p>
+        </div>
+        <div class="prototype-grid">
+          <article class="prototype-card prototype-card-main">
+            <div class="prototype-card-top">
+              <div class="prototype-tags-row">
+                <span class="proto-tag">Decision intelligence</span>
+                <span class="proto-tag">Predictive analytics</span>
+                <span class="proto-tag">Human approval</span>
+                <span class="proto-tag">AI governance</span>
+              </div>
+              <div class="proto-ai-badge"><span class="proto-pulse"></span>Interactive Prototype</div>
+            </div>
+            <h3>See the signals. Approve the next move. Measure the result.</h3>
+            <p>A working PMO prototype that connects strategy, execution and cost in one view, recommends the next move, and turns approved decisions into measurable results through mock actions in team tools.</p>
+            <div class="prototype-features">
+              <div class="pf-item"><span class="pf-icon">◎</span><div><strong>One portfolio, three perspectives</strong><span>Tactical, stakeholder and leadership views share a seeded portfolio of 12 programs and 40 projects.</span></div></div>
+              <div class="pf-item"><span class="pf-icon">↗</span><div><strong>Predictive signals and forecasts</strong><span>Explore delivery risk, scope growth, team capacity and cross-team dependencies with forecast ranges.</span></div></div>
+              <div class="pf-item"><span class="pf-icon">✦</span><div><strong>Grounded conversational analytics</strong><span>Ask built-in portfolio questions and inspect recorded answers, cited evidence and confidence.</span></div></div>
+              <div class="pf-item"><span class="pf-icon">→</span><div><strong>Human decisions with follow-through</strong><span>Compare alternatives, approve or modify a recommendation, inspect staged Jira, Smartsheet, Slack and calendar payloads, and check the outcome.</span></div></div>
+              <div class="pf-item"><span class="pf-icon">◇</span><div><strong>Visible AI governance</strong><span>Inspect evaluation fixtures, guardrails, decision history, request traces and modeled token costs.</span></div></div>
+            </div>
+            <p class="source-note"><strong>Prototype data notice:</strong> All portfolios, programs, people, budgets and metrics are synthetic. No real company, employer or client data is used. AI responses are recorded and integrations are mocked.</p>
+            <div class="prototype-actions">
+              <a class="button button-primary prototype-cta" href="decision-intelligence.html">Explore the decision intelligence prototype →</a>
+              <a class="button button-secondary" href="decision-intelligence-requirements.md">Read the requirements</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section impact-section" id="impact">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Where I create leverage</p>
+            <h2>The systems behind strong execution.</h2>
+          </div>
+          <p>I operate where strategy, technology, people, and decisions have to become one coherent system.</p>
+        </div>
+
+        <div class="impact-grid">
+          <article class="impact-card impact-card-large">
+            <span class="impact-icon">↗</span>
+            <h3>Enterprise transformation</h3>
+            <p>Turn broad strategic direction into sequenced portfolios, operating models, and measurable delivery across 1000+ initiatives.</p>
+            <ul><li>Portfolio prioritization</li><li>Cloud modernization</li><li>Cross-org delivery</li></ul>
+          </article>
+          <article class="impact-card">
+            <span class="impact-icon">◎</span>
+            <h3>AI adoption systems</h3>
+            <p>Move AI from tool rollout to governed, measurable behavior change.</p>
+          </article>
+          <article class="impact-card">
+            <span class="impact-icon">◇</span>
+            <h3>Portfolio governance</h3>
+            <p>Design lightweight decision systems for risk, dependencies, tradeoffs, and accountability.</p>
+          </article>
+          <article class="impact-card">
+            <span class="impact-icon">≋</span>
+            <h3>Executive alignment</h3>
+            <p>Give leaders a shared view of priorities, progress, and the decisions that matter now.</p>
+          </article>
+          <article class="impact-card impact-card-accent">
+            <p class="quote">“The work is not adding process. It is creating enough clarity that the organization can move.”</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section fedramp-section">
+      <div class="wrap fedramp-card">
+        <div>
+          <p class="eyebrow">Case study callout</p>
+          <h2>FedRAMP and compliance governance across complex cloud delivery.</h2>
+        </div>
+        <div class="fedramp-copy">
+          <p>At Oracle, I supported regulated cloud delivery and FedRAMP readiness by turning security, engineering, SaaS operations, audit, and executive requirements into an accountable governance rhythm.</p>
+          <div class="fedramp-points">
+            <span>Control evidence readiness</span>
+            <span>Release gate governance</span>
+            <span>Cross-team ownership clarity</span>
+            <span>Executive risk visibility</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section recognition-section">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Recognition &amp; reputation</p>
+            <h2>What leaders say.</h2>
+          </div>
+          <p>Credibility built through calm leadership, structured execution, and measurable delivery in high-pressure environments.</p>
+        </div>
+
+        <div class="recognition-layout">
+          <blockquote class="testimonial-card">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Alison brings calm, reason, and structure to complex, high-pressure programs. She has exceptional collaboration and relationship-building skills, with the ability to align teams, resolve conflict, and move challenging projects forward. Her program management and implementation expertise are second to none.</p>
+            <footer>
+              <strong>Hakkı Yemeniciler</strong>
+              <span>Creative Director &amp; Digital Strategist</span>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial-card testimonial-card-secondary">
+            <span class="quote-mark" aria-hidden="true">“</span>
+            <p>Alison led implementation for a complex program with more than 200 tactical deliverables, bringing strong ideas, execution discipline, and a drive for excellence. She adds immense value to large-scale project and implementation efforts.</p>
+            <footer>
+              <strong>Teresa Allen</strong>
+              <span>Executive Coach &amp; Chief of Staff Leader</span>
+            </footer>
+          </blockquote>
+        </div>
+
+        <div class="awards-heading">
+          <p class="eyebrow">Selected recognition</p>
+          <h3>High-visibility work, recognized.</h3>
+        </div>
+
+        <div class="award-list">
+            <article>
+              <span class="award-year">2019</span>
+              <div>
+                <h3>Global Campaign Integration</h3>
+                <p>Integrated content into global campaign frameworks, increasing visibility and engagement.</p>
+              </div>
+            </article>
+            <article>
+              <span class="award-year">2018</span>
+              <div>
+                <h3>Olympic Winter Games Activation</h3>
+                <p>Led digital marketing strategy for Intel's first activation at the Olympic Winter Games.</p>
+              </div>
+            </article>
+            <article>
+              <span class="award-year">2018</span>
+              <div>
+                <h3>Campaign Innovation</h3>
+                <p>Recognized for campaign innovation that brought product stories to new audience segments.</p>
+              </div>
+            </article>
+            <article>
+              <span class="award-year">2018</span>
+              <div>
+                <h3>Customer Journey Strategy</h3>
+                <p>Directed the .com strategy that simplified the PC innovation customer journey.</p>
+              </div>
+            </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap approach-section" id="approach">
+      <div class="approach-intro">
+        <p class="eyebrow">Leadership approach</p>
+        <h2>Clarity is a growth strategy.</h2>
+      </div>
+      <div class="approach-copy">
+        <p>I am most useful when the goal is ambitious, the environment is complex, and progress depends on many teams moving together.</p>
+        <p>My role is to make the work legible: clarify the outcome, surface the real dependencies, create decision mechanisms, and build an operating rhythm people can trust. Then I lead the change required to make the new system stick.</p>
+        <div class="approach-steps">
+          <div><strong>01</strong><span>Frame the outcome</span></div>
+          <div><strong>02</strong><span>Expose the system</span></div>
+          <div><strong>03</strong><span>Align decisions</span></div>
+          <div><strong>04</strong><span>Enable adoption</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section search-section" id="search-focus">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Search focus</p>
+            <h2>What I’m hired to do.</h2>
+          </div>
+          <p>I’m brought into complex environments where strategy is clear but execution needs structure—aligning leaders, clarifying priorities, operationalizing change, and creating decision rhythms that move work forward.</p>
+        </div>
+        <div class="search-grid">
+          <article>
+            <h3>Relevant roles</h3>
+            <p>Senior Program Manager · Principal Program Manager · Senior Principal Program Manager · Technical Program Manager · AI Program Manager · Enterprise Transformation Lead · PMO Director · Portfolio Operations · Product Operations · Strategy &amp; Operations · Business Operations · Chief of Staff · NPI Operations</p>
+          </article>
+          <article>
+            <h3>Core expertise</h3>
+            <p>AI Strategy · AI Adoption · AI Enablement · Generative AI · AI-Enabled Workflows · Dragonboat · Jira · GitHub · Confluence · Portfolio Planning · Roadmapping · OKRs · Operating Model Transformation · PMO Leadership · Executive Reporting · Agile · Scrum · SAFe · Kanban · Cloud Transformation · SaaS Platforms · Change Management · Release Governance · Risk Management · FedRAMP Readiness</p>
+          </article>
+          <article>
+            <h3>Where I create value</h3>
+            <p>I work at the intersection of Product, Engineering, Business Operations, and executive leadership—translating strategy into roadmaps, operating models, adoption plans, governance systems, and measurable execution.</p>
+          </article>
+          <article class="tools-card">
+            <h3>Tools &amp; methodologies</h3>
+            <dl class="tools-list">
+              <div>
+                <dt>Tools</dt>
+                <dd>Dragonboat, Jira, GitHub, Confluence, Smartsheet, Asana, BI dashboards</dd>
+              </div>
+              <div>
+                <dt>AI tools</dt>
+                <dd>ChatGPT, Claude, Gemini, Dragonboat Agentic AI</dd>
+              </div>
+              <div>
+                <dt>Program methods</dt>
+                <dd>Agile, Scrum, SAFe, Kanban, release management, change management</dd>
+              </div>
+              <div>
+                <dt>Planning &amp; governance</dt>
+                <dd>Portfolio planning, roadmapping, OKRs, executive reporting, governance frameworks</dd>
+              </div>
+              <div>
+                <dt>Execution &amp; risk</dt>
+                <dd>RAID, dependency management, risk management, decision frameworks, stakeholder alignment</dd>
+              </div>
+            </dl>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Let's talk</p>
+          <h2>Building what comes next?</h2>
+          <p>I’m interested in senior-level opportunities across AI Strategy &amp; Operations, Enterprise Transformation, Technical Program Management, PMO Leadership, Product Operations, Portfolio Operations, Strategy &amp; Operations, and Chief of Staff roles—particularly in AI, SaaS, cloud platforms, cybersecurity, fintech, healthcare technology, and enterprise software.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="contact-link" href="mailto:awhittaker2gs@gmail.com">
+            <span>Email</span>
+            <strong>awhittaker2gs@gmail.com ↗</strong>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/alisoncwhittaker/" target="_blank" rel="noreferrer">
+            <span>LinkedIn</span>
+            <strong>Connect with Alison ↗</strong>
+          </a>
+          <a class="contact-link" href="Alison-Whittaker-Resume-2026.pdf" download>
+            <span>Résumé</span>
+            <strong>Download PDF ↓</strong>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <p>Alison Whittaker · Santa Barbara, California</p>
+      <p>Senior Program Leader · AI Strategy & Enterprise Transformation</p>
+    </div>
+  </footer>
+</body>
+</html>
