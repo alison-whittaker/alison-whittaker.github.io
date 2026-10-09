@@ -35,7 +35,7 @@ Approval threshold and request budget are editable configuration. Requests creat
 
 ## Scope and remaining requirements
 
-This release delivers the runnable recorded-response decision loop and portfolio demonstration. The original requirements are preserved in `decision-intelligence-requirements.md`; they describe the broader intended system. The following remain future work:
+This release delivers the runnable recorded-response decision loop and portfolio demonstration. The following remain future work:
 
 - N2 optional live AI via a local, environment-key-backed server. No API key entry or provider call is shipped in this static release.
 - Production forecasting/classification and independent, larger AI evaluation sets. The five built-in grounding fixtures are a small demonstration.
