@@ -12,6 +12,19 @@
   <link rel="icon" type="image/png" href="alison-whittaker-profile.png">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
+  <style id="prototype-teaser-styles">
+    #prototypes .prototype-teaser { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 24px 40px; align-items: center; }
+    #prototypes .prototype-teaser-copy { min-width: 0; text-align: left; }
+    #prototypes .eyebrow { margin: 0 0 8px; }
+    #prototypes h2 { margin: 0; font-size: clamp(1.42rem, 2.2vw, 2.1rem); letter-spacing: -.025em; line-height: 1.15; }
+    #prototypes .prototype-teaser-description { max-width: 62ch; margin: 10px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+    #prototypes .prototype-teaser-note { margin: 12px 0 0; color: var(--muted); font-size: .72rem; line-height: 1.5; text-align: left; }
+    #prototypes .prototype-teaser-link { justify-self: end; white-space: nowrap; }
+    @media (max-width: 680px) {
+      #prototypes .prototype-teaser { grid-template-columns: 1fr; gap: 18px; }
+      #prototypes .prototype-teaser-link { justify-self: start; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -232,20 +245,15 @@
       </div>
     </section>
 
-    <section class="section prototype-section" id="prototypes">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><p class="eyebrow">Interactive prototype</p><h2>Execution Readiness</h2></div>
-          <p>Connect the plan, surface alignment gaps, and focus the priority review.</p>
+    <section class="section prototype-section" id="prototypes" aria-labelledby="prototype-title">
+      <div class="wrap prototype-teaser">
+        <div class="prototype-teaser-copy">
+          <p class="eyebrow">Interactive prototype</p>
+          <h2 id="prototype-title">Execution Readiness</h2>
+          <p class="prototype-teaser-description">Review portfolio health, dependencies, and P0/P1 priorities by business unit or goal.</p>
+          <p class="prototype-teaser-note">Independent demo · Fictional data · No live integrations</p>
         </div>
-        <div class="prototype-grid">
-          <article class="prototype-card prototype-card-main">
-            <h3>One readiness view, organized by business unit or goal.</h3>
-            <p>Explore roadmap commitments, quarterly plans, dependencies, launches, and plan changes. Review initiative health and urgency across P0/P1 workstreams, with scope and alignment visible throughout.</p>
-            <p class="source-note"><strong>Independent demo:</strong> All data and source records are fictional. No live integrations or AI requests are used. This demonstration is separate from my employer work.</p>
-            <div class="prototype-actions"><a class="button button-primary prototype-cta" href="decision-intelligence.html">Explore Execution Readiness →</a></div>
-          </article>
-        </div>
+        <a class="button button-primary prototype-teaser-link" href="decision-intelligence.html">Open dashboard →</a>
       </div>
     </section>
 
