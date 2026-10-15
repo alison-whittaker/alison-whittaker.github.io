@@ -12,6 +12,25 @@
   <link rel="icon" type="image/png" href="alison-whittaker-profile.png">
   <link rel="stylesheet" href="styles.css">
   <script defer src="script.js"></script>
+  <style id="prototype-clean-styles">
+    #prototypes .prototype-clean { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px 32px; align-items: center; text-align: left; }
+    #prototypes .prototype-clean-heading { min-width: 0; }
+    #prototypes .eyebrow { margin: 0 0 8px; }
+    #prototypes h2 { margin: 0; font-size: clamp(1.42rem, 2.2vw, 2.1rem); line-height: 1.15; letter-spacing: -.025em; }
+    #prototypes .prototype-clean-heading > p:not(.eyebrow) { max-width: 56ch; margin: 10px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+    #prototypes .prototype-clean-links { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; justify-content: flex-end; }
+    #prototypes .prototype-clean-links .button { white-space: nowrap; min-height: 42px; }
+    #prototypes .prototype-clean-note { grid-column: 1 / -1; margin: 0; color: var(--muted); font-size: .72rem; line-height: 1.5; text-align: left; }
+    @media (max-width: 1000px) {
+      #prototypes .prototype-clean { grid-template-columns: 1fr; gap: 16px; }
+      #prototypes .prototype-clean-links { justify-content: flex-start; }
+      #prototypes .prototype-clean-note { grid-column: 1; }
+    }
+    @media (max-width: 380px) {
+      #prototypes .prototype-clean-links { display: grid; grid-template-columns: 1fr; }
+      #prototypes .prototype-clean-links .button { justify-content: flex-start; }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -232,20 +251,18 @@
       </div>
     </section>
 
-    <section class="section prototype-section" id="prototypes">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><p class="eyebrow">Interactive prototype</p><h2>Execution Readiness</h2></div>
-          <p>Connect the plan, surface alignment gaps, and focus the priority review.</p>
+    <section class="section prototype-section" id="prototypes" aria-labelledby="prototype-title">
+      <div class="wrap prototype-clean">
+        <div class="prototype-clean-heading">
+          <p class="eyebrow">Interactive prototype</p>
+          <h2 id="prototype-title">Execution Readiness</h2>
+          <p>Product priorities and engineering delivery, connected in one dashboard.</p>
         </div>
-        <div class="prototype-grid">
-          <article class="prototype-card prototype-card-main">
-            <h3>Product readiness and engineering delivery, connected.</h3>
-            <p>Explore roadmap commitments, quarterly plans, dependencies, launches, and plan changes. Switch to the engineering view for linked epics, owning teams, technical dependencies, accepted outputs, and release-readiness gates. Shared filters keep the business unit, goal, and scope in context.</p>
-            <p class="source-note"><strong>Independent demo:</strong> All data and source records are fictional. No live integrations or AI requests are used. This demonstration is separate from my employer work.</p>
-            <div class="prototype-actions"><a class="button button-primary prototype-cta" href="decision-intelligence.html">Explore Product Readiness →</a><a class="button button-secondary" href="decision-intelligence.html?view=engineering">Explore Engineering Delivery →</a></div>
-          </article>
+        <div class="prototype-clean-links">
+          <a class="button button-primary" href="decision-intelligence.html">Product readiness →</a>
+          <a class="button button-secondary" href="decision-intelligence.html?view=engineering">Engineering delivery →</a>
         </div>
+        <p class="prototype-clean-note">Independent demo · Fictional data · No live integrations</p>
       </div>
     </section>
 
