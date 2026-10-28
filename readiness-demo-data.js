@@ -105,14 +105,14 @@ window.READINESS_DEMO = {
       "engineering": "Engineering lead H"
     }
   ],
-  "initiatives": [
+  "demos": [
     {
       "id": "DEMO-101",
       "goal": "G01",
       "workstream": "WS-01",
       "quarter": "Q1 2027",
       "name": "Baseline guided onboarding",
-      "owner": "Initiative owner A",
+      "owner": "Demo owner A",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -123,7 +123,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Carried forward",
       "due": "2027-03-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -132,7 +132,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q1 2027",
       "name": "Pilot guided onboarding",
-      "owner": "Initiative owner A",
+      "owner": "Demo owner A",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -143,7 +143,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-111",
       "status": "Open",
       "due": "2027-03-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -152,7 +152,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q1 2027",
       "name": "Review guided onboarding",
-      "owner": "Initiative owner A",
+      "owner": "Demo owner A",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -163,7 +163,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-112",
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -172,7 +172,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q2 2027",
       "name": "Welcome checklist",
-      "owner": "Initiative owner A",
+      "owner": "Demo owner A",
       "fields": {
         "Owner": true,
         "Outcome": false,
@@ -183,7 +183,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "In planning",
       "due": "2027-06-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -192,7 +192,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q2 2027",
       "name": "Activation experiment",
-      "owner": "Initiative owner A",
+      "owner": "Demo owner A",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -203,7 +203,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-211",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -212,7 +212,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q2 2027",
       "name": "Onboarding signals",
-      "owner": "Initiative owner A",
+      "owner": "Demo owner A",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -223,7 +223,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-212",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -232,7 +232,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q1 2027",
       "name": "Baseline self-service discovery",
-      "owner": "Initiative owner B",
+      "owner": "Demo owner B",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -243,7 +243,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-113",
       "status": "Complete",
       "due": "2027-03-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -252,7 +252,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q1 2027",
       "name": "Pilot self-service discovery",
-      "owner": "Initiative owner B",
+      "owner": "Demo owner B",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -263,7 +263,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -272,7 +272,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q1 2027",
       "name": "Review self-service discovery",
-      "owner": "Initiative owner B",
+      "owner": "Demo owner B",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -283,7 +283,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-115",
       "status": "Carried forward",
       "due": "2027-03-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -292,7 +292,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q2 2027",
       "name": "Discovery filters",
-      "owner": "Initiative owner B",
+      "owner": "Demo owner B",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -303,7 +303,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-213",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -312,7 +312,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q2 2027",
       "name": "Search relevance",
-      "owner": "Initiative owner B",
+      "owner": "Demo owner B",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -323,7 +323,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "In planning",
       "due": "2027-06-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -332,7 +332,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q2 2027",
       "name": "Browse analytics",
-      "owner": "Initiative owner B",
+      "owner": "Demo owner B",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -343,7 +343,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-215",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -352,7 +352,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q1 2027",
       "name": "Baseline resilient foundations",
-      "owner": "Initiative owner C",
+      "owner": "Demo owner C",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -363,7 +363,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-116",
       "status": "Open",
       "due": "2027-03-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -372,7 +372,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q1 2027",
       "name": "Pilot resilient foundations",
-      "owner": "Initiative owner C",
+      "owner": "Demo owner C",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -383,7 +383,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-117",
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -392,7 +392,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q1 2027",
       "name": "Review resilient foundations",
-      "owner": "Initiative owner C",
+      "owner": "Demo owner C",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -403,7 +403,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-118",
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -412,7 +412,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q2 2027",
       "name": "Recovery rehearsal",
-      "owner": "Initiative owner C",
+      "owner": "Demo owner C",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -423,7 +423,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-216",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -432,7 +432,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q2 2027",
       "name": "Capacity guardrails",
-      "owner": "Initiative owner C",
+      "owner": "Demo owner C",
       "fields": {
         "Owner": true,
         "Outcome": false,
@@ -443,7 +443,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-217",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -452,7 +452,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q2 2027",
       "name": "Service health alerts",
-      "owner": "Initiative owner C",
+      "owner": "Demo owner C",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -463,7 +463,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-218",
       "status": "In planning",
       "due": "2027-06-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -472,7 +472,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-04",
       "quarter": "Q1 2027",
       "name": "Baseline release confidence",
-      "owner": "Initiative owner D",
+      "owner": "Demo owner D",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -483,7 +483,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Complete",
       "due": "2027-03-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -492,7 +492,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-04",
       "quarter": "Q1 2027",
       "name": "Pilot release confidence",
-      "owner": "Initiative owner D",
+      "owner": "Demo owner D",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -503,7 +503,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-120",
       "status": "Carried forward",
       "due": "2027-03-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -512,7 +512,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-04",
       "quarter": "Q1 2027",
       "name": "Review release confidence",
-      "owner": "Initiative owner D",
+      "owner": "Demo owner D",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -523,7 +523,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-121",
       "status": "Open",
       "due": "2027-03-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -543,7 +543,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -563,7 +563,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-220",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -583,7 +583,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-221",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -592,7 +592,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q1 2027",
       "name": "Baseline support journey",
-      "owner": "Initiative owner E",
+      "owner": "Demo owner E",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -603,7 +603,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-122",
       "status": "Complete",
       "due": "2027-03-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -612,7 +612,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q1 2027",
       "name": "Pilot support journey",
-      "owner": "Initiative owner E",
+      "owner": "Demo owner E",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -623,7 +623,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-123",
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -632,7 +632,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q1 2027",
       "name": "Review support journey",
-      "owner": "Initiative owner E",
+      "owner": "Demo owner E",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -643,7 +643,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -652,7 +652,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q2 2027",
       "name": "Case routing",
-      "owner": "Initiative owner E",
+      "owner": "Demo owner E",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -663,7 +663,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-222",
       "status": "In planning",
       "due": "2027-06-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -672,7 +672,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q2 2027",
       "name": "Help center refresh",
-      "owner": "Initiative owner E",
+      "owner": "Demo owner E",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -683,7 +683,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-223",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -692,7 +692,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q2 2027",
       "name": "Feedback triage",
-      "owner": "Initiative owner E",
+      "owner": "Demo owner E",
       "fields": {
         "Owner": true,
         "Outcome": false,
@@ -703,7 +703,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -712,7 +712,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q1 2027",
       "name": "Baseline accessible experiences",
-      "owner": "Initiative owner F",
+      "owner": "Demo owner F",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -723,7 +723,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-125",
       "status": "Carried forward",
       "due": "2027-03-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -732,7 +732,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q1 2027",
       "name": "Pilot accessible experiences",
-      "owner": "Initiative owner F",
+      "owner": "Demo owner F",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -743,7 +743,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-126",
       "status": "Open",
       "due": "2027-03-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -752,7 +752,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q1 2027",
       "name": "Review accessible experiences",
-      "owner": "Initiative owner F",
+      "owner": "Demo owner F",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -763,7 +763,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-127",
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -772,7 +772,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q2 2027",
       "name": "Keyboard navigation",
-      "owner": "Initiative owner F",
+      "owner": "Demo owner F",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -783,7 +783,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-225",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -792,7 +792,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q2 2027",
       "name": "Readable forms",
-      "owner": "Initiative owner F",
+      "owner": "Demo owner F",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -803,7 +803,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-226",
       "status": "In planning",
       "due": "2027-06-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -812,7 +812,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q2 2027",
       "name": "Contrast improvements",
-      "owner": "Initiative owner F",
+      "owner": "Demo owner F",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -823,7 +823,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-227",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -832,7 +832,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q1 2027",
       "name": "Baseline planning clarity",
-      "owner": "Initiative owner G",
+      "owner": "Demo owner G",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -843,7 +843,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-128",
       "status": "Complete",
       "due": "2027-03-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -852,7 +852,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q1 2027",
       "name": "Pilot planning clarity",
-      "owner": "Initiative owner G",
+      "owner": "Demo owner G",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -863,7 +863,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-129",
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -872,7 +872,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q1 2027",
       "name": "Review planning clarity",
-      "owner": "Initiative owner G",
+      "owner": "Demo owner G",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -883,7 +883,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Carried forward",
       "due": "2027-03-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -892,7 +892,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q2 2027",
       "name": "Intake standards",
-      "owner": "Initiative owner G",
+      "owner": "Demo owner G",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -903,7 +903,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-228",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -912,7 +912,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q2 2027",
       "name": "Capacity review",
-      "owner": "Initiative owner G",
+      "owner": "Demo owner G",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -923,7 +923,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-229",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -932,7 +932,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q2 2027",
       "name": "Dependency register",
-      "owner": "Initiative owner G",
+      "owner": "Demo owner G",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -943,7 +943,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "In planning",
       "due": "2027-06-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -952,7 +952,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q1 2027",
       "name": "Baseline knowledge sharing",
-      "owner": "Initiative owner H",
+      "owner": "Demo owner H",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -963,7 +963,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-131",
       "status": "Open",
       "due": "2027-03-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -972,7 +972,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q1 2027",
       "name": "Pilot knowledge sharing",
-      "owner": "Initiative owner H",
+      "owner": "Demo owner H",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -983,7 +983,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-132",
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -992,7 +992,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q1 2027",
       "name": "Review knowledge sharing",
-      "owner": "Initiative owner H",
+      "owner": "Demo owner H",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -1003,7 +1003,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-133",
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -1012,7 +1012,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q2 2027",
       "name": "Knowledge index",
-      "owner": "Initiative owner H",
+      "owner": "Demo owner H",
       "fields": {
         "Owner": true,
         "Outcome": false,
@@ -1023,7 +1023,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-231",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -1032,7 +1032,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q2 2027",
       "name": "Playbook refresh",
-      "owner": "Initiative owner H",
+      "owner": "Demo owner H",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -1043,7 +1043,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-232",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     },
     {
@@ -1052,7 +1052,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q2 2027",
       "name": "Learning sessions",
-      "owner": "Initiative owner H",
+      "owner": "Demo owner H",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -1063,7 +1063,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-233",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Initiative register",
+      "source": "Demo register",
       "asOf": "2027-03-26"
     }
   ],
@@ -1081,8 +1081,8 @@ window.READINESS_DEMO = {
       "provides": "Priority ranks, leads and quarter spans"
     },
     {
-      "id": "initiatives",
-      "name": "Initiative register",
+      "id": "demos",
+      "name": "Demo register",
       "asOf": "2027-03-26",
       "provides": "Planning detail and lifecycle status"
     },
