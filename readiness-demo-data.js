@@ -107,7 +107,7 @@ window.READINESS_DEMO = {
   ],
   "initiatives": [
     {
-      "id": "DEMO-INIT-101",
+      "id": "DEMO-101",
       "goal": "G01",
       "workstream": "WS-01",
       "quarter": "Q1 2027",
@@ -127,7 +127,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-102",
+      "id": "DEMO-102",
       "goal": "G01",
       "workstream": "WS-01",
       "quarter": "Q1 2027",
@@ -147,7 +147,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-103",
+      "id": "DEMO-103",
       "goal": "G01",
       "workstream": "WS-01",
       "quarter": "Q1 2027",
@@ -167,7 +167,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-201",
+      "id": "DEMO-201",
       "goal": "G01",
       "workstream": "WS-01",
       "quarter": "Q2 2027",
@@ -187,7 +187,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-202",
+      "id": "DEMO-202",
       "goal": "G01",
       "workstream": "WS-01",
       "quarter": "Q2 2027",
@@ -207,7 +207,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-203",
+      "id": "DEMO-203",
       "goal": "G01",
       "workstream": "WS-01",
       "quarter": "Q2 2027",
@@ -227,7 +227,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-104",
+      "id": "DEMO-104",
       "goal": "G01",
       "workstream": "WS-02",
       "quarter": "Q1 2027",
@@ -247,7 +247,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-105",
+      "id": "DEMO-105",
       "goal": "G01",
       "workstream": "WS-02",
       "quarter": "Q1 2027",
@@ -267,7 +267,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-106",
+      "id": "DEMO-106",
       "goal": "G01",
       "workstream": "WS-02",
       "quarter": "Q1 2027",
@@ -287,7 +287,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-204",
+      "id": "DEMO-204",
       "goal": "G01",
       "workstream": "WS-02",
       "quarter": "Q2 2027",
@@ -307,7 +307,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-205",
+      "id": "DEMO-205",
       "goal": "G01",
       "workstream": "WS-02",
       "quarter": "Q2 2027",
@@ -327,7 +327,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-206",
+      "id": "DEMO-206",
       "goal": "G01",
       "workstream": "WS-02",
       "quarter": "Q2 2027",
@@ -347,7 +347,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-107",
+      "id": "DEMO-107",
       "goal": "G02",
       "workstream": "WS-03",
       "quarter": "Q1 2027",
@@ -367,7 +367,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-108",
+      "id": "DEMO-108",
       "goal": "G02",
       "workstream": "WS-03",
       "quarter": "Q1 2027",
@@ -387,7 +387,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-109",
+      "id": "DEMO-109",
       "goal": "G02",
       "workstream": "WS-03",
       "quarter": "Q1 2027",
@@ -407,7 +407,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-207",
+      "id": "DEMO-207",
       "goal": "G02",
       "workstream": "WS-03",
       "quarter": "Q2 2027",
@@ -427,7 +427,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-208",
+      "id": "DEMO-208",
       "goal": "G02",
       "workstream": "WS-03",
       "quarter": "Q2 2027",
@@ -447,7 +447,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-209",
+      "id": "DEMO-209",
       "goal": "G02",
       "workstream": "WS-03",
       "quarter": "Q2 2027",
@@ -467,7 +467,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-110",
+      "id": "DEMO-110",
       "goal": "G02",
       "workstream": "WS-04",
       "quarter": "Q1 2027",
@@ -487,7 +487,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-111",
+      "id": "DEMO-111",
       "goal": "G02",
       "workstream": "WS-04",
       "quarter": "Q1 2027",
@@ -507,7 +507,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-112",
+      "id": "DEMO-112",
       "goal": "G02",
       "workstream": "WS-04",
       "quarter": "Q1 2027",
@@ -527,7 +527,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-210",
+      "id": "DEMO-210",
       "goal": "G02",
       "workstream": "WS-04",
       "quarter": "Q2 2027",
@@ -547,7 +547,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-211",
+      "id": "DEMO-211",
       "goal": "G02",
       "workstream": "WS-04",
       "quarter": "Q2 2027",
@@ -567,7 +567,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-212",
+      "id": "DEMO-212",
       "goal": "G02",
       "workstream": "WS-04",
       "quarter": "Q2 2027",
@@ -587,7 +587,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-113",
+      "id": "DEMO-113",
       "goal": "G03",
       "workstream": "WS-05",
       "quarter": "Q1 2027",
@@ -607,7 +607,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-114",
+      "id": "DEMO-114",
       "goal": "G03",
       "workstream": "WS-05",
       "quarter": "Q1 2027",
@@ -627,7 +627,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-115",
+      "id": "DEMO-115",
       "goal": "G03",
       "workstream": "WS-05",
       "quarter": "Q1 2027",
@@ -647,7 +647,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-213",
+      "id": "DEMO-213",
       "goal": "G03",
       "workstream": "WS-05",
       "quarter": "Q2 2027",
@@ -667,7 +667,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-214",
+      "id": "DEMO-214",
       "goal": "G03",
       "workstream": "WS-05",
       "quarter": "Q2 2027",
@@ -687,7 +687,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-215",
+      "id": "DEMO-215",
       "goal": "G03",
       "workstream": "WS-05",
       "quarter": "Q2 2027",
@@ -707,7 +707,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-116",
+      "id": "DEMO-116",
       "goal": "G03",
       "workstream": "WS-06",
       "quarter": "Q1 2027",
@@ -727,7 +727,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-117",
+      "id": "DEMO-117",
       "goal": "G03",
       "workstream": "WS-06",
       "quarter": "Q1 2027",
@@ -747,7 +747,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-118",
+      "id": "DEMO-118",
       "goal": "G03",
       "workstream": "WS-06",
       "quarter": "Q1 2027",
@@ -767,7 +767,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-216",
+      "id": "DEMO-216",
       "goal": "G03",
       "workstream": "WS-06",
       "quarter": "Q2 2027",
@@ -787,7 +787,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-217",
+      "id": "DEMO-217",
       "goal": "G03",
       "workstream": "WS-06",
       "quarter": "Q2 2027",
@@ -807,7 +807,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-218",
+      "id": "DEMO-218",
       "goal": "G03",
       "workstream": "WS-06",
       "quarter": "Q2 2027",
@@ -827,7 +827,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-119",
+      "id": "DEMO-119",
       "goal": "G04",
       "workstream": "WS-07",
       "quarter": "Q1 2027",
@@ -847,7 +847,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-120",
+      "id": "DEMO-120",
       "goal": "G04",
       "workstream": "WS-07",
       "quarter": "Q1 2027",
@@ -867,7 +867,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-121",
+      "id": "DEMO-121",
       "goal": "G04",
       "workstream": "WS-07",
       "quarter": "Q1 2027",
@@ -887,7 +887,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-219",
+      "id": "DEMO-219",
       "goal": "G04",
       "workstream": "WS-07",
       "quarter": "Q2 2027",
@@ -907,7 +907,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-220",
+      "id": "DEMO-220",
       "goal": "G04",
       "workstream": "WS-07",
       "quarter": "Q2 2027",
@@ -927,7 +927,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-221",
+      "id": "DEMO-221",
       "goal": "G04",
       "workstream": "WS-07",
       "quarter": "Q2 2027",
@@ -947,7 +947,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-122",
+      "id": "DEMO-122",
       "goal": "G04",
       "workstream": "WS-08",
       "quarter": "Q1 2027",
@@ -967,7 +967,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-123",
+      "id": "DEMO-123",
       "goal": "G04",
       "workstream": "WS-08",
       "quarter": "Q1 2027",
@@ -987,7 +987,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-124",
+      "id": "DEMO-124",
       "goal": "G04",
       "workstream": "WS-08",
       "quarter": "Q1 2027",
@@ -1007,7 +1007,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-222",
+      "id": "DEMO-222",
       "goal": "G04",
       "workstream": "WS-08",
       "quarter": "Q2 2027",
@@ -1027,7 +1027,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-223",
+      "id": "DEMO-223",
       "goal": "G04",
       "workstream": "WS-08",
       "quarter": "Q2 2027",
@@ -1047,7 +1047,7 @@ window.READINESS_DEMO = {
       "asOf": "2027-03-26"
     },
     {
-      "id": "DEMO-INIT-224",
+      "id": "DEMO-224",
       "goal": "G04",
       "workstream": "WS-08",
       "quarter": "Q2 2027",
