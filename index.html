@@ -30,6 +30,10 @@
       #prototypes .prototype-clean-links { display: grid; grid-template-columns: 1fr; }
       #prototypes .prototype-clean-links .button { justify-content: flex-start; }
     }
+    #prototypes .prototype-preview { grid-column: 1 / -1; display: block; margin-top: 12px; border: 1px solid var(--muted); border-radius: 12px; overflow: hidden; }
+    #prototypes .prototype-preview img { display: block; width: 100%; height: auto; }
+    #prototypes .prototype-clean-try { grid-column: 1 / -1; margin: 4px 0 0; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+    #prototypes .prototype-preview:focus-visible { outline: 3px solid currentColor; outline-offset: 4px; }
   </style>
 </head>
 <body>
@@ -317,12 +321,17 @@
         <div class="prototype-clean-heading">
           <p class="eyebrow">Interactive prototype</p>
           <h2 id="prototype-title">Quarterly Planning Readiness</h2>
-          <p>One view of quarterly execution readiness: annual goals, multi-quarter workstreams, initiative detail, and visible planning gaps.</p>
+          <p>Can leaders see what’s ready, what’s blocked, and where decisions are needed before the quarter begins? Explore a portfolio view connecting annual goals, workstreams, initiatives, and planning gaps.</p>
+          <p>Illustrates my approach to portfolio governance, dependency visibility, and execution accountability.</p>
         </div>
         <div class="prototype-clean-links">
-          <a class="button button-primary" href="decision-intelligence.html">Explore the readiness mockup →</a>
+          <a class="button button-primary" href="decision-intelligence.html">Explore the prototype →</a>
         </div>
-        <p class="prototype-clean-note">MOCKUP · Fictional data only · Daily-refresh concept with an as-of date on every source · Replaces spreadsheets, slides, and disconnected source views</p>
+        <a class="prototype-preview" href="decision-intelligence.html" aria-label="Explore the Quarterly Planning Readiness prototype">
+          <img src="prototype-preview.png" alt="Quarterly Planning Readiness interface showing readiness scores by annual goal, planning detail, dependency decisions, and delivery traceability." width="1280" height="720" loading="lazy">
+        </a>
+        <p class="prototype-clean-try"><strong>Try this:</strong> Open a demo in “Demos &amp; readiness gaps” to inspect its planning checks and actions needed.</p>
+        <p class="prototype-clean-note">Interactive mockup · Fictional data · Illustrative daily-refresh concept</p>
       </div>
     </section>
 
