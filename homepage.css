@@ -201,3 +201,78 @@ body > footer { padding-block:18px; background:var(--paper); color:var(--muted);
  .hero-copy { grid-row:2; }
  .hero { gap:18px; }
 }
+
+/* Focused refinement of the four lower editorial sections. */
+.impact-section,.recognition-section,.approach-section,.search-section { padding-block:28px; }
+.impact-section .section-heading,.recognition-section .section-heading,.search-section .section-heading { margin-bottom:18px; gap:32px; align-items:center; }
+.impact-section .section-heading > p,.recognition-section .section-heading > p,.search-section .section-heading > p { padding-top:0; font-size:.82rem; line-height:1.55; }
+.impact-section .eyebrow,.recognition-section .eyebrow,.approach-section .eyebrow,.search-section .eyebrow { margin-bottom:8px; font-size:.6rem; }
+.impact-section h2,.recognition-section h2,.approach-section h2,.search-section h2 { font-size:clamp(1.45rem,2.2vw,1.8rem); line-height:1.2; }
+.impact-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.impact-card { min-height:0; padding:18px; border-radius:8px; }
+.impact-card-large { grid-column:span 2; grid-row:auto; }
+.impact-icon { width:24px; height:24px; font-size:.75rem; border:0; border-radius:0; display:block; line-height:24px; }
+.impact-card h3,.impact-card-large h3 { margin:8px 0 6px; font-size:.9rem; line-height:1.35; }
+.impact-card p { font-size:.8rem; line-height:1.55; }
+.impact-card-large ul { display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:10px; }
+.impact-card-large li { border:0; padding:0; font-size:.68rem; }
+.impact-card-accent { align-items:center; border-color:var(--line); }
+.impact-card .quote { font-size:.92rem; font-weight:500; line-height:1.5; }
+.recognition-layout { gap:12px; }
+.testimonial-card,.testimonial-card-secondary { padding:20px; border-radius:8px; background:var(--paper); }
+.quote-mark { font-size:1.5rem; }
+.testimonial-card > p { margin:8px 0 14px; font-size:.83rem; line-height:1.6; font-weight:400; }
+.testimonial-card footer { gap:2px; padding-top:10px; font-size:.76rem; }
+.testimonial-card footer span { font-size:.67rem; }
+.awards-heading { margin:20px 0 10px; gap:12px; }
+.awards-heading h3 { font-size:1rem; font-weight:600; }
+.award-list { border-radius:8px; }
+.award-list article { padding:13px 16px; grid-template-columns:40px minmax(0,1fr); gap:10px; min-height:0; }
+.award-list h3 { font-size:.79rem; margin-bottom:3px; line-height:1.4; }
+.award-list p { font-size:.7rem; line-height:1.5; }
+.award-year { padding-top:2px; font-size:.6rem; }
+.approach-section { grid-template-columns:.8fr 1.2fr; gap:36px; align-items:start; }
+.approach-copy > p { font-size:.84rem; line-height:1.6; margin-bottom:10px; }
+.approach-steps { grid-template-columns:repeat(4,minmax(0,1fr)); gap:0; margin-top:16px; border-top:1px solid var(--line); padding-top:14px; }
+.approach-steps div { min-height:0; border:0; border-right:1px solid var(--line); border-radius:0; padding:0 12px; gap:6px; }
+.approach-steps div:first-child { padding-left:0; }
+.approach-steps div:last-child { border-right:0; padding-right:0; }
+.approach-steps strong { font-size:.6rem; font-weight:600; }
+.approach-steps span { font-size:.72rem; line-height:1.4; font-weight:600; }
+.search-grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.search-grid article { padding:18px; border-radius:8px; }
+.search-grid article:nth-child(3) { grid-column:auto; }
+.search-grid h3 { margin-bottom:10px; font-size:.86rem; font-weight:650; }
+.search-grid p { font-size:.76rem; line-height:1.65; }
+.search-grid .tools-card { grid-column:1 / -1; }
+.tools-list { grid-template-columns:repeat(5,minmax(0,1fr)); gap:18px; }
+.tools-list dt { font-size:.57rem; margin-bottom:6px; letter-spacing:.07em; }
+.tools-list dd { font-size:.72rem; line-height:1.55; }
+@media(max-width:900px) {
+ .approach-section { grid-template-columns:1fr; gap:16px; }
+ .tools-list { grid-template-columns:repeat(3,minmax(0,1fr)); }
+ .search-grid { grid-template-columns:1fr 1fr; }
+ .search-grid article:nth-child(3) { grid-column:1 / -1; }
+}
+@media(max-width:680px) {
+ .impact-section,.recognition-section,.approach-section,.search-section { padding-block:24px; }
+ .impact-section .section-heading,.recognition-section .section-heading,.search-section .section-heading { gap:12px; margin-bottom:16px; }
+ .impact-grid { grid-template-columns:1fr 1fr; }
+ .impact-card { padding:16px; }
+ .impact-card-large,.impact-card-accent { grid-column:1 / -1; }
+ .recognition-layout,.search-grid { grid-template-columns:1fr; }
+ .testimonial-card,.testimonial-card-secondary { padding:18px; }
+ .awards-heading { flex-direction:row; align-items:center; }
+ .awards-heading h3 { font-size:.9rem; }
+ .award-list article { padding:12px 14px; }
+ .approach-steps { grid-template-columns:1fr 1fr; gap:12px 0; }
+ .approach-steps div:nth-child(3) { padding-left:0; }
+ .approach-steps div:nth-child(2) { border-right:0; }
+ .tools-list { grid-template-columns:1fr 1fr; gap:16px; }
+}
+@media(max-width:380px) {
+ .impact-grid { grid-template-columns:1fr; }
+ .impact-card-large,.impact-card-accent { grid-column:auto; }
+ .tools-list { grid-template-columns:1fr; }
+ .awards-heading { flex-direction:column; align-items:flex-start; gap:6px; }
+}
