@@ -180,3 +180,24 @@ body > footer { padding-block:18px; background:var(--paper); color:var(--muted);
  .footer-inner { gap:8px; }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { animation:none!important; transition:none!important; } }
+
+/* Larger portrait within the hero, balanced with compact career highlights. */
+.hero { align-items:center; }
+.hero-profile { display:grid; gap:18px; justify-items:center; min-width:0; }
+.hero-portrait { display:block; width:148px; height:148px; object-fit:cover; object-position:center 36%; border-radius:50%; border:1px solid var(--line); }
+.hero-profile .proof-grid { width:100%; }
+.hero-profile .proof-card { min-height:104px; padding:16px; gap:12px; }
+.hero-profile .proof-card strong { font-size:1.6rem; }
+@media(max-width:900px) and (min-width:681px) {
+ .hero-profile { width:100%; grid-template-columns:132px minmax(0,1fr); gap:24px; align-items:center; }
+ .hero-portrait { width:132px; height:132px; }
+ .hero-profile .proof-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:680px) {
+ .hero { position:relative; }
+ .hero-profile { display:contents; }
+ .hero-portrait { grid-row:1; width:112px; height:112px; }
+ .hero-profile .proof-grid { grid-row:3; }
+ .hero-copy { grid-row:2; }
+ .hero { gap:18px; }
+}
