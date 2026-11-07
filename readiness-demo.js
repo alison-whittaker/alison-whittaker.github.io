@@ -2,12 +2,12 @@
 (() => {
 'use strict';
 const D=window.READINESS_DEMO, $=id=>document.getElementById(id);
-const state={goal:'all',team:'all',quarter:'Q2 2027',gaps:false,search:'',workstream:null,metric:null};
+const state={goal:'all',team:'all',quarter:'Q2 2027',gaps:false,search:'',workstream:null,metric:null,leader:'all',view:'goal'};
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const goal=id=>D.goals.find(g=>g.id===id), work=id=>D.workstreams.find(w=>w.id===id);
-const eligibleGoals=()=>D.goals.filter(g=>(state.goal==='all'||g.id===state.goal)&&(state.team==='all'||g.team===state.team));
-const eligibleWork=(gid=null)=>D.workstreams.filter(w=>eligibleGoals().some(g=>g.id===w.goal)&&(!gid||w.goal===gid));
-const records=(q='Q2 2027',gid=null)=>D.demos.filter(i=>i.quarter===q&&eligibleGoals().some(g=>g.id===i.goal)&&(!gid||i.goal===gid));
+const eligibleGoals=()=>D.goals.filter(g=>(state.goal==='all'||g.id===state.goal)&&(state.team==='all'||g.team===state.team)&&(state.leader==='all'||D.workstreams.some(w=>w.goal===g.id&&w.product===state.leader)));
+const eligibleWork=(gid=null)=>D.workstreams.filter(w=>eligibleGoals().some(g=>g.id===w.goal)&&(!gid||w.goal===gid)&&(state.leader==='all'||w.product===state.leader));
+const records=(q='Q2 2027',gid=null)=>D.demos.filter(i=>i.quarter===q&&eligibleGoals().some(g=>g.id===i.goal)&&(!gid||i.goal===gid)&&(state.leader==='all'||work(i.workstream).product===state.leader));
 const complete=i=>Object.values(i.fields).every(Boolean), submitted=i=>i.dependency!=='Draft', decided=i=>['Accepted','Declined'].includes(i.dependency);
 const checks=i=>[...Object.values(i.fields),decided(i),Boolean(i.epic)];
 const readiness=(wid,q)=>{const a=D.demos.filter(i=>i.workstream===wid&&i.quarter===q);return {done:a.reduce((n,i)=>n+checks(i).filter(Boolean).length,0),total:a.length*6};};
@@ -17,7 +17,7 @@ const status=p=>p===null?'Not applicable':p>=80?'On track':p>=50?'Needs attentio
 const metrics=[
  {id:'priority',name:'Business prioritization',short:'Workstreams ranked',description:'Every current-quarter workstream has a business priority rank.',definition:'Ranked Q2 workstreams / all Q2 workstreams. Rank belongs to the multi-quarter workstream.',source:'Workstream register',date:'2027-03-26',gap:'Missing priority rank',test:i=>Boolean(work(i.workstream).rank)},
  {id:'planning',name:'Demo planning detail',short:'Planning detail complete',description:'Demos carry the detail needed to execute.',definition:'Q2 demos with owner, outcome, scope and milestone / all Q2 demos. All four fields are required.',source:'Demo register',date:'2027-03-26',gap:'Missing required planning fields',test:complete},
- {id:'submitted',name:'Dependencies submitted',short:'Dependencies submitted',description:'Dependency requests have reached the receiving team.',definition:'Non-draft dependency requests / all current-quarter requests. Each demo demo has one request.',source:'Dependency register',date:'2027-03-26',gap:'Dependency still in draft',test:submitted},
+ {id:'submitted',name:'Dependencies submitted',short:'Dependencies submitted',description:'Dependency requests have reached the receiving team.',definition:'Non-draft dependency requests / all current-quarter requests. Each demo has one request.',source:'Dependency register',date:'2027-03-26',gap:'Dependency still in draft',test:submitted},
  {id:'decided',name:'Dependencies decisioned',short:'Decisions recorded',description:'Receiving teams have recorded a dependency decision.',definition:'Accepted or declined requests / submitted requests. Declined is a decision, not a delivery commitment.',source:'Dependency register',date:'2027-03-26',gap:'Receiving-team decision not recorded',test:decided},
  {id:'epics',name:'Delivery epics linked',short:'Delivery traceability',description:'Demos trace to delivery epics in the execution tracker.',definition:'Q2 demos with a delivery epic link / all Q2 demos.',source:'Delivery tracker',date:'2027-03-25',gap:'Delivery epic link missing',test:i=>Boolean(i.epic)},
  {id:'closeout',name:'Previous-quarter close-out',short:'Q1 demos closed',description:'Previous-quarter demos are completed or explicitly reviewed.',definition:'Completed Q1 demos / all Q1 demos. Carried-forward and open work remains a visible gap.',source:'Demo register',date:'2027-03-26',gap:'Prior-quarter demo not closed',test:i=>i.status==='Complete'},
@@ -62,15 +62,32 @@ function renderDemos(){
 }
 let focusReturn=null;
 function showDemo(id){const i=D.demos.find(i=>i.id===id);if(!i)return;focusReturn=document.activeElement;const w=work(i.workstream);$('dialog-body').innerHTML=`<h2 id="dialog-title">${esc(i.name)}</h2><p class="muted">${i.id} · ${i.quarter}</p><dl class="detail-grid"><div><dt>Annual goal</dt><dd>${i.goal} · ${esc(goal(i.goal).name)}</dd></div><div><dt>Multi-quarter workstream</dt><dd>${esc(w.name)} · ${w.span}</dd></div><div><dt>Owner</dt><dd>${i.owner}</dd></div><div><dt>Lifecycle status</dt><dd>${i.status}</dd></div><div><dt>Quarter milestone</dt><dd>${i.fields.Milestone?i.due:'Missing — confirm date'}</dd></div><div><dt>Delivery epic</dt><dd>${i.epic||'Missing — link delivery epic'}</dd></div></dl><h3>Planning & execution checks</h3><ul class="check-list">${Object.entries(i.fields).map(([k,v])=>`<li><span>${k}</span><span class="badge ${v?'green':'amber'}">${v?'Present':'Missing'}</span></li>`).join('')}<li><span>Dependency</span><span class="badge ${decided(i)?'green':'amber'}">${i.dependency}</span></li><li><span>Delivery traceability</span><span class="badge ${i.epic?'green':'amber'}">${i.epic?'Linked':'Missing'}</span></li></ul><p class="dialog-gap"><strong>Action:</strong> ${missing(i).length?missing(i).map(esc).join('; '):'No readiness gaps recorded for this demo.'}</p><p class="detail-source">Fictional sources · Demo register: ${i.asOf} · Dependency register: 2027-03-26 · Delivery tracker: 2027-03-25. No live source links.</p>`;$('demo-dialog').showModal();}
+function renderExecutive(){
+ const groups=state.view==='leader'?[...new Set(eligibleWork().map(w=>w.product))].map(name=>({name,leader:name})):eligibleGoals().map(g=>({name:g.id+' · '+g.name,gid:g.id}));
+ const previous=state.leader;
+ $('executive-table').innerHTML=groups.length?`<table class="executive"><thead><tr><th scope="col">${state.view==='leader'?'Demo leader':'Annual goal'}</th><th scope="col">Gaps / decisions needed</th><th scope="col">Wins / ready to proceed</th></tr></thead><tbody>${groups.map(g=>{
+ if(g.leader)state.leader=g.leader;
+ const values=metrics.filter(m=>m.id!=='readiness').map(m=>({m,v:measure(m,g.gid||null)}));
+ const line=x=>`<button class="summary-signal ${tone(pct(x.v))}" data-measure="${x.m.id}" ${g.gid?'data-goal="'+g.gid+'"':''} ${g.leader?'data-leader="'+esc(g.leader)+'"':''}>${x.m.name}<strong>${pct(x.v)===null?'N/A':pct(x.v)+'%'}</strong><small>${x.v.done} / ${x.v.total}</small></button>`;
+ const gaps=values.filter(x=>pct(x.v)!==null&&pct(x.v)<80),wins=values.filter(x=>pct(x.v)>=80);
+ const total=measure(metrics.find(m=>m.id==='readiness'),g.gid||null);state.leader=previous;
+ return `<tr><td><strong>${esc(g.name)}</strong><div>${badge(pct(total))}</div><small>Execution checks: ${pct(total)}%</small><small>${values.filter(x=>pct(x.v)>=80).length} of 6 measures on track</small></td><td>${gaps.map(line).join('')||'<span class="muted">No gaps in this scope</span>'}</td><td>${wins.map(line).join('')||'<span class="muted">No measures at threshold yet</span>'}</td></tr>`;
+ }).join('')}</tbody></table>`:'<p class="empty">No records match these filters.</p>';
+ $('view-goal').setAttribute('aria-pressed',String(state.view==='goal'));$('view-leader').setAttribute('aria-pressed',String(state.view==='leader'));
+}
+$('leader-filter').innerHTML += [...new Set(D.workstreams.map(w=>w.product))].map(n=>`<option>${esc(n)}</option>`).join('');
+$('leader-filter').addEventListener('change',e=>{state.leader=e.target.value;state.workstream=null;state.metric=null;render();});
+$('view-goal').addEventListener('click',()=>{state.view='goal';render();});
+$('view-leader').addEventListener('click',()=>{state.view='leader';render();});
 function render(){
  document.querySelectorAll('[data-filter-goal]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filterGoal===state.goal)));
- renderMatrix();renderMeasures();renderWorkstreams();renderDemos();
+ renderMatrix();renderMeasures();renderWorkstreams();renderDemos();renderExecutive();
 }
 $('goal-filters').innerHTML=[{id:'all',name:'All goals'},...D.goals].map(g=>`<button type="button" data-filter-goal="${g.id}" aria-pressed="${g.id==='all'}" title="${esc(g.name)}">${g.id==='all'?'All goals':g.id+' · '+esc(g.name)}</button>`).join('');
 $('team').innerHTML+=[...new Set(D.goals.map(g=>g.team))].map(t=>`<option>${t}</option>`).join('');
 $('source-list').innerHTML=D.sources.map(s=>`<article class="source-card"><strong>${s.name}</strong><time datetime="${s.asOf}">As of ${s.asOf}</time><span class="muted">${s.provides}</span></article>`).join('');
 $('team').addEventListener('change',e=>{state.team=e.target.value;state.workstream=null;state.metric=null;render();});
-$('reset').addEventListener('click',()=>{Object.assign(state,{goal:'all',team:'all',quarter:'Q2 2027',gaps:false,search:'',workstream:null,metric:null});$('team').value='all';$('work-quarter').value='both';$('demo-quarter').value='Q2 2027';$('gap-filter').value='all';$('search').value='';render();});
+$('reset').addEventListener('click',()=>{Object.assign(state,{goal:'all',team:'all',quarter:'Q2 2027',gaps:false,search:'',workstream:null,metric:null});$('team').value='all';state.leader='all';$('leader-filter').value='all';$('work-quarter').value='both';$('demo-quarter').value='Q2 2027';$('gap-filter').value='all';$('search').value='';render();});
 $('work-quarter').addEventListener('change',renderWorkstreams);
 $('demo-quarter').addEventListener('change',e=>{state.quarter=e.target.value;state.metric=null;renderDemos();});
 $('gap-filter').addEventListener('change',e=>{state.gaps=e.target.value==='gaps';renderDemos();});
@@ -82,7 +99,7 @@ $('demo-dialog').addEventListener('click',e=>{if(e.target===$('demo-dialog')){co
 function scrollToEl(el){el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
  if(b.dataset.filterGoal){state.goal=b.dataset.filterGoal;state.team='all';$('team').value='all';state.workstream=null;state.metric=null;render();}
- if(b.dataset.measure){const id=b.dataset.measure;if(b.dataset.goal&&b.dataset.goal!=='all'){state.goal=b.dataset.goal;state.team='all';$('team').value='all';state.workstream=null;render();}const el=$('measure-'+id);el.open=true;scrollToEl(el);}
+ if(b.dataset.measure){if(b.dataset.leader){state.leader=b.dataset.leader;$('leader-filter').value=state.leader;render();}const id=b.dataset.measure;if(b.dataset.goal&&b.dataset.goal!=='all'){state.goal=b.dataset.goal;state.team='all';$('team').value='all';state.workstream=null;render();}const el=$('measure-'+id);el.open=true;scrollToEl(el);}
  if(b.dataset.work){state.workstream=b.dataset.work;state.metric=null;state.quarter=b.dataset.quarter||'Q2 2027';state.search='';state.gaps=false;$('search').value='';$('gap-filter').value='all';$('demo-quarter').value=state.quarter;renderDemos();scrollToEl($('demos'));}
  if(b.dataset.demo)showDemo(b.dataset.demo);
 });
