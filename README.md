@@ -2,6 +2,10 @@
 
 Personal portfolio and interactive program-management prototypes, published with GitHub Pages.
 
+Alison Whittaker is a senior program and technical program leader with 15+ years delivering enterprise platforms and transformation across Product, Engineering, Release, and Operations. Her foundation in customer experience, UX, marketing, and sales connects customer and business needs to technical execution. Experience includes alignment across 40+ global engineering organizations at Oracle, Fusion Applications security alignment, high-priority CVE risk management, microservices security, FedRAMP readiness, and AI-enabled planning adoption at Intuit.
+
+[Download the current PM résumé](https://alison-whittaker.github.io/Alison-Whittaker-Resume-2026-PM.pdf)
+
 ## Quarterly Planning Readiness Mockup
 
 **This is an independent mockup using entirely fictional data.** No actual company information, customer records, employee names, internal goals, workstreams, demos, screenshots, videos, credentials, or live source connections are included in this prototype.
