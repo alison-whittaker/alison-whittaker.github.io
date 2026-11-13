@@ -65,3 +65,7 @@ Use these files for Alison Whittaker's GitHub profile and GitHub Pages site.
 
 - GitHub profile avatar: GitHub profile settings > Change avatar > upload `github-avatar-white-bg.jpg`
 - GitHub Pages site: replace the site image asset with `alison-whittaker-profile.png`
+
+## Related process skill
+
+The scorecard now includes a process-question skill with ten fictional local guides, suggested questions, accountable roles, verification dates, and links to the exact source guidance. `process-assistant.js` performs static keyword retrieval; it does not call an AI model or company systems. Unsupported questions show an explicit no-guidance response. `process-skill.md` documents its answer contract and complete mock source library. All prototype identities are fictional; the separate personal portfolio and résumé retain their original attribution.
