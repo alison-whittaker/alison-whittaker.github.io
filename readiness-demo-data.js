@@ -31,7 +31,7 @@ window.READINESS_DEMO = {
       "team": "Growth",
       "span": "Q1\u2013Q3 2027",
       "rank": 1,
-      "product": "Mira Fernwick",
+      "product": "Avery Glen",
       "engineering": "Demo delivery lead A"
     },
     {
@@ -41,7 +41,7 @@ window.READINESS_DEMO = {
       "team": "Growth",
       "span": "Q1\u2013Q3 2027",
       "rank": 2,
-      "product": "Theo Brambleton",
+      "product": "Morgan Reed",
       "engineering": "Demo delivery lead B"
     },
     {
@@ -51,7 +51,7 @@ window.READINESS_DEMO = {
       "team": "Platform",
       "span": "Q1\u2013Q3 2027",
       "rank": 3,
-      "product": "Nola Quillmere",
+      "product": "Sage Alder",
       "engineering": "Demo delivery lead C"
     },
     {
@@ -61,7 +61,7 @@ window.READINESS_DEMO = {
       "team": "Platform",
       "span": "Q1\u2013Q3 2027",
       "rank": null,
-      "product": "Ivo Mossvale",
+      "product": "Finley Brook",
       "engineering": "Demo delivery lead D"
     },
     {
@@ -71,7 +71,7 @@ window.READINESS_DEMO = {
       "team": "Experience",
       "span": "Q1\u2013Q3 2027",
       "rank": 5,
-      "product": "Esme Glintwood",
+      "product": "Robin Ash",
       "engineering": "Demo delivery lead E"
     },
     {
@@ -81,7 +81,7 @@ window.READINESS_DEMO = {
       "team": "Experience",
       "span": "Q1\u2013Q3 2027",
       "rank": 6,
-      "product": "Remy Thistleford",
+      "product": "Jamie Birch",
       "engineering": "Demo delivery lead F"
     },
     {
@@ -91,7 +91,7 @@ window.READINESS_DEMO = {
       "team": "Operations",
       "span": "Q1\u2013Q3 2027",
       "rank": null,
-      "product": "Ada Wrenfell",
+      "product": "Casey Elm",
       "engineering": "Demo delivery lead G"
     },
     {
@@ -101,7 +101,7 @@ window.READINESS_DEMO = {
       "team": "Operations",
       "span": "Q1\u2013Q3 2027",
       "rank": 8,
-      "product": "Orin Petalby",
+      "product": "Taylor Cove",
       "engineering": "Demo delivery lead H"
     }
   ],
@@ -112,7 +112,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q1 2027",
       "name": "Baseline guided onboarding",
-      "owner": "Mira Fernwick",
+      "owner": "Avery Glen",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -132,7 +132,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q1 2027",
       "name": "Pilot guided onboarding",
-      "owner": "Mira Fernwick",
+      "owner": "Avery Glen",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -152,7 +152,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q1 2027",
       "name": "Review guided onboarding",
-      "owner": "Mira Fernwick",
+      "owner": "Avery Glen",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -172,7 +172,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q2 2027",
       "name": "Welcome checklist",
-      "owner": "Mira Fernwick",
+      "owner": "Avery Glen",
       "fields": {
         "Owner": true,
         "Outcome": false,
@@ -192,7 +192,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q2 2027",
       "name": "Activation experiment",
-      "owner": "Mira Fernwick",
+      "owner": "Avery Glen",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -212,7 +212,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-01",
       "quarter": "Q2 2027",
       "name": "Onboarding signals",
-      "owner": "Mira Fernwick",
+      "owner": "Avery Glen",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -232,7 +232,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q1 2027",
       "name": "Baseline self-service discovery",
-      "owner": "Theo Brambleton",
+      "owner": "Morgan Reed",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -252,7 +252,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q1 2027",
       "name": "Pilot self-service discovery",
-      "owner": "Theo Brambleton",
+      "owner": "Morgan Reed",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -272,7 +272,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q1 2027",
       "name": "Review self-service discovery",
-      "owner": "Theo Brambleton",
+      "owner": "Morgan Reed",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -292,7 +292,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q2 2027",
       "name": "Discovery filters",
-      "owner": "Theo Brambleton",
+      "owner": "Morgan Reed",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -312,7 +312,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q2 2027",
       "name": "Search relevance",
-      "owner": "Theo Brambleton",
+      "owner": "Morgan Reed",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -332,7 +332,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-02",
       "quarter": "Q2 2027",
       "name": "Browse analytics",
-      "owner": "Theo Brambleton",
+      "owner": "Morgan Reed",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -352,7 +352,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q1 2027",
       "name": "Baseline resilient foundations",
-      "owner": "Nola Quillmere",
+      "owner": "Sage Alder",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -372,7 +372,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q1 2027",
       "name": "Pilot resilient foundations",
-      "owner": "Nola Quillmere",
+      "owner": "Sage Alder",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -392,7 +392,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q1 2027",
       "name": "Review resilient foundations",
-      "owner": "Nola Quillmere",
+      "owner": "Sage Alder",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -412,7 +412,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q2 2027",
       "name": "Recovery rehearsal",
-      "owner": "Nola Quillmere",
+      "owner": "Sage Alder",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -432,7 +432,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q2 2027",
       "name": "Capacity guardrails",
-      "owner": "Nola Quillmere",
+      "owner": "Sage Alder",
       "fields": {
         "Owner": true,
         "Outcome": false,
@@ -452,7 +452,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-03",
       "quarter": "Q2 2027",
       "name": "Service health alerts",
-      "owner": "Nola Quillmere",
+      "owner": "Sage Alder",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -472,7 +472,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-04",
       "quarter": "Q1 2027",
       "name": "Baseline release confidence",
-      "owner": "Ivo Mossvale",
+      "owner": "Finley Brook",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -492,7 +492,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-04",
       "quarter": "Q1 2027",
       "name": "Pilot release confidence",
-      "owner": "Ivo Mossvale",
+      "owner": "Finley Brook",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -512,7 +512,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-04",
       "quarter": "Q1 2027",
       "name": "Review release confidence",
-      "owner": "Ivo Mossvale",
+      "owner": "Finley Brook",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -592,7 +592,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q1 2027",
       "name": "Baseline support journey",
-      "owner": "Esme Glintwood",
+      "owner": "Robin Ash",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -612,7 +612,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q1 2027",
       "name": "Pilot support journey",
-      "owner": "Esme Glintwood",
+      "owner": "Robin Ash",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -632,7 +632,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q1 2027",
       "name": "Review support journey",
-      "owner": "Esme Glintwood",
+      "owner": "Robin Ash",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -652,7 +652,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q2 2027",
       "name": "Case routing",
-      "owner": "Esme Glintwood",
+      "owner": "Robin Ash",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -672,7 +672,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q2 2027",
       "name": "Help center refresh",
-      "owner": "Esme Glintwood",
+      "owner": "Robin Ash",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -692,7 +692,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-05",
       "quarter": "Q2 2027",
       "name": "Feedback triage",
-      "owner": "Esme Glintwood",
+      "owner": "Robin Ash",
       "fields": {
         "Owner": true,
         "Outcome": false,
@@ -712,7 +712,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q1 2027",
       "name": "Baseline accessible experiences",
-      "owner": "Remy Thistleford",
+      "owner": "Jamie Birch",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -732,7 +732,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q1 2027",
       "name": "Pilot accessible experiences",
-      "owner": "Remy Thistleford",
+      "owner": "Jamie Birch",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -752,7 +752,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q1 2027",
       "name": "Review accessible experiences",
-      "owner": "Remy Thistleford",
+      "owner": "Jamie Birch",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -772,7 +772,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q2 2027",
       "name": "Keyboard navigation",
-      "owner": "Remy Thistleford",
+      "owner": "Jamie Birch",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -792,7 +792,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q2 2027",
       "name": "Readable forms",
-      "owner": "Remy Thistleford",
+      "owner": "Jamie Birch",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -812,7 +812,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-06",
       "quarter": "Q2 2027",
       "name": "Contrast improvements",
-      "owner": "Remy Thistleford",
+      "owner": "Jamie Birch",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -832,7 +832,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q1 2027",
       "name": "Baseline planning clarity",
-      "owner": "Ada Wrenfell",
+      "owner": "Casey Elm",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -852,7 +852,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q1 2027",
       "name": "Pilot planning clarity",
-      "owner": "Ada Wrenfell",
+      "owner": "Casey Elm",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -872,7 +872,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q1 2027",
       "name": "Review planning clarity",
-      "owner": "Ada Wrenfell",
+      "owner": "Casey Elm",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -892,7 +892,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q2 2027",
       "name": "Intake standards",
-      "owner": "Ada Wrenfell",
+      "owner": "Casey Elm",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -912,7 +912,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q2 2027",
       "name": "Capacity review",
-      "owner": "Ada Wrenfell",
+      "owner": "Casey Elm",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -932,7 +932,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-07",
       "quarter": "Q2 2027",
       "name": "Dependency register",
-      "owner": "Ada Wrenfell",
+      "owner": "Casey Elm",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -952,7 +952,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q1 2027",
       "name": "Baseline knowledge sharing",
-      "owner": "Orin Petalby",
+      "owner": "Taylor Cove",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -972,7 +972,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q1 2027",
       "name": "Pilot knowledge sharing",
-      "owner": "Orin Petalby",
+      "owner": "Taylor Cove",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -992,7 +992,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q1 2027",
       "name": "Review knowledge sharing",
-      "owner": "Orin Petalby",
+      "owner": "Taylor Cove",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -1012,7 +1012,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q2 2027",
       "name": "Knowledge index",
-      "owner": "Orin Petalby",
+      "owner": "Taylor Cove",
       "fields": {
         "Owner": true,
         "Outcome": false,
@@ -1032,7 +1032,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q2 2027",
       "name": "Playbook refresh",
-      "owner": "Orin Petalby",
+      "owner": "Taylor Cove",
       "fields": {
         "Owner": true,
         "Outcome": true,
@@ -1052,7 +1052,7 @@ window.READINESS_DEMO = {
       "workstream": "WS-08",
       "quarter": "Q2 2027",
       "name": "Learning sessions",
-      "owner": "Orin Petalby",
+      "owner": "Taylor Cove",
       "fields": {
         "Owner": true,
         "Outcome": true,
