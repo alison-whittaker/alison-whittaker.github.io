@@ -300,3 +300,18 @@ body > footer { padding-block:18px; background:var(--paper); color:var(--muted);
  .leverage-row { grid-template-columns:1fr; gap:10px; }
  .leverage-row article { padding:0; border:0; }
 }
+
+/* Latest recommendation featured beside two colleague endorsements. */
+.recognition-layout-featured { grid-template-columns:1.08fr 1fr; align-items:stretch; gap:16px; }
+.testimonial-stack { display:grid; grid-template-columns:minmax(0,1fr); gap:16px; }
+.testimonial-stack .testimonial-card { min-height:0; }
+.testimonial-card-featured { padding:28px; background:var(--paper); }
+.testimonial-card-featured > p { font-size:.98rem; line-height:1.75; margin:14px 0; }
+.testimonial-card-featured footer { margin-top:auto; }
+.testimonial-card-featured footer a { color:inherit; text-decoration:none; }
+.testimonial-card-featured footer a:hover { text-decoration:underline; }
+@media(max-width:760px) {
+ .recognition-layout-featured { grid-template-columns:minmax(0,1fr); }
+ .testimonial-card-featured { padding:20px; }
+ .testimonial-card-featured > p { font-size:.9rem; line-height:1.65; }
+}
