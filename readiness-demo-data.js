@@ -123,7 +123,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Carried forward",
       "due": "2027-03-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -143,7 +143,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-111",
       "status": "Open",
       "due": "2027-03-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -163,7 +163,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-112",
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -183,7 +183,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "In planning",
       "due": "2027-06-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -203,7 +203,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-211",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -223,7 +223,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-212",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -243,7 +243,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-113",
       "status": "Complete",
       "due": "2027-03-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -263,7 +263,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -283,7 +283,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-115",
       "status": "Carried forward",
       "due": "2027-03-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -303,7 +303,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-213",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -323,7 +323,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "In planning",
       "due": "2027-06-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -343,7 +343,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-215",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -363,7 +363,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-116",
       "status": "Open",
       "due": "2027-03-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -383,7 +383,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-117",
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -403,7 +403,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-118",
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -423,7 +423,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-216",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -443,7 +443,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-217",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -463,7 +463,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-218",
       "status": "In planning",
       "due": "2027-06-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -483,7 +483,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Complete",
       "due": "2027-03-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -503,7 +503,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-120",
       "status": "Carried forward",
       "due": "2027-03-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -523,7 +523,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-121",
       "status": "Open",
       "due": "2027-03-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -543,7 +543,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -563,7 +563,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-220",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -583,7 +583,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-221",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -603,7 +603,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-122",
       "status": "Complete",
       "due": "2027-03-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -623,7 +623,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-123",
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -643,7 +643,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -663,7 +663,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-222",
       "status": "In planning",
       "due": "2027-06-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -683,7 +683,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-223",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -703,7 +703,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -723,7 +723,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-125",
       "status": "Carried forward",
       "due": "2027-03-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -743,7 +743,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-126",
       "status": "Open",
       "due": "2027-03-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -763,7 +763,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-127",
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -783,7 +783,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-225",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -803,7 +803,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-226",
       "status": "In planning",
       "due": "2027-06-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -823,7 +823,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-227",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -843,7 +843,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-128",
       "status": "Complete",
       "due": "2027-03-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -863,7 +863,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-129",
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -883,7 +883,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "Carried forward",
       "due": "2027-03-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -903,7 +903,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-228",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -923,7 +923,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-229",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -943,7 +943,7 @@ window.READINESS_DEMO = {
       "epic": null,
       "status": "In planning",
       "due": "2027-06-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -963,7 +963,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-131",
       "status": "Open",
       "due": "2027-03-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -983,7 +983,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-132",
       "status": "Complete",
       "due": "2027-03-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -1003,7 +1003,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-133",
       "status": "Complete",
       "due": "2027-03-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -1023,7 +1023,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-231",
       "status": "Confirmed",
       "due": "2027-06-20",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -1043,7 +1043,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-232",
       "status": "Confirmed",
       "due": "2027-06-21",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     },
     {
@@ -1063,7 +1063,7 @@ window.READINESS_DEMO = {
       "epic": "DEMO-233",
       "status": "Confirmed",
       "due": "2027-06-22",
-      "source": "Demo register",
+      "source": "Initiative register",
       "asOf": "2027-03-26"
     }
   ],
@@ -1082,7 +1082,7 @@ window.READINESS_DEMO = {
     },
     {
       "id": "demos",
-      "name": "Demo register",
+      "name": "Initiative register",
       "asOf": "2027-03-26",
       "provides": "Planning detail and lifecycle status"
     },
@@ -1094,7 +1094,7 @@ window.READINESS_DEMO = {
     },
     {
       "id": "delivery",
-      "name": "Delivery tracker",
+      "name": "Jira snapshot",
       "asOf": "2027-03-25",
       "provides": "Epic links and delivery traceability"
     }
