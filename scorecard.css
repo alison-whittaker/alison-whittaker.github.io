@@ -13,4 +13,17 @@
 .calculation p {margin:0;color:var(--muted);font-size:14px}
 @media(max-width:650px){.about-scorecard>.section-title{flex-wrap:wrap}.about-scorecard .sources{max-width:100%}}
 
-.details-disclosure{border:1px solid var(--line);border-radius:8px;padding:18px}.details-disclosure>summary{cursor:pointer;display:list-item}.details-disclosure>summary h2{display:inline;margin:0}.details-disclosure>summary>span{display:block;margin:8px 0 0 20px;color:var(--muted);font-size:13px}.details-disclosure>section{margin-top:24px}
+
+/* Readiness detail stays visible; only calculation methodology collapses. */
+.measure-heading{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:15px 18px}
+#critical-list{max-height:none}
+.calculations-disclosure{margin-top:30px;border:1px solid var(--line);border-radius:8px;background:white}
+.calculations-disclosure>summary{padding:18px;cursor:pointer}
+.calculations-disclosure>summary h2{display:inline}
+.calculations-disclosure>summary span{display:block;margin:8px 0 0 20px;color:var(--muted);font-size:12px}
+.calculations-body{padding:0 18px 18px}
+.claude-skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.claude-skill-grid ul{padding-left:20px}
+.skill-prompt{margin-top:12px!important;padding:16px;background:white;border:1px solid var(--line);border-radius:8px}
+.skill-download{display:inline-block;text-decoration:none}
+@media(max-width:650px){.claude-skill-grid{grid-template-columns:1fr}.measure-heading{align-items:flex-start;gap:12px;flex-wrap:wrap}.process-actions{flex-wrap:wrap}}
