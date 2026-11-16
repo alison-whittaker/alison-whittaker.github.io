@@ -5,7 +5,7 @@
 <title>Quarterly Execution Scorecard — Fictional Demo</title>
 <meta name="description" content="Fictional quarterly planning readiness mockup: annual goals, multi-quarter workstreams, demo detail, readiness gaps and dated sources.">
 <link rel="stylesheet" href="readiness-demo.css?v=process-v3">
-<script defer src="readiness-demo-data.js?v=process-v3"></script><script defer src="readiness-demo.js?v=claude-skill-v1"></script>
+<script defer src="readiness-demo-data.js?v=process-v3"></script><script defer src="readiness-demo.js?v=expand-details-v1"></script>
 <link rel="stylesheet" href="scorecard.css?v=claude-skill-v1">
 <link rel="stylesheet" href="process-assistant.css?v=3">
 <script defer src="process-assistant.js?v=3"></script>
@@ -25,7 +25,8 @@
 <section id="executive-summary" aria-labelledby="executive-title"><div class="section-title"><div><p class="eyebrow">Decisions before commitments</p><h2 id="executive-title">3. Exec Summary</h2></div><span class="hint">Select a signal to inspect its measure</span></div><div id="executive-table" class="table-shell"></div><p class="note">Thresholds: 80%+ on track · 50–79% needs attention · below 50% at risk. All figures use fictional records.</p></section>
 <section id="overview" aria-labelledby="overview-title"><div class="section-title"><div><p class="eyebrow">Quarterly planning alignment</p><h2 id="overview-title">4. Rollup</h2></div><span class="hint">Select any score to inspect the gaps ↓</span></div><div id="matrix" class="table-shell"></div><p class="note">Scores are calculated from the fictional records shown below. Combined scores use total completed / total applicable records, not an average of percentages.</p></section>
 <section id="details" aria-labelledby="details-title"><div class="section-title"><h2 id="details-title">5. Details</h2></div>
-<section id="measures" aria-labelledby="measures-title"><div class="section-title"><div><p class="eyebrow">From signal to action</p><h3 id="measures-title">Readiness measures</h3></div><span class="hint">Definitions, scores, and gaps are shown below</span></div><div id="measure-list"></div></section>
+<section id="measures" aria-labelledby="measures-title"><div class="section-title"><div><p class="eyebrow">From signal to action</p><h3 id="measures-title">Readiness measures</h3></div><span class="hint">Expand each measure for definitions, scores, and gaps</span></div><div id="measure-list"></div></section>
+<details class="process-library"><summary>Planning process guidance</summary>
 <section id="process-assistant" aria-labelledby="process-title" class="process-panel">
 <div class="section-title"><div><p class="eyebrow">Related skill / planning process guide</p><h3 id="process-title">Ask how the process works</h3></div><span class="badge blue">Mock skill · local sources</span></div>
 <p class="section-description">Get practical steps, ownership, dates, and source references for the fictional Lumenfern planning process.</p>
@@ -35,7 +36,7 @@
 <div id="process-answer" class="process-answer" role="region" aria-label="Process guidance" aria-live="polite"><p class="muted">Choose a question or ask about planning, dependencies, owners, health, access, or escalation.</p></div>
 </div><aside class="process-aside"><h3>How this skill answers</h3><ol><li>Find the relevant fictional process guide.</li><li>Show steps, accountable roles, and the source date.</li><li>Link to the exact guidance so you can verify it.</li></ol><p>This is a rule-based demonstration using a fixed snapshot, not live AI or company policy. Unsupported questions are left unanswered.</p><p><strong>Mock skill owner:</strong> Rowan Vale<br><strong>Last verified:</strong> March 26, 2027</p><a href="process-skill.md">View skill specification ↗</a></aside></div>
 <details class="process-library"><summary>Browse the fictional source library</summary><p class="note">All names, dates, tools, rules, and contacts in these guides are invented for this demonstration. These are the sources behind the answers.</p><div id="process-sources"></div></details>
-</section></section>
+</section></details></section>
 <details id="calculations" class="calculations-disclosure"><summary><h2 id="calculations-title">6. How calculations work</h2><span>View formulas, thresholds, and counting rules</span></summary><div class="calculations-body"><div id="calculation-list"></div><p class="note">80%+ on track · 50–79% needs attention · below 50% at risk. Zero applicable records = N/A. Combined rates use summed numerators and denominators. A declined dependency counts as decisioned and remains an open action for replanning. Data is a fixed fictional snapshot.</p></div></details>
 <section id="claude-skill" class="process-panel" aria-labelledby="claude-skill-title">
 <div class="section-title"><div><p class="eyebrow">Reusable companion / human-reviewed planning</p><h2 id="claude-skill-title">7. Related Claude Skill</h2></div><span class="badge blue">Downloadable skill · fictional data</span></div>
