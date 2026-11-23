@@ -45,3 +45,14 @@ th{background:#edf0f3;color:#69717a;font-size:10px;letter-spacing:.45px;text-tra
 .total-row th,.total-row td{font-weight:700;background:#edf0f3}.gap-box{background:#f8f9fa;border:0;border-top:1px solid var(--line);margin:0;padding:13px}.gap-box h4{text-transform:uppercase;color:var(--muted);font-size:10px;letter-spacing:.4px}
 .note,.measure-source{font-size:11px;line-height:1.5;color:var(--muted)}
 @media(max-width:700px){.wrap{padding:20px 16px 40px}.masthead>div,.mock-banner{padding-left:16px;padding-right:16px}.intro h1{font-size:23px}.toolbar{position:static}.view-row .team-label,.filter-row .team-label{margin-left:0}.purpose{grid-template-columns:1fr;gap:10px}.about-scorecard>.section-title{flex-wrap:wrap}.about-scorecard .sources{margin-left:0}.measure summary{flex-wrap:wrap}.measure-total{margin-left:auto}.section-title{align-items:flex-start}.hint{display:none}}
+
+/* Keep the goal filters and jump links together on one scrollable line. */
+.toolbar{padding:0;background:#fff;position:sticky;top:0;z-index:3}
+.toolbar-line{display:flex;align-items:center;gap:12px;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;padding:8px 0;white-space:nowrap}
+.toolbar-line:focus-visible{outline:2px solid #5381bf;outline-offset:2px}
+.toolbar-line .filter-row,.toolbar-line .chips,.toolbar-line .jump{display:flex;flex-wrap:nowrap;align-items:center;flex:0 0 auto;padding:0;margin:0;overflow:visible}
+.toolbar-line .filter-row{gap:8px}.toolbar-line .chips{gap:5px}.toolbar-line .jump{gap:6px;border-left:1px solid var(--line);padding-left:12px}
+.toolbar-line .jump-label{margin-right:2px}.toolbar-line button,.toolbar-line a{flex:0 0 auto}
+.extra-filters{position:relative;padding:0 0 5px}.extra-filters>summary{display:inline-block;color:var(--blue);font-size:12px;cursor:pointer;padding:2px 0;list-style:none}.extra-filters>summary::before{content:'▸';margin-right:5px}.extra-filters[open]>summary::before{content:'▾'}
+.extra-filters-content{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:5px 0 8px}.extra-filters-content .view-row{padding:0}.extra-filters-content .team-label{margin:0}
+@media(max-width:700px){.toolbar{position:static}.toolbar-line{padding:8px 0}.extra-filters-content{align-items:flex-start}}

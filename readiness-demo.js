@@ -74,7 +74,7 @@ function render(){
  document.querySelectorAll('[data-filter-goal]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filterGoal===state.goal)));
  renderMatrix();renderMeasures();renderExecutive();renderCritical();renderRanking();
 }
-$('goal-filters').innerHTML=[{id:'all',name:'All goals'},...D.goals].map(g=>`<button type="button" data-filter-goal="${g.id}" aria-pressed="${g.id==='all'}" title="${esc(g.name)}">${g.id==='all'?'All goals':g.id+' · '+esc(g.name)}</button>`).join('');
+$('goal-filters').innerHTML=[{id:'all',name:'All goals'},...D.goals].map(g=>`<button type="button" data-filter-goal="${g.id}" aria-pressed="${g.id==='all'}" title="${esc(g.name)}">${g.id==='all'?'All goals':esc(g.id)}</button>`).join('');
 $('team').innerHTML+=[...new Set(D.goals.map(g=>g.team))].map(t=>`<option>${t}</option>`).join('');
 $('source-list').innerHTML=D.sources.map(s=>`<article class="source-card"><strong>${s.name}</strong><time datetime="${s.asOf}">As of ${s.asOf}</time><span class="muted">${s.provides}</span></article>`).join('');
 $('team').addEventListener('change',e=>{state.team=e.target.value;state.workstream=null;state.metric=null;render();});
