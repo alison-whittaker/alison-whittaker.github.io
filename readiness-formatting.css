@@ -1,0 +1,47 @@
+/* Reference scorecard layout: loaded last so every section shares one visual system. */
+:root{--ink:#30343b;--muted:#68707a;--line:#d5d9df;--blue:#355c96;--green:#42755d;--amber:#8a6b43;--red:#9e5150;--bg:#fff}
+body{background:#fff;color:var(--ink);font:14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:1170px;padding:24px 32px 48px}
+.masthead>div{max-width:1170px;padding:10px 32px}
+.mock-banner{max-width:1170px;margin:auto;background:#f5f6f8;color:#626b77;border:0;padding:8px 32px;justify-content:flex-start}
+h1{font-size:28px;line-height:1.2;letter-spacing:-.5px}h1:after{background:#4f6fa5;height:2px;margin-top:9px}
+.subtitle{margin-top:10px;font-size:13px;line-height:1.5}
+.toolbar{margin-top:20px;background:#fff;backdrop-filter:none;border:0;border-bottom:1px solid var(--line);padding:7px 0}
+.view-row,.filter-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:5px 0}
+.view-row .team-label,.filter-row .team-label{margin-left:8px}
+.chips{gap:5px}.chips button,.jump a,.quiet{font-size:12px;padding:5px 10px;border:1px solid #cfd4db;border-radius:20px;background:#fff}
+.chips button[aria-pressed=true]{background:#3f69a7;color:#fff;border-color:#3f69a7}
+.jump{display:flex;flex-wrap:nowrap;overflow-x:auto;gap:6px;padding:7px 0;scrollbar-width:thin}
+.jump a{color:#39404a;flex:0 0 auto}.jump a:hover{border-color:#466a9c;color:#355c96}
+section{margin-top:26px}.section-title{display:flex;align-items:center;gap:12px;border-bottom:2px solid #8196b6;padding:0 0 7px;margin:0 0 10px}
+.section-title h2,.section-title h3{font-size:15px;line-height:1.3;letter-spacing:.55px;text-transform:uppercase}
+.section-title .eyebrow{display:none}.section-title .section-description{margin:3px 0 0}
+.section-description,.about-caption{font-size:12px;line-height:1.5;color:var(--muted);margin:0 0 10px}
+.about-scorecard{border:0;padding:0;margin-top:26px}.about-scorecard>.section-title{border-bottom:2px solid #8196b6;padding-bottom:7px;margin-bottom:6px;align-items:center}
+.about-scorecard .sources{min-width:0;margin:0 0 0 auto;max-width:420px}.about-scorecard .sources summary{padding:4px 9px;font-size:12px}
+#source-list{grid-template-columns:repeat(auto-fit,minmax(125px,1fr))}
+.about-panel,.date-strip{background:#f7f8f9;border:1px solid var(--line);border-radius:5px;padding:15px}
+.about-panel>p{font-size:13px}.purpose{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:14px 0;padding:0;border:0}
+.purpose p{border-left:2px solid #8299ba;padding:0 0 0 10px;font-size:12px}.purpose strong{font-size:12px}
+.about-panel .about-source{border-top:1px solid var(--line);padding-top:10px;font-size:11px;color:var(--muted)}
+.scope-line{margin:9px 0;color:var(--muted)}.date-strip{font-size:12px;line-height:1.65;color:var(--muted)}
+.opens-panel{background:#fbf6e9;border:1px solid #d4c495;border-left:4px solid #9c8354;border-radius:5px;overflow:hidden}
+.opens-panel>summary{display:flex;align-items:center;flex-wrap:wrap;gap:12px;padding:10px 13px;cursor:pointer;font-size:12px;list-style:none}
+.opens-panel>summary:before{content:'●';color:#9c8354;font-size:10px}.opens-panel>summary span:nth-child(2){color:var(--blue);text-decoration:underline}.opens-panel>summary span:last-child{color:var(--muted)}
+.opens-panel .table-shell{margin:0 12px 12px;background:#fff}
+.table-shell,.measure{border:1px solid var(--line);border-radius:5px;box-shadow:none;overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:9px 11px;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:#edf0f3;color:#69717a;font-size:10px;letter-spacing:.45px;text-transform:uppercase;text-align:left}
+.ranking{min-width:680px}.ranking td:nth-child(1){width:5%}.ranking td:nth-child(2){width:19%}.ranking td:nth-child(3){width:12%}.ranking td:nth-child(4){width:32%}.ranking td small{display:block;color:var(--muted)}
+.executive{table-layout:fixed;min-width:700px}.executive th:first-child{width:23%}.executive td{padding:12px 11px}.executive td:first-child>strong{margin-bottom:4px}.executive td:first-child>small{margin-top:4px}
+.summary-signal{display:flex;align-items:baseline;justify-content:flex-start;gap:5px;padding:3px 0;font-size:12px;color:var(--ink)!important}
+.summary-signal:before{content:'○';color:var(--amber)}.summary-signal.green:before{content:'✓';color:var(--green)}.summary-signal.red:before{color:var(--red)}
+.summary-signal strong{margin-left:3px}.summary-signal small{font-size:10px;color:var(--muted)}
+#details>section{padding:0;border:0;margin-top:12px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.measure{margin:10px 0;background:#fff}.measure summary{display:flex;align-items:center;gap:16px;padding:14px 16px;list-style:none}.measure summary::after{content:'⌄';font-size:18px}.measure[open] summary::after{content:'⌃'}
+.measure-title{min-width:0;flex:1}.measure-title h3{font-size:13px;text-transform:uppercase;letter-spacing:.25px}.measure-title p{font-size:12px;margin-top:4px}
+.measure-total{display:flex;align-items:center;gap:8px;white-space:nowrap}.measure-total strong{font-size:17px}.measure-total small{font-size:11px;color:var(--muted)}
+.measure-body{padding:0 16px 16px}.measure-body .definition{padding:13px 0}.measure-table{overflow:auto}.measure-table table{min-width:620px}.measure-table td:not(:first-child),.measure-table th:not(:first-child){text-align:right}
+.total-row th,.total-row td{font-weight:700;background:#edf0f3}.gap-box{background:#f8f9fa;border:0;border-top:1px solid var(--line);margin:0;padding:13px}.gap-box h4{text-transform:uppercase;color:var(--muted);font-size:10px;letter-spacing:.4px}
+.note,.measure-source{font-size:11px;line-height:1.5;color:var(--muted)}
+@media(max-width:700px){.wrap{padding:20px 16px 40px}.masthead>div,.mock-banner{padding-left:16px;padding-right:16px}.intro h1{font-size:23px}.toolbar{position:static}.view-row .team-label,.filter-row .team-label{margin-left:0}.purpose{grid-template-columns:1fr;gap:10px}.about-scorecard>.section-title{flex-wrap:wrap}.about-scorecard .sources{margin-left:0}.measure summary{flex-wrap:wrap}.measure-total{margin-left:auto}.section-title{align-items:flex-start}.hint{display:none}}
