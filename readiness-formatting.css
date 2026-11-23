@@ -56,3 +56,13 @@ th{background:#edf0f3;color:#69717a;font-size:10px;letter-spacing:.45px;text-tra
 .extra-filters{position:relative;padding:0 0 5px}.extra-filters>summary{display:inline-block;color:var(--blue);font-size:12px;cursor:pointer;padding:2px 0;list-style:none}.extra-filters>summary::before{content:'▸';margin-right:5px}.extra-filters[open]>summary::before{content:'▾'}
 .extra-filters-content{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:5px 0 8px}.extra-filters-content .view-row{padding:0}.extra-filters-content .team-label{margin:0}
 @media(max-width:700px){.toolbar{position:static}.toolbar-line{padding:8px 0}.extra-filters-content{align-items:flex-start}}
+
+/* Place the source disclosure alongside the demo snapshot date. */
+.refresh-row{display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-top:5px;font-size:13px;color:var(--muted)}
+.refresh-row>span{padding-top:5px}
+.refresh-row .sources{margin:0;border:0;background:transparent;flex:0 1 auto;min-width:0}
+.refresh-row .sources summary{display:block;padding:5px 0;color:var(--blue);font-size:13px;font-weight:600}
+.refresh-row .sources[open]{flex-basis:100%;border:1px solid var(--line);border-radius:5px;background:#fff;padding:0 12px 10px}
+.refresh-row .sources[open] summary{padding:9px 0}
+.refresh-row #source-list{padding:0;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
+.refresh-row .sources .note{padding:0;margin-top:4px}
