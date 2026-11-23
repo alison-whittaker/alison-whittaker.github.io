@@ -65,9 +65,14 @@ $('leader-filter').innerHTML += [...new Set(D.workstreams.map(w=>w.product))].ma
 $('leader-filter').addEventListener('change',e=>{state.leader=e.target.value;state.workstream=null;state.metric=null;render();});
 $('view-goal').addEventListener('click',()=>{state.view='goal';render();});
 $('view-leader').addEventListener('click',()=>{state.view='leader';render();});
+function renderRanking(){
+ const m=metrics.find(x=>x.id==='readiness');
+ const rows=eligibleGoals().map(g=>({g,v:measure(m,g.id),values:metrics.filter(x=>x.id!=='readiness').map(x=>({m:x,v:measure(x,g.id)}))})).sort((a,b)=>(pct(b.v)??-1)-(pct(a.v)??-1));
+ $('ranking').innerHTML=rows.length?'<table class="ranking"><thead><tr><th>#</th><th>Annual goal</th><th>Ready</th><th>Why</th><th>Needed now</th></tr></thead><tbody>'+rows.map((r,i)=>{const good=r.values.filter(x=>pct(x.v)>=80), gaps=r.values.filter(x=>pct(x.v)!==null&&pct(x.v)<80);return '<tr><td>'+(i+1)+'</td><td><strong>'+esc(r.g.id)+' · '+esc(r.g.name)+'</strong></td><td><button class="text-link score-number '+tone(pct(r.v))+'" data-measure="readiness" data-goal="'+esc(r.g.id)+'">'+(pct(r.v)??'N/A')+'%</button><small>'+status(pct(r.v))+'</small></td><td>'+(good.map(x=>esc(x.m.name)+' '+pct(x.v)+'%').join(' · ')||'No measures at threshold yet')+'</td><td>'+(gaps.map(x=>esc(x.m.name)+' '+pct(x.v)+'%').join(' · ')||'Maintain readiness')+'</td></tr>';}).join('')+'</tbody></table>':'<p class="empty">No goals match these filters.</p>';
+}
 function render(){
  document.querySelectorAll('[data-filter-goal]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filterGoal===state.goal)));
- renderMatrix();renderMeasures();renderExecutive();renderCritical();
+ renderMatrix();renderMeasures();renderExecutive();renderCritical();renderRanking();
 }
 $('goal-filters').innerHTML=[{id:'all',name:'All goals'},...D.goals].map(g=>`<button type="button" data-filter-goal="${g.id}" aria-pressed="${g.id==='all'}" title="${esc(g.name)}">${g.id==='all'?'All goals':g.id+' · '+esc(g.name)}</button>`).join('');
 $('team').innerHTML+=[...new Set(D.goals.map(g=>g.team))].map(t=>`<option>${t}</option>`).join('');
@@ -78,7 +83,7 @@ $('close-dialog').addEventListener('click',()=>$('demo-dialog').close());
 $('demo-dialog').addEventListener('close',()=>focusReturn?.focus());
 $('demo-dialog').addEventListener('click',e=>{if(e.target===$('demo-dialog')){const r=e.target.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)e.target.close();}});
 function scrollToEl(el){el.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
-document.addEventListener('click',e=>{if(e.target.closest('a[href="#calculations"]'))$('calculations').open=true;const b=e.target.closest('button');if(!b)return;
+document.addEventListener('click',e=>{const anchor=e.target.closest('a[href^="#measure-"]');if(anchor){const target=$(anchor.getAttribute('href').slice(1));if(target)target.open=true;}if(e.target.closest('a[href="#calculations"]'))$('calculations').open=true;const b=e.target.closest('button');if(!b)return;
  if(b.dataset.filterGoal){state.goal=b.dataset.filterGoal;state.team='all';$('team').value='all';state.workstream=null;state.metric=null;render();}
  if(b.dataset.measure){if(b.dataset.leader){state.leader=b.dataset.leader;$('leader-filter').value=state.leader;render();}const id=b.dataset.measure;if(b.dataset.goal&&b.dataset.goal!=='all'){state.goal=b.dataset.goal;state.team='all';$('team').value='all';state.workstream=null;render();}const el=$('measure-'+id);el.open=true;scrollToEl(el);}
  if(b.dataset.demo)showDemo(b.dataset.demo);
