@@ -66,3 +66,5 @@ th{background:#edf0f3;color:#69717a;font-size:10px;letter-spacing:.45px;text-tra
 .refresh-row .sources[open] summary{padding:9px 0}
 .refresh-row #source-list{padding:0;grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}
 .refresh-row .sources .note{padding:0;margin-top:4px}
+
+.calculations-disclosure{margin-top:16px}.calculations-disclosure>summary{padding:11px 14px}.calculations-body{padding:0 14px 14px}

@@ -8,8 +8,8 @@
 <script defer src="readiness-demo-data.js?v=process-v3"></script><script defer src="readiness-demo.js?v=filter-line-v1"></script>
 <link rel="stylesheet" href="scorecard.css?v=claude-skill-v1">
 <link rel="stylesheet" href="process-assistant.css?v=3">
-<link rel="stylesheet" href="readiness-formatting.css?v=4">
-<script defer src="process-assistant.js?v=3"></script>
+<link rel="stylesheet" href="readiness-formatting.css?v=5">
+
 </head>
 <body>
 <a class="skip" href="#overview">Skip to readiness overview</a>
@@ -30,18 +30,8 @@
 <section id="overview" aria-labelledby="overview-title"><div class="section-title"><div><p class="eyebrow">Quarterly planning alignment</p><h2 id="overview-title">Scorecard</h2></div><span class="hint">Select any score to inspect the gaps ↓</span></div><div id="matrix" class="table-shell"></div><p class="note">Scores are calculated from the fictional records shown below. Combined scores use total completed / total applicable records, not an average of percentages.</p></section>
 <section id="details" aria-labelledby="details-title"><div class="section-title"><div><h2 id="details-title">Details</h2><p class="section-description">One section per measure. Select a row to expand it.</p></div></div>
 <section id="measures" aria-labelledby="measures-title"><h3 id="measures-title" class="sr-only">Readiness measures</h3><div id="measure-list"></div></section>
-<details class="process-library"><summary>Planning process guidance</summary>
-<section id="process-assistant" aria-labelledby="process-title" class="process-panel">
-<div class="section-title"><div><p class="eyebrow">Related skill / planning process guide</p><h3 id="process-title">Ask how the process works</h3></div><span class="badge blue">Mock skill · local sources</span></div>
-<p class="section-description">Get practical steps, ownership, dates, and source references for the fictional Lumenfern planning process.</p>
-<div class="process-layout"><div>
-<form id="process-form"><label for="process-question">Your process question</label><textarea id="process-question" rows="3" maxlength="1500" placeholder="How do I submit a dependency and who decides?" required></textarea><div class="process-actions"><button type="submit" class="process-primary">Find guidance →</button><button type="button" id="process-clear" class="quiet">Clear</button></div></form>
-<p class="note">Try a question</p><div id="process-prompts" class="chips"></div>
-<div id="process-answer" class="process-answer" role="region" aria-label="Process guidance" aria-live="polite"><p class="muted">Choose a question or ask about planning, dependencies, owners, health, access, or escalation.</p></div>
-</div><aside class="process-aside"><h3>How this skill answers</h3><ol><li>Find the relevant fictional process guide.</li><li>Show steps, accountable roles, and the source date.</li><li>Link to the exact guidance so you can verify it.</li></ol><p>This is a rule-based demonstration using a fixed snapshot, not live AI or company policy. Unsupported questions are left unanswered.</p><p><strong>Mock skill owner:</strong> Rowan Vale<br><strong>Last verified:</strong> March 26, 2027</p><a href="process-skill.md">View skill specification ↗</a></aside></div>
-<details class="process-library"><summary>Browse the fictional source library</summary><p class="note">All names, dates, tools, rules, and contacts in these guides are invented for this demonstration. These are the sources behind the answers.</p><div id="process-sources"></div></details>
-</section></details></section>
-<details id="calculations" class="calculations-disclosure"><summary><h2 id="calculations-title">How calculations work</h2><span>View formulas, thresholds, and counting rules</span></summary><div class="calculations-body"><div id="calculation-list"></div><p class="note">80%+ on track · 50–79% needs attention · below 50% at risk. Zero applicable records = N/A. Combined rates use summed numerators and denominators. A declined dependency counts as decisioned and remains an open action for replanning. Data is a fixed fictional snapshot.</p></div></details>
+</section>
+<details id="calculations" class="calculations-disclosure"><summary><h2 id="calculations-title">How calculations work</h2></summary><div class="calculations-body"><div id="calculation-list"></div><p class="note">80%+ on track · 50–79% needs attention · below 50% at risk. Zero applicable records = N/A. Combined rates use summed numerators and denominators. A declined dependency counts as decisioned and remains an open action for replanning. Data is a fixed fictional snapshot.</p></div></details>
 <section id="claude-skill" class="process-panel" aria-labelledby="claude-skill-title">
 <div class="section-title"><div><p class="eyebrow">Reusable companion / human-reviewed planning</p><h2 id="claude-skill-title">Related Claude Skill</h2></div><span class="badge blue">Demo only · fictional data</span></div>
 <h3>Quarterly Planning Review</h3>
@@ -50,7 +40,7 @@
 <div class="process-actions"><button type="button" class="process-primary skill-download" disabled aria-disabled="true">Demo purposes only</button></div>
 <p class="note">This companion is a demonstration; no skill download or installation is available.</p>
 </section>
-<footer><span>Lumenfern Studio demonstration · All content and metrics are fictional.</span><a href="process-skill.md">Process skill specification ↗</a></footer>
+<footer><span>Lumenfern Studio demonstration · All content and metrics are fictional.</span></footer>
 </main>
 <dialog id="demo-dialog" aria-labelledby="dialog-title"><div class="dialog-heading"><p class="eyebrow">Fictional demo detail</p><button id="close-dialog" class="quiet" autofocus>Close ×</button></div><div id="dialog-body"></div></dialog>
 </body></html>
